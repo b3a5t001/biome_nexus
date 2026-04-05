@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_torch_wall",
+  "textures": {
+    "torch": "biome_nexus:block/copper_torch"
+  }
+}

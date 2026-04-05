@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "biome_nexus:block/weathered_copper_lantern"
+    },
+    "hanging=true": {
+      "model": "biome_nexus:block/weathered_copper_lantern_hanging"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "biome_nexus:block/polished_ice_rock_slab"
+    },
+    "type=double": {
+      "model": "biome_nexus:block/polished_ice_rock"
+    },
+    "type=top": {
+      "model": "biome_nexus:block/polished_ice_rock_slab_top"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "values": [
+    "biome_nexus:sulfur_block",
+    "biome_nexus:sulfur_ore",
+    "biome_nexus:copper_chain",
+    "biome_nexus:waxed_copper_chain",
+    "biome_nexus:exposed_copper_chain",
+    "biome_nexus:waxed_exposed_copper_chain",
+    "biome_nexus:weathered_copper_chain",
+    "biome_nexus:waxed_weathered_copper_chain",
+    "biome_nexus:oxidised_copper_chain",
+    "biome_nexus:waxed_oxidised_copper_chain",
+    "biome_nexus:copper_bars",
+    "biome_nexus:waxed_copper_bars",
+    "biome_nexus:exposed_copper_bars",
+    "biome_nexus:waxed_exposed_copper_bars",
+    "biome_nexus:weathered_copper_bars",
+    "biome_nexus:waxed_weathered_copper_bars",
+    "biome_nexus:oxidised_copper_bars",
+    "biome_nexus:waxed_oxidised_copper_bars",
+    "biome_nexus:copper_lantern",
+    "biome_nexus:waxed_copper_lantern",
+    "biome_nexus:exposed_copper_lantern",
+    "biome_nexus:waxed_exposed_copper_lantern",
+    "biome_nexus:weathered_copper_lantern",
+    "biome_nexus:waxed_weathered_copper_lantern",
+    "biome_nexus:oxidised_copper_lantern",
+    "biome_nexus:waxed_oxidised_copper_lantern"
+  ]
+}

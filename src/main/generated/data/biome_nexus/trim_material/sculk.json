@@ -1,0 +1,9 @@
+{
+  "asset_name": "sculk",
+  "description": {
+    "color": "#034150",
+    "translate": "trim_material.biome_nexus.sculk"
+  },
+  "ingredient": "minecraft:echo_shard",
+  "item_model_index": 0.9
+}

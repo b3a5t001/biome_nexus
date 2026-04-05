@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "S": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    " G ",
+    " S ",
+    " G "
+  ],
+  "result": {
+    "count": 1,
+    "id": "biome_nexus:gold_chain"
+  }
+}

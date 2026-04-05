@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "biome_nexus",
+	"version": "1.4.0",
+	"name": "Biome Nexus",
+	"description": "The nexus of biomes. A mod that adds new biomes and features to the game in a respectable manner",
+	"authors": [
+		"B3a5t001"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/biome_nexus/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.b3a5t001.biome_nexus.BiomeNexus"
+		],
+		"client": [
+			"com.b3a5t001.biome_nexus.BiomeNexusClient"
+		],
+		"fabric-datagen": [
+			"com.b3a5t001.biome_nexus.BiomeNexusDataGenerator"
+		]
+	},
+	"mixins": [
+		"biome_nexus.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.6",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

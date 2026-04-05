@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sulfur_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "biome_nexus:sulfur_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "biome_nexus:sulfur_torch"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sulfur_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "biome_nexus:sulfur_torch"
+    ]
+  }
+}

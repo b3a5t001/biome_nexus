@@ -1,0 +1,9 @@
+{
+  "asset_name": "ice",
+  "description": {
+    "color": "#74ABFE",
+    "translate": "trim_material.biome_nexus.ice"
+  },
+  "ingredient": "minecraft:blue_ice",
+  "item_model_index": 0.8
+}

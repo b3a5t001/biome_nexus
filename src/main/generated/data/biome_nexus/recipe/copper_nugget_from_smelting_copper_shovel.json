@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "copper_nugget",
+  "ingredient": {
+    "item": "biome_nexus:copper_shovel"
+  },
+  "result": {
+    "id": "biome_nexus:copper_nugget"
+  }
+}

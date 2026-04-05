@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "biome_nexus:ice_rock"
+    },
+    {
+      "item": "biome_nexus:ice_rock"
+    },
+    {
+      "item": "biome_nexus:ice_rock"
+    },
+    {
+      "item": "biome_nexus:ice_rock"
+    },
+    {
+      "item": "biome_nexus:ice_rock"
+    },
+    {
+      "item": "biome_nexus:ice_rock"
+    },
+    {
+      "item": "biome_nexus:ice_rock"
+    },
+    {
+      "item": "biome_nexus:ice_rock"
+    },
+    {
+      "item": "biome_nexus:ice_rock"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "biome_nexus:polished_ice_rock"
+  }
+}

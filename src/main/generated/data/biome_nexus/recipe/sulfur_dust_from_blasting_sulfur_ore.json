@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "sulfur_ore",
+  "ingredient": {
+    "item": "biome_nexus:sulfur_ore"
+  },
+  "result": {
+    "id": "biome_nexus:sulfur_dust"
+  }
+}

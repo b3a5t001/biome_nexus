@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "biome_nexus:block/polished_ice_rock"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "biome_nexus:sulfur_torch"
+    },
+    "X": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XSX",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "biome_nexus:gold_lantern"
+  }
+}

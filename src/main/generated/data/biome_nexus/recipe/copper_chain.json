@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "biome_nexus:copper_nugget"
+    },
+    "S": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    " G ",
+    " S ",
+    " G "
+  ],
+  "result": {
+    "count": 1,
+    "id": "biome_nexus:copper_chain"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "biome_nexus:block/weathered_copper_bars"
+  }
+}

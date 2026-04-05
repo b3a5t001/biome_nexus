@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "biome_nexus:block/ice_rock_bricks"
+  }
+}

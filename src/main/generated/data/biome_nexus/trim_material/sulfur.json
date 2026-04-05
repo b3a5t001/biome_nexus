@@ -1,0 +1,9 @@
+{
+  "asset_name": "sulfur",
+  "description": {
+    "color": "#FFFACD",
+    "translate": "trim_material.biome_nexus.sulfur"
+  },
+  "ingredient": "biome_nexus:sulfur_dust",
+  "item_model_index": 0.6
+}

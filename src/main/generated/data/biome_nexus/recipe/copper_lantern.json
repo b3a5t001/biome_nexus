@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "biome_nexus:copper_torch"
+    },
+    "X": {
+      "item": "biome_nexus:copper_nugget"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "XSX",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "biome_nexus:copper_lantern"
+  }
+}
