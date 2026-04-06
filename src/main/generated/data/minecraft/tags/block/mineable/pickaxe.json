@@ -40,6 +40,18 @@
     "biome_nexus:ice_rock_bricks",
     "biome_nexus:ice_rock_brick_slab",
     "biome_nexus:ice_rock_brick_stairs",
-    "biome_nexus:ice_rock_brick_wall"
+    "biome_nexus:ice_rock_brick_wall",
+    "biome_nexus:jade_block",
+    "biome_nexus:jade_ore",
+    "biome_nexus:deepslate_jade_ore",
+    "biome_nexus:jade_bricks",
+    "biome_nexus:jade_brick_slab",
+    "biome_nexus:jade_brick_stairs",
+    "biome_nexus:jade_brick_wall",
+    "biome_nexus:sculk_slate",
+    "biome_nexus:sculk_slate_bricks",
+    "biome_nexus:sculk_slate_brick_slab",
+    "biome_nexus:sculk_slate_brick_stairs",
+    "biome_nexus:sculk_slate_brick_wall"
   ]
 }

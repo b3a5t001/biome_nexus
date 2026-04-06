@@ -59,7 +59,8 @@
                 "netherite_darker": "trims/color_palettes/netherite_darker",
                 "sulfur": "biome_nexus:trims/color_palettes/sulfur",
                 "ice": "biome_nexus:trims/color_palettes/ice",
-                "sculk": "biome_nexus:trims/color_palettes/sculk"
+                "sculk": "biome_nexus:trims/color_palettes/sculk",
+                "jade": "biome_nexus:trims/color_palettes/jade"
             }
         }
     ]

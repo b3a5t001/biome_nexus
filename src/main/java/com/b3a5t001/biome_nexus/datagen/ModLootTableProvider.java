@@ -52,13 +52,25 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ICE_ROCK_SLAB, slabDrops(ModBlocks.ICE_ROCK_SLAB));
         addDrop(ModBlocks.ICE_ROCK_STAIRS);
         addDrop(ModBlocks.ICE_ROCK_WALL);
-        addDrop(ModBlocks.ICE_ROCK_BRICK_WALL);
-        addDrop(ModBlocks.ICE_ROCK_BRICK_SLAB,slabDrops(ModBlocks.ICE_ROCK_BRICK_SLAB));
-        addDrop(ModBlocks.ICE_ROCK_BRICK_STAIRS);
-        addDrop(ModBlocks.ICE_ROCK_BRICKS);
         addDrop(ModBlocks.POLISHED_ICE_ROCK);
         addDrop(ModBlocks.POLISHED_ICE_ROCK_SLAB,slabDrops(ModBlocks.POLISHED_ICE_ROCK_SLAB));
         addDrop(ModBlocks.POLISHED_ICE_ROCK_STAIRS);
         addDrop(ModBlocks.POLISHED_ICE_ROCK_WALL);
+        addDrop(ModBlocks.ICE_ROCK_BRICKS);
+        addDrop(ModBlocks.ICE_ROCK_BRICK_SLAB,slabDrops(ModBlocks.ICE_ROCK_BRICK_SLAB));
+        addDrop(ModBlocks.ICE_ROCK_BRICK_STAIRS);
+        addDrop(ModBlocks.ICE_ROCK_BRICK_WALL);
+        addDrop(ModBlocks.JADE_BLOCK);
+        addDrop(ModBlocks.JADE_BRICKS);
+        addDrop(ModBlocks.JADE_BRICK_SLAB,slabDrops(ModBlocks.JADE_BRICK_SLAB));
+        addDrop(ModBlocks.JADE_BRICK_STAIRS);
+        addDrop(ModBlocks.JADE_BRICK_WALL);
+        addDrop(ModBlocks.JADE_ORE,oreDrops(ModBlocks.JADE_ORE, ModItems.JADE_CRYSTAL));
+        addDrop(ModBlocks.DEEPSLATE_JADE_ORE,oreDrops(ModBlocks.DEEPSLATE_JADE_ORE, ModItems.JADE_CRYSTAL));;
+        addDrop(ModBlocks.SCULK_SLATE);
+        addDrop(ModBlocks.SCULK_SLATE_BRICKS);
+        addDrop(ModBlocks.SCULK_SLATE_BRICK_SLAB,slabDrops(ModBlocks.SCULK_SLATE_BRICK_SLAB));
+        addDrop(ModBlocks.SCULK_SLATE_BRICK_STAIRS);
+        addDrop(ModBlocks.SCULK_SLATE_BRICK_WALL);
     }
 }

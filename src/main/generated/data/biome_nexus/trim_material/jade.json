@@ -1,0 +1,9 @@
+{
+  "asset_name": "jade",
+  "description": {
+    "color": "#1FAE69",
+    "translate": "trim_material.biome_nexus.jade"
+  },
+  "ingredient": "biome_nexus:jade_brick",
+  "item_model_index": 0.7
+}

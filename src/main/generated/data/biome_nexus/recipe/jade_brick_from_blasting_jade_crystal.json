@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.5,
+  "group": "jade_ore",
+  "ingredient": {
+    "item": "biome_nexus:jade_crystal"
+  },
+  "result": {
+    "id": "biome_nexus:jade_brick"
+  }
+}

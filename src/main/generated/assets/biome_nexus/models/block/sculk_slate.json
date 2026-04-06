@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "biome_nexus:block/sculk_slate_top",
+    "side": "biome_nexus:block/sculk_slate_side"
+  }
+}

@@ -58,7 +58,19 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ICE_ROCK_BRICKS)
                 .add(ModBlocks.ICE_ROCK_BRICK_SLAB)
                 .add(ModBlocks.ICE_ROCK_BRICK_STAIRS)
-                .add(ModBlocks.ICE_ROCK_BRICK_WALL);
+                .add(ModBlocks.ICE_ROCK_BRICK_WALL)
+                .add(ModBlocks.JADE_BLOCK)
+                .add(ModBlocks.JADE_ORE)
+                .add(ModBlocks.DEEPSLATE_JADE_ORE)
+                .add(ModBlocks.JADE_BRICKS)
+                .add(ModBlocks.JADE_BRICK_SLAB)
+                .add(ModBlocks.JADE_BRICK_STAIRS)
+                .add(ModBlocks.JADE_BRICK_WALL)
+                .add(ModBlocks.SCULK_SLATE)
+                .add(ModBlocks.SCULK_SLATE_BRICKS)
+                .add(ModBlocks.SCULK_SLATE_BRICK_SLAB)
+                .add(ModBlocks.SCULK_SLATE_BRICK_STAIRS)
+                .add(ModBlocks.SCULK_SLATE_BRICK_WALL);
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.SULFUR_BLOCK)
                 .add(ModBlocks.SULFUR_ORE)
@@ -85,7 +97,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WEATHERED_COPPER_LANTERN)
                 .add(ModBlocks.WAXED_WEATHERED_COPPER_LANTERN)
                 .add(ModBlocks.OXIDISED_COPPER_LANTERN)
-                .add(ModBlocks.WAXED_OXIDISED_COPPER_LANTERN);
+                .add(ModBlocks.WAXED_OXIDISED_COPPER_LANTERN)
+                .add(ModBlocks.JADE_ORE)
+                .add(ModBlocks.DEEPSLATE_JADE_ORE);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.GOLD_CHAIN)
                 .add(ModBlocks.GOLD_BARS)
@@ -98,14 +112,17 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.SLABS)
                 .add(ModBlocks.ICE_ROCK_SLAB)
                 .add(ModBlocks.POLISHED_ICE_ROCK_SLAB)
-                .add(ModBlocks.ICE_ROCK_BRICK_SLAB);
+                .add(ModBlocks.ICE_ROCK_BRICK_SLAB)
+                .add(ModBlocks.JADE_BRICK_SLAB);
         getOrCreateTagBuilder(BlockTags.STAIRS)
                 .add(ModBlocks.ICE_ROCK_STAIRS)
                 .add(ModBlocks.POLISHED_ICE_ROCK_STAIRS)
-                .add(ModBlocks.ICE_ROCK_BRICK_STAIRS);
+                .add(ModBlocks.ICE_ROCK_BRICK_STAIRS)
+                .add(ModBlocks.JADE_BRICK_STAIRS);
         getOrCreateTagBuilder(BlockTags.WALLS)
                 .add(ModBlocks.ICE_ROCK_WALL)
                 .add(ModBlocks.POLISHED_ICE_ROCK_WALL)
-                .add(ModBlocks.ICE_ROCK_BRICK_WALL);
+                .add(ModBlocks.ICE_ROCK_BRICK_WALL)
+                .add(ModBlocks.JADE_BRICK_WALL);
     }
 }

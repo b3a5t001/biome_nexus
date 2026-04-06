@@ -27,8 +27,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.SULFUR_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.COPPER_NUGGET
         ,RecipeCategory.BUILDING_BLOCKS, Items.COPPER_INGOT);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.JADE_CRYSTAL
+                    ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BLOCK);
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.SULFUR_TORCH)
+            ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.SULFUR_TORCH)
                 .input('#', Items.COAL)
                 .input('X', ModItems.SULFUR_DUST)
                 .input('S', Items.STICK)
@@ -185,16 +187,50 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.ICE_ROCK_BRICKS), conditionsFromItem(ModBlocks.ICE_ROCK_BRICKS))
                 .offerTo(exporter);
 
-        offerSmelting(exporter, List.of(ModBlocks.SULFUR_ORE.asItem()), RecipeCategory.MISC,
-                ModItems.SULFUR_DUST, 0.7f, 200, "sulfur_ore");
-        offerBlasting(exporter, List.of(ModBlocks.SULFUR_ORE.asItem()), RecipeCategory.MISC,
-                ModItems.SULFUR_DUST, 0.7f, 100, "sulfur_ore");
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICKS, ModItems.JADE_BRICK);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICK_SLAB, ModBlocks.JADE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICK_WALL, ModBlocks.JADE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICK_STAIRS, 4)
+                .input('I', ModBlocks.JADE_BRICKS.asItem())
+                .pattern("I  ")
+                .pattern("II ")
+                .pattern("III")
+                .criterion(hasItem(ModBlocks.JADE_BRICKS), conditionsFromItem(ModBlocks.JADE_BRICKS))
+                .offerTo(exporter);
 
-        offerSmelting(exporter, List.of(ModItems.COPPER_BOOTS.asItem(),ModItems.COPPER_AXE,ModItems.COPPER_CHESTPLATE,
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE, 3)
+                .input('S', Items.SCULK)
+                .input('D', Items.DEEPSLATE)
+                .pattern("DS ")
+                .pattern("SD ")
+                .pattern("   ")
+                .criterion(hasItem(Items.SCULK), conditionsFromItem(Items.SCULK))
+                .offerTo(exporter);
+        offerCompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICKS, ModBlocks.SCULK_SLATE);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_SLAB, ModBlocks.SCULK_SLATE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_WALL, ModBlocks.SCULK_SLATE_BRICKS);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_STAIRS, 4)
+                .input('I', ModBlocks.SCULK_SLATE_BRICKS.asItem())
+                .pattern("I  ")
+                .pattern("II ")
+                .pattern("III")
+                .criterion(hasItem(ModBlocks.SCULK_SLATE_BRICKS), conditionsFromItem(ModBlocks.SCULK_SLATE_BRICKS))
+                .offerTo(exporter);
+
+        offerSmelting(exporter, List.of(ModBlocks.SULFUR_ORE), RecipeCategory.MISC,
+                ModItems.SULFUR_DUST, 0.7f, 200, "sulfur_ore");
+        offerBlasting(exporter, List.of(ModBlocks.SULFUR_ORE), RecipeCategory.MISC,
+                ModItems.SULFUR_DUST, 0.7f, 100, "sulfur_ore");
+        offerSmelting(exporter, List.of(ModBlocks.JADE_ORE,ModBlocks.DEEPSLATE_JADE_ORE,ModItems.JADE_CRYSTAL),
+                RecipeCategory.MISC, ModItems.JADE_BRICK, 0.5f, 200, "jade_ore");
+        offerBlasting(exporter, List.of(ModBlocks.JADE_ORE,ModBlocks.DEEPSLATE_JADE_ORE,ModItems.JADE_CRYSTAL),
+                RecipeCategory.MISC, ModItems.JADE_BRICK, 0.5f, 100, "jade_ore");
+
+        offerSmelting(exporter, List.of(ModItems.COPPER_BOOTS,ModItems.COPPER_AXE,ModItems.COPPER_CHESTPLATE,
                         ModItems.COPPER_HELMET,ModItems.COPPER_LEGGINGS, ModItems.COPPER_HOE,ModItems.COPPER_PICKAXE,
                         ModItems.COPPER_SHOVEL, ModItems.COPPER_SWORD), RecipeCategory.MISC,
                 ModItems.COPPER_NUGGET, 0.1f, 200, "copper_nugget");
-        offerBlasting(exporter, List.of(ModItems.COPPER_BOOTS.asItem(),ModItems.COPPER_AXE,ModItems.COPPER_CHESTPLATE,
+        offerBlasting(exporter, List.of(ModItems.COPPER_BOOTS,ModItems.COPPER_AXE,ModItems.COPPER_CHESTPLATE,
                         ModItems.COPPER_HELMET,ModItems.COPPER_LEGGINGS, ModItems.COPPER_HOE,ModItems.COPPER_PICKAXE,
                         ModItems.COPPER_SHOVEL, ModItems.COPPER_SWORD), RecipeCategory.MISC,
                 ModItems.COPPER_NUGGET, 0.1f, 100, "copper_nugget");
@@ -220,5 +256,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_ROCK_BRICK_SLAB, ModBlocks.ICE_ROCK_BRICKS,2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_ROCK_BRICK_STAIRS, ModBlocks.ICE_ROCK_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_ROCK_BRICK_WALL, ModBlocks.ICE_ROCK_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICK_SLAB, ModBlocks.JADE_BRICKS,2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICK_STAIRS, ModBlocks.JADE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICK_WALL, ModBlocks.JADE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICKS, ModBlocks.SCULK_SLATE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_SLAB, ModBlocks.SCULK_SLATE,2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_STAIRS, ModBlocks.SCULK_SLATE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_WALL, ModBlocks.SCULK_SLATE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_SLAB, ModBlocks.SCULK_SLATE_BRICKS,2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_STAIRS, ModBlocks.SCULK_SLATE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_WALL, ModBlocks.SCULK_SLATE_BRICKS);
     }
 }

@@ -10,6 +10,8 @@ public class ModItemGroup {
                 entries -> {
                     entries.add(ModItems.SULFUR_DUST);
                     entries.add(ModItems.COPPER_NUGGET);
+                    entries.add(ModItems.JADE_BRICK);
+                    entries.add(ModItems.JADE_CRYSTAL);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(
@@ -24,9 +26,9 @@ public class ModItemGroup {
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(
                 entries -> {
+                    entries.add(ModItems.COPPER_SHOVEL);
                     entries.add(ModItems.COPPER_PICKAXE);
                     entries.add(ModItems.COPPER_AXE);
-                    entries.add(ModItems.COPPER_SHOVEL);
                     entries.add(ModItems.COPPER_HOE);
                 }
         );
@@ -63,11 +65,23 @@ public class ModItemGroup {
                     entries.add(ModBlocks.ICE_ROCK_BRICK_SLAB);
                     entries.add(ModBlocks.ICE_ROCK_BRICK_STAIRS);
                     entries.add(ModBlocks.ICE_ROCK_BRICK_WALL);
+                    entries.add(ModBlocks.JADE_BLOCK);
+                    entries.add(ModBlocks.JADE_BRICKS);
+                    entries.add(ModBlocks.JADE_BRICK_SLAB);
+                    entries.add(ModBlocks.JADE_BRICK_STAIRS);
+                    entries.add(ModBlocks.JADE_BRICK_WALL);
+                    entries.add(ModBlocks.SCULK_SLATE);
+                    entries.add(ModBlocks.SCULK_SLATE_BRICKS);
+                    entries.add(ModBlocks.SCULK_SLATE_BRICK_SLAB);
+                    entries.add(ModBlocks.SCULK_SLATE_BRICK_STAIRS);
+                    entries.add(ModBlocks.SCULK_SLATE_BRICK_WALL);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(
                 entries -> {
                     entries.add(ModBlocks.SULFUR_ORE);
+                    entries.add(ModBlocks.JADE_ORE);
+                    entries.add(ModBlocks.DEEPSLATE_JADE_ORE);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(

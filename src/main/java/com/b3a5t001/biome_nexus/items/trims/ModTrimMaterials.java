@@ -24,11 +24,14 @@ public class ModTrimMaterials {
             Identifier.of(BiomeNexus.MOD_ID, "ice"));
     public static final RegistryKey<ArmorTrimMaterial> SCULK = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
             Identifier.of(BiomeNexus.MOD_ID, "sculk"));
+    public static final RegistryKey<ArmorTrimMaterial> JADE = RegistryKey.of(RegistryKeys.TRIM_MATERIAL,
+            Identifier.of(BiomeNexus.MOD_ID, "jade"));
 
     public static void bootstrap(Registerable<ArmorTrimMaterial> registerable) {
         register(registerable, SULFUR, Registries.ITEM.getEntry(ModItems.SULFUR_DUST), Style.EMPTY.withColor(0xFFFACD), 0.6f);
         register(registerable, ICE, Registries.ITEM.getEntry(Items.BLUE_ICE), Style.EMPTY.withColor(0x74ABFE), 0.8f);
         register(registerable, SCULK, Registries.ITEM.getEntry(Items.ECHO_SHARD), Style.EMPTY.withColor(0x034150), 0.9f);
+        register(registerable, JADE, Registries.ITEM.getEntry(ModItems.JADE_BRICK), Style.EMPTY.withColor(0x1FAE69), 0.7f);
     }
 
     private static void register(Registerable<ArmorTrimMaterial> registerable, RegistryKey<ArmorTrimMaterial> armorTrimKey,

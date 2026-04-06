@@ -51,7 +51,10 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(13))));
 
-
+    public static final Item JADE_CRYSTAL = registerItem("jade_crystal",
+            new Item(new Item.Settings()));
+    public static final Item JADE_BRICK = registerItem("jade_brick",
+            new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(BiomeNexus.MOD_ID, name), item);

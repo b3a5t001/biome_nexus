@@ -130,6 +130,45 @@ public class ModBlocks {
     public static final Block ICE_ROCK_BRICK_WALL = registerBlock("ice_rock_brick_wall",
             new WallBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
                     .sounds(BlockSoundGroup.CALCITE).requiresTool()),true);
+    
+    public static final Block JADE_BRICKS = registerBlock("jade_bricks",
+            new Block(AbstractBlock.Settings.create().mapColor(MapColor.EMERALD_GREEN).strength(2.0f, 6.0f)
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES).requiresTool()),true);
+    public static final Block JADE_BRICK_SLAB = registerBlock("jade_brick_slab",
+            new SlabBlock(AbstractBlock.Settings.create().mapColor(MapColor.EMERALD_GREEN).strength(2.0f, 6.0f)
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES).requiresTool()),true);
+    public static final Block JADE_BRICK_STAIRS = registerBlock("jade_brick_stairs",
+            new StairsBlock(ModBlocks.JADE_BRICKS.getDefaultState(),AbstractBlock.Settings.create().mapColor(MapColor.EMERALD_GREEN).strength(2.0f, 6.0f)
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES).requiresTool()),true);
+    public static final Block JADE_BRICK_WALL = registerBlock("jade_brick_wall",
+            new WallBlock(AbstractBlock.Settings.create().mapColor(MapColor.EMERALD_GREEN).strength(2.0f, 6.0f)
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES).requiresTool()),true);
+    public static final Block JADE_ORE = registerBlock("jade_ore",
+            new Block(AbstractBlock.Settings.create().mapColor(MapColor.EMERALD_GREEN).strength(2.0f, 5.5f)
+                    .sounds(BlockSoundGroup.STONE).requiresTool()),true);
+    public static final Block DEEPSLATE_JADE_ORE = registerBlock("deepslate_jade_ore",
+            new Block(AbstractBlock.Settings.create().mapColor(MapColor.EMERALD_GREEN).strength(2.5f, 6.0f)
+                    .sounds(BlockSoundGroup.DEEPSLATE_TILES).requiresTool()),true);
+    public static final Block JADE_BLOCK = registerBlock("jade_block",
+            new Block(AbstractBlock.Settings.create().mapColor(MapColor.EMERALD_GREEN).strength(2.0f, 5.0f)
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK).requiresTool()),true);
+
+    public static final Block SCULK_SLATE = registerBlock("sculk_slate",
+            new PillarBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).strength(2.0f, 6.0f)
+                    .sounds(BlockSoundGroup.DEEPSLATE).requiresTool()),true);
+    public static final Block SCULK_SLATE_BRICKS = registerBlock("sculk_slate_bricks",
+            new Block(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).strength(2.0f, 6.0f)
+                    .sounds(BlockSoundGroup.DEEPSLATE).requiresTool()),true);
+    public static final Block SCULK_SLATE_BRICK_SLAB = registerBlock("sculk_slate_brick_slab",
+            new SlabBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).strength(2.0f, 6.0f)
+                    .sounds(BlockSoundGroup.DEEPSLATE).requiresTool()),true);
+    public static final Block SCULK_SLATE_BRICK_STAIRS = registerBlock("sculk_slate_brick_stairs",
+            new StairsBlock(ModBlocks.SCULK_SLATE_BRICKS.getDefaultState(),AbstractBlock.Settings.create().mapColor(MapColor.EMERALD_GREEN).strength(2.0f, 6.0f)
+                    .sounds(BlockSoundGroup.DEEPSLATE).requiresTool()),true);
+    public static final Block SCULK_SLATE_BRICK_WALL = registerBlock("sculk_slate_brick_wall",
+            new WallBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).strength(2.0f, 6.0f)
+                    .sounds(BlockSoundGroup.DEEPSLATE).requiresTool()),true);
+
 
     static {
         OxidizableChainBlock.registerOxidationPair(COPPER_CHAIN, EXPOSED_COPPER_CHAIN);

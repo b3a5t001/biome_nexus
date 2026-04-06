@@ -18,6 +18,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.SULFUR_DUST)
+                .add(ModItems.JADE_BRICK)
                 .add(Items.ECHO_SHARD)
                 .add(Items.BLUE_ICE);
 

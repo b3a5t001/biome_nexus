@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": {
+      "item": "minecraft:deepslate"
+    },
+    "S": {
+      "item": "minecraft:sculk"
+    }
+  },
+  "pattern": [
+    "DS ",
+    "SD ",
+    "   "
+  ],
+  "result": {
+    "count": 4,
+    "id": "biome_nexus:sculk_slate"
+  }
+}

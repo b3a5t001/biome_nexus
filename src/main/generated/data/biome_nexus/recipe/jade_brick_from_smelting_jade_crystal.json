@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "group": "jade_ore",
+  "ingredient": {
+    "item": "biome_nexus:jade_crystal"
+  },
+  "result": {
+    "id": "biome_nexus:jade_brick"
+  }
+}

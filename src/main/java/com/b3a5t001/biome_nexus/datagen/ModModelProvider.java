@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.client.TexturedModel;
 import net.minecraft.item.ArmorItem;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -35,6 +36,20 @@ public class ModModelProvider extends FabricModelProvider {
         iceRockBrickPool.slab(ModBlocks.ICE_ROCK_BRICK_SLAB);
         iceRockBrickPool.stairs(ModBlocks.ICE_ROCK_BRICK_STAIRS);
         iceRockBrickPool.wall(ModBlocks.ICE_ROCK_BRICK_WALL);
+        BlockStateModelGenerator.BlockTexturePool jadeBrickPool =
+                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JADE_BRICKS);
+        jadeBrickPool.slab(ModBlocks.JADE_BRICK_SLAB);
+        jadeBrickPool.stairs(ModBlocks.JADE_BRICK_STAIRS);
+        jadeBrickPool.wall(ModBlocks.JADE_BRICK_WALL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JADE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JADE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_JADE_ORE);
+        BlockStateModelGenerator.BlockTexturePool sculkSlateBrickPool =
+                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SCULK_SLATE_BRICKS);
+        sculkSlateBrickPool.slab(ModBlocks.SCULK_SLATE_BRICK_SLAB);
+        sculkSlateBrickPool.stairs(ModBlocks.SCULK_SLATE_BRICK_STAIRS);
+        sculkSlateBrickPool.wall(ModBlocks.SCULK_SLATE_BRICK_WALL);
+        blockStateModelGenerator.registerSingleton(ModBlocks.SCULK_SLATE, TexturedModel.CUBE_COLUMN);
 
     }
 
@@ -42,6 +57,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.SULFUR_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.COPPER_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.JADE_BRICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.JADE_CRYSTAL, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.COPPER_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_AXE, Models.HANDHELD);
