@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "C": {
+    "I": {
       "item": "minecraft:copper_ingot"
     }
   },
   "pattern": [
-    "CCC",
-    "C C",
-    "C C"
+    "III",
+    "I I",
+    "I I"
   ],
   "result": {
     "count": 1,

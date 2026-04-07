@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "C": {
+    "I": {
       "item": "minecraft:copper_ingot"
     },
     "S": {
@@ -10,8 +10,8 @@
     }
   },
   "pattern": [
-    " CC",
-    " SC",
+    "II ",
+    "IS ",
     " S "
   ],
   "result": {

@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
-    "S": {
-      "item": "biome_nexus:copper_torch"
-    },
-    "X": {
+    "N": {
       "item": "biome_nexus:copper_nugget"
+    },
+    "T": {
+      "item": "biome_nexus:copper_torch"
     }
   },
   "pattern": [
-    "XXX",
-    "XSX",
-    "XXX"
+    "NNN",
+    "NTN",
+    "NNN"
   ],
   "result": {
     "count": 1,

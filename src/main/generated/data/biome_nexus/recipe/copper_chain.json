@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
-    "G": {
-      "item": "biome_nexus:copper_nugget"
-    },
-    "S": {
+    "I": {
       "item": "minecraft:copper_ingot"
+    },
+    "N": {
+      "item": "biome_nexus:copper_nugget"
     }
   },
   "pattern": [
-    " G ",
-    " S ",
-    " G "
+    " N ",
+    " I ",
+    " N "
   ],
   "result": {
     "count": 1,

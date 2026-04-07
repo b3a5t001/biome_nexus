@@ -1,24 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
-    "#": {
-      "item": "minecraft:coal"
+    "C": {
+      "tag": "minecraft:coals"
+    },
+    "I": {
+      "item": "biome_nexus:copper_nugget"
     },
     "S": {
       "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "biome_nexus:copper_nugget"
     }
   },
   "pattern": [
-    " # ",
-    " X ",
+    " C ",
+    " I ",
     " S "
   ],
   "result": {
-    "count": 1,
+    "count": 4,
     "id": "biome_nexus:copper_torch"
   }
 }

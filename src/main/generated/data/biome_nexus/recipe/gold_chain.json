@@ -1,18 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
-    "G": {
-      "item": "minecraft:gold_nugget"
-    },
-    "S": {
+    "I": {
       "item": "minecraft:gold_ingot"
+    },
+    "N": {
+      "item": "minecraft:gold_nugget"
     }
   },
   "pattern": [
-    " G ",
-    " S ",
-    " G "
+    " N ",
+    " I ",
+    " N "
   ],
   "result": {
     "count": 1,

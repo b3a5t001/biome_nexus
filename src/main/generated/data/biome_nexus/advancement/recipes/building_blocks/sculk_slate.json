@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sculk_slate_bricks": {
+    "has_sculk": {
       "conditions": {
         "items": [
           {
-            "items": "biome_nexus:sculk_slate_bricks"
+            "items": "minecraft:sculk"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_sculk_slate_bricks"
+      "has_sculk"
     ]
   ],
   "rewards": {
