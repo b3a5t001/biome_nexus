@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steel_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "biome_nexus:steel_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "biome_nexus:steel_nugget_from_smelting_steel_shovel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_steel_shovel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "biome_nexus:steel_nugget_from_smelting_steel_shovel"
+    ]
+  }
+}

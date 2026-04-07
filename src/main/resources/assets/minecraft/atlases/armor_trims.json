@@ -38,7 +38,9 @@
                 "trims/models/armor/flow",
                 "trims/models/armor/flow_leggings",
                 "trims/models/armor/bolt",
-                "trims/models/armor/bolt_leggings"
+                "trims/models/armor/bolt_leggings",
+                "biome_nexus:trims/models/armor/grace",
+                "biome_nexus:trims/models/armor/grace_leggings"
             ],
             "palette_key": "trims/color_palettes/trim_palette",
             "permutations": {
@@ -61,7 +63,9 @@
                 "ice": "biome_nexus:trims/color_palettes/ice",
                 "sculk": "biome_nexus:trims/color_palettes/sculk",
                 "jade": "biome_nexus:trims/color_palettes/jade",
-                "tin": "biome_nexus:trims/color_palettes/tin"
+                "tin": "biome_nexus:trims/color_palettes/tin",
+                "steel": "biome_nexus:trims/color_palettes/steel",
+                "steel_darker": "biome_nexus:trims/color_palettes/steel_darker"
             }
         }
     ]

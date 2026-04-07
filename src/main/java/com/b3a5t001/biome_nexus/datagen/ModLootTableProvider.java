@@ -111,6 +111,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.TIN_BARS);
         addDrop(ModBlocks.TIN_DOOR, doorDrops(ModBlocks.TIN_DOOR));
         addDrop(ModBlocks.TIN_TRAPDOOR);
+        addDrop(ModBlocks.STEEL_BLOCK);
+        addDrop(ModBlocks.STEEL_LANTERN);
+        addDrop(ModBlocks.STEEL_CHAINS);
+        addDrop(ModBlocks.STEEL_BARS);
     }
 
     public LootTable.Builder multipleOreDrops(Block block, Item drop, int min, int max) {

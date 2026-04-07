@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "biome_nexus:item/steel_shovel"
+  }
+}

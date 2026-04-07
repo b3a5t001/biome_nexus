@@ -78,6 +78,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(ModBlocks.TIN_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.TIN_TRAPDOOR);
         blockStateModelGenerator.registerTorch(ModBlocks.TIN_TORCH, ModBlocks.TIN_WALL_TORCH);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STEEL_BLOCK);
 
     }
 
@@ -90,16 +91,29 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_TIN, Models.GENERATED);
         itemModelGenerator.register(ModItems.TIN_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.TIN_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STEEL_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STEEL_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GRACE_SMITHING_TEMPLATE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.COPPER_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.STEEL_HOE, Models.HANDHELD);
+
 
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_BOOTS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.STEEL_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.STEEL_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.STEEL_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.STEEL_BOOTS));
     }
 }

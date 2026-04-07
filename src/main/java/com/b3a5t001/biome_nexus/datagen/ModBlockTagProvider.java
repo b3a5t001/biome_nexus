@@ -96,7 +96,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.TIN_TRAPDOOR)
                 .add(ModBlocks.TIN_CHAINS)
                 .add(ModBlocks.TIN_BARS)
-                .add(ModBlocks.TIN_LANTERN);
+                .add(ModBlocks.TIN_LANTERN)
+                .add(ModBlocks.STEEL_BLOCK)
+                .add(ModBlocks.STEEL_CHAINS)
+                .add(ModBlocks.STEEL_BARS)
+                .add(ModBlocks.STEEL_LANTERN);
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.SULFUR_BLOCK)
                 .add(ModBlocks.SULFUR_ORE)
@@ -143,12 +147,22 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.GOLD_CHAIN)
                 .add(ModBlocks.GOLD_BARS)
-                .add(ModBlocks.GOLD_LANTERN);
+                .add(ModBlocks.GOLD_LANTERN)
+                .add(ModBlocks.STEEL_BLOCK)
+                .add(ModBlocks.STEEL_CHAINS)
+                .add(ModBlocks.STEEL_BARS)
+                .add(ModBlocks.STEEL_LANTERN);
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_COPPER_TOOL)
                 .addTag(BlockTags.NEEDS_STONE_TOOL);
         getOrCreateTagBuilder(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_STONE_TOOL);
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_STEEL_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+        getOrCreateTagBuilder(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
         getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_STONE_TOOL);
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
+        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
         getOrCreateTagBuilder(BlockTags.SLABS)
                 .add(ModBlocks.ICE_ROCK_SLAB)
                 .add(ModBlocks.POLISHED_ICE_ROCK_SLAB)

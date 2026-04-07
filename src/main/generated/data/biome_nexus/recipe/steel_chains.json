@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "I": {
+      "item": "biome_nexus:steel_ingot"
+    },
+    "N": {
+      "item": "biome_nexus:steel_nugget"
+    }
+  },
+  "pattern": [
+    " N ",
+    " I ",
+    " N "
+  ],
+  "result": {
+    "count": 1,
+    "id": "biome_nexus:steel_chains"
+  }
+}

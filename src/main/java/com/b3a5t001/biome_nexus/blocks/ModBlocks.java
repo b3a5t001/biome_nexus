@@ -238,6 +238,15 @@ public class ModBlocks {
     public static final Block TIN_TRAPDOOR = registerBlock("tin_trapdoor",
              new TrapdoorBlock(BlockSetType.COPPER,AbstractBlock.Settings.copy(Blocks.IRON_BARS).mapColor(MapColor.LIGHT_GRAY)),true);
 
+    public static final Block STEEL_BLOCK = registerBlock("steel_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.NETHERITE_BLOCK).mapColor(MapColor.GRAY)),true);
+    public static final Block STEEL_BARS = registerBlock("steel_bars",
+            new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS).mapColor(MapColor.GRAY)),true);
+    public static final Block STEEL_CHAINS = registerBlock("steel_chains",
+            new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).mapColor(MapColor.GRAY)),true);
+    public static final Block STEEL_LANTERN = registerBlock("steel_lantern",
+            new LanternBlock(AbstractBlock.Settings.copy(Blocks.LANTERN).mapColor(MapColor.GRAY)),true);
+
 
     static {
         OxidizableChainBlock.registerOxidationPair(COPPER_CHAIN, EXPOSED_COPPER_CHAIN);

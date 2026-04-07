@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.4,
+  "group": "steel_nugget",
+  "ingredient": {
+    "item": "biome_nexus:steel_boots"
+  },
+  "result": {
+    "id": "biome_nexus:steel_nugget"
+  }
+}

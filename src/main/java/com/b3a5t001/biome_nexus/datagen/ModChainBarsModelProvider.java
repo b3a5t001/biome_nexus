@@ -35,6 +35,9 @@ public class ModChainBarsModelProvider implements DataProvider {
         ModBlockstateModelHelper.registerChain(registrar, ModBlocks.TIN_CHAINS);
         ModBlockstateModelHelper.registerBars(registrar, ModBlocks.TIN_BARS);
         ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.TIN_LANTERN);
+        ModBlockstateModelHelper.registerChain(registrar, ModBlocks.STEEL_CHAINS);
+        ModBlockstateModelHelper.registerBars(registrar, ModBlocks.STEEL_BARS);
+        ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.STEEL_LANTERN);
 
         ModBlockstateModelHelper.registerChain(registrar, ModBlocks.COPPER_CHAIN, ModBlocks.WAXED_COPPER_CHAIN);
         ModBlockstateModelHelper.registerChain(registrar, ModBlocks.EXPOSED_COPPER_CHAIN, ModBlocks.WAXED_EXPOSED_COPPER_CHAIN);

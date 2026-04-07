@@ -15,24 +15,37 @@ public class ModItemGroup {
                     entries.add(ModItems.RAW_TIN);
                     entries.add(ModItems.TIN_INGOT);
                     entries.add(ModItems.TIN_NUGGET);
+                    entries.add(ModItems.STEEL_INGOT);
+                    entries.add(ModItems.STEEL_NUGGET);
+                    entries.add(ModItems.GRACE_SMITHING_TEMPLATE);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(
                 entries -> {
                     entries.add(ModItems.COPPER_SWORD);
+                    entries.add(ModItems.STEEL_SWORD);
                     entries.add(ModItems.COPPER_AXE);
+                    entries.add(ModItems.STEEL_AXE);
                     entries.add(ModItems.COPPER_HELMET);
+                    entries.add(ModItems.STEEL_HELMET);
                     entries.add(ModItems.COPPER_CHESTPLATE);
+                    entries.add(ModItems.STEEL_CHESTPLATE);
                     entries.add(ModItems.COPPER_LEGGINGS);
+                    entries.add(ModItems.STEEL_LEGGINGS);
                     entries.add(ModItems.COPPER_BOOTS);
+                    entries.add(ModItems.STEEL_BOOTS);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(
                 entries -> {
                     entries.add(ModItems.COPPER_SHOVEL);
+                    entries.add(ModItems.STEEL_SHOVEL);
                     entries.add(ModItems.COPPER_PICKAXE);
+                    entries.add(ModItems.STEEL_PICKAXE);
                     entries.add(ModItems.COPPER_AXE);
+                    entries.add(ModItems.STEEL_AXE);
                     entries.add(ModItems.COPPER_HOE);
+                    entries.add(ModItems.STEEL_HOE);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(
@@ -93,9 +106,12 @@ public class ModItemGroup {
                     entries.add(ModBlocks.CHISELED_TIN);
                     entries.add(ModBlocks.TIN_GRATE);
                     entries.add(ModBlocks.TIN_CHAINS);
+                    entries.add(ModBlocks.TIN_BARS);
                     entries.add(ModBlocks.TIN_DOOR);
                     entries.add(ModBlocks.TIN_TRAPDOOR);
-                    entries.add(ModBlocks.TIN_BARS);
+                    entries.add(ModBlocks.STEEL_BLOCK);
+                    entries.add(ModBlocks.STEEL_CHAINS);
+                    entries.add(ModBlocks.STEEL_BARS);
                     entries.add(ModBlocks.SCULK_SLATE);
                     entries.add(ModBlocks.SCULK_SLATE_BRICKS);
                     entries.add(ModBlocks.SCULK_SLATE_BRICK_SLAB);
@@ -127,6 +143,7 @@ public class ModItemGroup {
                     entries.add(ModBlocks.GOLD_LANTERN);
                     entries.add(ModItems.TIN_TORCH);
                     entries.add(ModBlocks.TIN_LANTERN);
+                    entries.add(ModBlocks.STEEL_LANTERN);
                 }
         );
     }

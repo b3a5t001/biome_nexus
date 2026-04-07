@@ -2,6 +2,10 @@
   "values": [
     "biome_nexus:gold_chain",
     "biome_nexus:gold_bars",
-    "biome_nexus:gold_lantern"
+    "biome_nexus:gold_lantern",
+    "biome_nexus:steel_block",
+    "biome_nexus:steel_chains",
+    "biome_nexus:steel_bars",
+    "biome_nexus:steel_lantern"
   ]
 }

@@ -1,5 +1,6 @@
 package com.b3a5t001.biome_nexus.items.armorweapon;
 
+import com.b3a5t001.biome_nexus.items.ModItems;
 import com.b3a5t001.biome_nexus.util.ModTags;
 import com.google.common.base.Suppliers;
 import net.minecraft.block.Block;
@@ -12,7 +13,9 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     COPPER(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL, 191, 5.0F,
-            1.5F, 17, () -> Ingredient.ofItems(Items.COPPER_INGOT));
+            1.5F, 17, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    STEEL(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL, 1645, 9.0f,
+            3.0f, 16, () -> Ingredient.ofItems(ModItems.STEEL_INGOT));
 
 
     private final TagKey<Block> inverseTag;

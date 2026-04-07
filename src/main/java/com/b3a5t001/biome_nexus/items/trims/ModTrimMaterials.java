@@ -34,7 +34,7 @@ public class ModTrimMaterials {
         register(registerable, ICE, Registries.ITEM.getEntry(Items.BLUE_ICE), Style.EMPTY.withColor(0x74ABFE), 0.8f);
         register(registerable, SCULK, Registries.ITEM.getEntry(Items.ECHO_SHARD), Style.EMPTY.withColor(0x034150), 0.9f);
         register(registerable, JADE, Registries.ITEM.getEntry(ModItems.JADE_BRICK), Style.EMPTY.withColor(0x1FAE69), 0.7f);
-        register(registerable, TIN, Registries.ITEM.getEntry(ModItems.TIN_INGOT), Style.EMPTY.withColor(0x8FA5A0), 0.1f);
+        register(registerable, TIN, Registries.ITEM.getEntry(ModItems.TIN_INGOT), Style.EMPTY.withColor(0x8FA5A0), 0.2f);
     }
 
     private static void register(Registerable<ArmorTrimMaterial> registerable, RegistryKey<ArmorTrimMaterial> armorTrimKey,

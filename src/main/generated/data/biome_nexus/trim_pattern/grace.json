@@ -1,0 +1,8 @@
+{
+  "asset_id": "biome_nexus:grace",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.biome_nexus.grace"
+  },
+  "template_item": "biome_nexus:grace_armor_trim_smithing_template"
+}

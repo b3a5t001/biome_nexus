@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "biome_nexus:steel_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "biome_nexus:steel_nugget"
+  }
+}

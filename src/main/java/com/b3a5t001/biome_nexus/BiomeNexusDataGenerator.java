@@ -2,6 +2,7 @@ package com.b3a5t001.biome_nexus;
 
 import com.b3a5t001.biome_nexus.datagen.*;
 import com.b3a5t001.biome_nexus.items.trims.ModTrimMaterials;
+import com.b3a5t001.biome_nexus.items.trims.ModTrimPatterns;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -22,5 +23,6 @@ public class BiomeNexusDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
 	}
 }

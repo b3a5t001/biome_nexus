@@ -20,25 +20,38 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
                 .add(ModItems.SULFUR_DUST)
                 .add(ModItems.JADE_BRICK)
                 .add(ModItems.TIN_INGOT)
+                .add(ModItems.STEEL_INGOT)
                 .add(Items.ECHO_SHARD)
                 .add(Items.BLUE_ICE);
 
+        getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
+                .add(ModItems.GRACE_SMITHING_TEMPLATE);
+
         getOrCreateTagBuilder(ItemTags.SWORDS)
-                .add(ModItems.COPPER_SWORD);
+                .add(ModItems.COPPER_SWORD)
+                .add(ModItems.STEEL_SWORD);
         getOrCreateTagBuilder(ItemTags.AXES)
-                .add(ModItems.COPPER_AXE);
+                .add(ModItems.COPPER_AXE)
+                .add(ModItems.STEEL_AXE);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
-                .add(ModItems.COPPER_PICKAXE);
+                .add(ModItems.COPPER_PICKAXE)
+                .add(ModItems.STEEL_PICKAXE);
         getOrCreateTagBuilder(ItemTags.SHOVELS)
-                .add(ModItems.COPPER_SHOVEL);
+                .add(ModItems.COPPER_SHOVEL)
+                .add(ModItems.STEEL_SHOVEL);
         getOrCreateTagBuilder(ItemTags.HOES)
-                .add(ModItems.COPPER_HOE);
+                .add(ModItems.COPPER_HOE)
+                .add(ModItems.STEEL_HOE);
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.COPPER_HELMET)
                 .add(ModItems.COPPER_CHESTPLATE)
                 .add(ModItems.COPPER_LEGGINGS)
-                .add(ModItems.COPPER_BOOTS);
+                .add(ModItems.COPPER_BOOTS)
+                .add(ModItems.STEEL_HELMET)
+                .add(ModItems.STEEL_CHESTPLATE)
+                .add(ModItems.STEEL_LEGGINGS)
+                .add(ModItems.STEEL_BOOTS);
 
     }
 }

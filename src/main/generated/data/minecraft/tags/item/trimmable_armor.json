@@ -3,6 +3,10 @@
     "biome_nexus:copper_helmet",
     "biome_nexus:copper_chestplate",
     "biome_nexus:copper_leggings",
-    "biome_nexus:copper_boots"
+    "biome_nexus:copper_boots",
+    "biome_nexus:steel_helmet",
+    "biome_nexus:steel_chestplate",
+    "biome_nexus:steel_leggings",
+    "biome_nexus:steel_boots"
   ]
 }

@@ -1,0 +1,12 @@
+{
+  "asset_name": "steel",
+  "description": {
+    "color": "#394343",
+    "translate": "trim_material.biome_nexus.steel"
+  },
+  "ingredient": "biome_nexus:steel_ingot",
+  "item_model_index": 0.3,
+  "override_armor_materials": {
+    "biome_nexus:steel_armor": "steel_darker"
+  }
+}
