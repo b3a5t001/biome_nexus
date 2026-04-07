@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_open",
+  "textures": {
+    "texture": "biome_nexus:block/tin_trapdoor"
+  }
+}

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_glass": {
+    "has_limestone": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:copper_ingot"
+            "items": "biome_nexus:limestone"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "biome_nexus:copper_bars"
+        "recipe": "biome_nexus:polished_limestone_wall_from_limestone_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_glass"
+      "has_limestone"
     ]
   ],
   "rewards": {
     "recipes": [
-      "biome_nexus:copper_bars"
+      "biome_nexus:polished_limestone_wall_from_limestone_stonecutting"
     ]
   }
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "biome_nexus:block/limestone_bricks",
+    "side": "biome_nexus:block/limestone_bricks",
+    "top": "biome_nexus:block/limestone_bricks"
+  }
+}

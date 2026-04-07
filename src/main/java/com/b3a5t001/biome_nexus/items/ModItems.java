@@ -21,6 +21,9 @@ public class ModItems {
     public static final Item COPPER_TORCH = registerItem("copper_torch",
             new VerticallyAttachableBlockItem(ModBlocks.COPPER_TORCH,
                     ModBlocks.COPPER_WALL_TORCH,new Item.Settings(), Direction.DOWN));
+    public static final Item TIN_TORCH = registerItem("tin_torch",
+            new VerticallyAttachableBlockItem(ModBlocks.TIN_TORCH,
+                    ModBlocks.TIN_WALL_TORCH,new Item.Settings(), Direction.DOWN));
 
     public static final Item COPPER_SWORD = registerItem("copper_sword",
             new SwordItem(ModToolMaterials.COPPER, new Item.Settings()
@@ -54,6 +57,13 @@ public class ModItems {
     public static final Item JADE_CRYSTAL = registerItem("jade_crystal",
             new Item(new Item.Settings()));
     public static final Item JADE_BRICK = registerItem("jade_brick",
+            new Item(new Item.Settings()));
+
+    public static final Item RAW_TIN = registerItem("raw_tin",
+            new Item(new Item.Settings()));
+    public static final Item TIN_INGOT = registerItem("tin_ingot",
+            new Item(new Item.Settings()));
+    public static final Item TIN_NUGGET = registerItem("tin_nugget",
             new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item){

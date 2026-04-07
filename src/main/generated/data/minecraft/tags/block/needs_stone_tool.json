@@ -27,6 +27,20 @@
     "biome_nexus:oxidised_copper_lantern",
     "biome_nexus:waxed_oxidised_copper_lantern",
     "biome_nexus:jade_ore",
-    "biome_nexus:deepslate_jade_ore"
+    "biome_nexus:deepslate_jade_ore",
+    "biome_nexus:tin_ore",
+    "biome_nexus:deepslate_tin_ore",
+    "biome_nexus:raw_tin_block",
+    "biome_nexus:tin_block",
+    "biome_nexus:cut_tin",
+    "biome_nexus:cut_tin_slab",
+    "biome_nexus:cut_tin_stairs",
+    "biome_nexus:tin_grate",
+    "biome_nexus:chiseled_tin",
+    "biome_nexus:tin_door",
+    "biome_nexus:tin_trapdoor",
+    "biome_nexus:tin_chains",
+    "biome_nexus:tin_bars",
+    "biome_nexus:tin_lantern"
   ]
 }

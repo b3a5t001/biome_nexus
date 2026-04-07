@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.6,
+  "group": "tin_ore",
+  "ingredient": {
+    "item": "biome_nexus:raw_tin"
+  },
+  "result": {
+    "id": "biome_nexus:tin_ingot"
+  }
+}

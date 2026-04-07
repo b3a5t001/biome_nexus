@@ -5,16 +5,16 @@ import com.b3a5t001.biome_nexus.items.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
-import net.minecraft.client.input.Input;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.ShapelessRecipe;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.util.Identifier;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -27,20 +27,39 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.SULFUR_DUST
-        ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.SULFUR_BLOCK);
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.COPPER_NUGGET
-        ,RecipeCategory.BUILDING_BLOCKS, Items.COPPER_INGOT);
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.SULFUR_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.COPPER_NUGGET
+                ,RecipeCategory.MISC, Items.COPPER_INGOT);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.JADE_CRYSTAL
-                    ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BLOCK);
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_TIN
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_TIN_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_INGOT
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIN_BLOCK);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN_INGOT)
+                .input('N', ModItems.TIN_NUGGET)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .criterion(hasItem(ModItems.TIN_NUGGET), conditionsFromItem(ModItems.TIN_NUGGET))
+                .offerTo(exporter, Identifier.of("biome_nexus", "tin_ingot_from_nuggets"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN_NUGGET, 9)
+                .input(ModItems.TIN_INGOT)
+                .criterion(hasItem(ModItems.TIN_INGOT), conditionsFromItem(ModItems.TIN_INGOT))
+                .offerTo(exporter, Identifier.of("biome_nexus", "tin_nuggets_from_ingot"));
 
         offerTorchRecipe(exporter, ModBlocks.SULFUR_TORCH, ModItems.SULFUR_DUST);
         offerLanternRecipe(exporter, ModBlocks.GOLD_LANTERN, ModItems.SULFUR_TORCH, Items.GOLD_NUGGET);
         offerChainRecipe(exporter, ModBlocks.GOLD_CHAIN, Items.GOLD_INGOT, Items.GOLD_NUGGET);
-        offerStainedGlassPaneRecipe(exporter, ModBlocks.GOLD_BARS, Items.GOLD_INGOT);
+        offerBarsRecipe(exporter, ModBlocks.GOLD_BARS, Items.GOLD_INGOT);
         offerTorchRecipe(exporter, ModBlocks.COPPER_TORCH, ModItems.COPPER_NUGGET);
         offerLanternRecipe(exporter, ModBlocks.COPPER_LANTERN, ModItems.COPPER_TORCH, ModItems.COPPER_NUGGET);
         offerChainRecipe(exporter, ModBlocks.COPPER_CHAIN, Items.COPPER_INGOT, ModItems.COPPER_NUGGET);
-        offerStainedGlassPaneRecipe(exporter, ModBlocks.COPPER_BARS, Items.COPPER_INGOT);
+        offerBarsRecipe(exporter, ModBlocks.COPPER_BARS, Items.COPPER_INGOT);
+        offerTorchRecipe(exporter, ModBlocks.TIN_TORCH, ModItems.TIN_NUGGET);
+        offerLanternRecipe(exporter, ModBlocks.TIN_LANTERN, ModItems.TIN_TORCH, ModItems.TIN_NUGGET);
+        offerChainRecipe(exporter, ModBlocks.TIN_CHAINS, ModItems.TIN_INGOT, ModItems.TIN_NUGGET);
+        offerBarsRecipe(exporter, ModBlocks.TIN_BARS, ModItems.TIN_INGOT);
 
         offerSwordRecipe(exporter, ModItems.COPPER_SWORD, Items.COPPER_INGOT);
         offerShovelRecipe(exporter, ModItems.COPPER_SHOVEL, Items.COPPER_INGOT);
@@ -65,6 +84,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStairsRecipe(exporter, ModBlocks.POLISHED_ICE_ROCK_STAIRS, ModBlocks.POLISHED_ICE_ROCK);
         offerStairsRecipe(exporter, ModBlocks.ICE_ROCK_BRICK_STAIRS, ModBlocks.ICE_ROCK_BRICKS);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE, 2)
+                .input('Q', Items.QUARTZ)
+                .input('D', Items.DEEPSLATE)
+                .pattern("DQ ")
+                .pattern("QD ")
+                .pattern("   ")
+                .criterion(hasItem(Items.DEEPSLATE), conditionsFromItem(Items.DEEPSLATE))
+                .offerTo(exporter);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS,ModBlocks.POLISHED_LIMESTONE, ModBlocks.LIMESTONE);
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS,ModBlocks.LIMESTONE_BRICKS, ModBlocks.POLISHED_LIMESTONE);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_SLAB, ModBlocks.LIMESTONE);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_LIMESTONE_SLAB, ModBlocks.POLISHED_LIMESTONE);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICK_SLAB, ModBlocks.LIMESTONE_BRICKS);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_WALL, ModBlocks.LIMESTONE);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_LIMESTONE_WALL, ModBlocks.POLISHED_LIMESTONE);
+        offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICK_WALL, ModBlocks.LIMESTONE_BRICKS);
+        offerStairsRecipe(exporter, ModBlocks.LIMESTONE_STAIRS, ModBlocks.LIMESTONE);
+        offerStairsRecipe(exporter, ModBlocks.POLISHED_LIMESTONE_STAIRS, ModBlocks.POLISHED_LIMESTONE);
+        offerStairsRecipe(exporter, ModBlocks.LIMESTONE_BRICK_STAIRS, ModBlocks.LIMESTONE_BRICKS);
+
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICKS, ModItems.JADE_BRICK);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICK_SLAB, ModBlocks.JADE_BRICKS);
         offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICK_WALL, ModBlocks.JADE_BRICKS);
@@ -83,6 +122,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerWallRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_WALL, ModBlocks.SCULK_SLATE_BRICKS);
         offerStairsRecipe(exporter, ModBlocks.SCULK_SLATE_BRICK_STAIRS, ModBlocks.SCULK_SLATE_BRICKS);
 
+        offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_TIN, ModBlocks.TIN_BLOCK);
+        offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_TIN_SLAB, ModBlocks.CUT_TIN);
+        offerStairsRecipe(exporter, ModBlocks.CUT_TIN_STAIRS, ModBlocks.CUT_TIN);
+        offerGrateRecipe(exporter, ModBlocks.TIN_GRATE, ModBlocks.TIN_BLOCK);
+        offerChiseledBlockRecipe(exporter, RecipeCategory.BUILDING_BLOCKS ,ModBlocks.CHISELED_TIN, ModBlocks.CUT_TIN_SLAB);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIN_DOOR, 3)
+                .input('T', ModItems.TIN_INGOT)
+                .pattern("TT ")
+                .pattern("TT ")
+                .pattern("TT ")
+                .criterion(hasItem(ModItems.TIN_INGOT), conditionsFromItem(ModItems.TIN_INGOT))
+                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIN_TRAPDOOR, 2)
+                .input('T', ModItems.TIN_INGOT)
+                .pattern("   ")
+                .pattern("TTT")
+                .pattern("TTT")
+                .criterion(hasItem(ModItems.TIN_INGOT), conditionsFromItem(ModItems.TIN_INGOT))
+                .offerTo(exporter);
+
+
         offerSmelting(exporter, List.of(ModBlocks.SULFUR_ORE), RecipeCategory.MISC,
                 ModItems.SULFUR_DUST, 0.7f, 200, "sulfur_ore");
         offerBlasting(exporter, List.of(ModBlocks.SULFUR_ORE), RecipeCategory.MISC,
@@ -91,6 +151,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 RecipeCategory.MISC, ModItems.JADE_BRICK, 0.5f, 200, "jade_ore");
         offerBlasting(exporter, List.of(ModBlocks.JADE_ORE,ModBlocks.DEEPSLATE_JADE_ORE,ModItems.JADE_CRYSTAL),
                 RecipeCategory.MISC, ModItems.JADE_BRICK, 0.5f, 100, "jade_ore");
+        offerSmelting(exporter, List.of(ModBlocks.TIN_ORE,ModBlocks.DEEPSLATE_TIN_ORE,ModItems.RAW_TIN),
+                RecipeCategory.MISC, ModItems.TIN_INGOT, 0.6f, 200, "tin_ore");
+        offerBlasting(exporter, List.of(ModBlocks.TIN_ORE,ModBlocks.DEEPSLATE_TIN_ORE,ModItems.RAW_TIN),
+                RecipeCategory.MISC, ModItems.TIN_INGOT, 0.6f, 100, "tin_ore");
 
         offerSmelting(exporter, List.of(ModItems.COPPER_BOOTS,ModItems.COPPER_AXE,ModItems.COPPER_CHESTPLATE,
                         ModItems.COPPER_HELMET,ModItems.COPPER_LEGGINGS, ModItems.COPPER_HOE,ModItems.COPPER_PICKAXE,
@@ -122,6 +186,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_ROCK_BRICK_SLAB, ModBlocks.ICE_ROCK_BRICKS,2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_ROCK_BRICK_STAIRS, ModBlocks.ICE_ROCK_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_ROCK_BRICK_WALL, ModBlocks.ICE_ROCK_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_SLAB, ModBlocks.LIMESTONE,2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_STAIRS, ModBlocks.LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_WALL, ModBlocks.LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_LIMESTONE, ModBlocks.LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_LIMESTONE_SLAB, ModBlocks.LIMESTONE,2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_LIMESTONE_STAIRS, ModBlocks.LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_LIMESTONE_WALL, ModBlocks.LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICKS, ModBlocks.LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICK_SLAB, ModBlocks.LIMESTONE,2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICK_STAIRS, ModBlocks.LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICK_WALL, ModBlocks.LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_LIMESTONE_SLAB, ModBlocks.POLISHED_LIMESTONE,2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_LIMESTONE_STAIRS, ModBlocks.POLISHED_LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_LIMESTONE_WALL, ModBlocks.POLISHED_LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICKS, ModBlocks.POLISHED_LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICK_SLAB, ModBlocks.POLISHED_LIMESTONE,2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICK_STAIRS, ModBlocks.POLISHED_LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICK_WALL, ModBlocks.POLISHED_LIMESTONE);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICK_SLAB, ModBlocks.LIMESTONE_BRICKS,2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICK_STAIRS, ModBlocks.LIMESTONE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIMESTONE_BRICK_WALL, ModBlocks.LIMESTONE_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICK_SLAB, ModBlocks.JADE_BRICKS,2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICK_STAIRS, ModBlocks.JADE_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BRICK_WALL, ModBlocks.JADE_BRICKS);
@@ -132,6 +217,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_SLAB, ModBlocks.SCULK_SLATE_BRICKS,2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_STAIRS, ModBlocks.SCULK_SLATE_BRICKS);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.SCULK_SLATE_BRICK_WALL, ModBlocks.SCULK_SLATE_BRICKS);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_TIN, ModBlocks.TIN_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_TIN_SLAB, ModBlocks.TIN_BLOCK, 8);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_TIN_STAIRS, ModBlocks.TIN_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_TIN, ModBlocks.TIN_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIN_GRATE, ModBlocks.TIN_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_TIN_SLAB, ModBlocks.CUT_TIN, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_TIN_STAIRS, ModBlocks.CUT_TIN);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_TIN, ModBlocks.CUT_TIN);
     }
 
     public static void offerStairsRecipe(RecipeExporter exporter, Block ouput, Block input){
@@ -171,6 +264,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" N ")
                 .pattern(" I ")
                 .pattern(" N ")
+                .criterion(hasItem(ingot), conditionsFromItem(ingot))
+                .offerTo(exporter);
+    }
+    public static void offerBarsRecipe(RecipeExporter exporter, Block ouput, Item ingot){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ouput, 16)
+                .input('I', ingot)
+                .pattern("   ")
+                .pattern("III")
+                .pattern("III")
                 .criterion(hasItem(ingot), conditionsFromItem(ingot))
                 .offerTo(exporter);
     }

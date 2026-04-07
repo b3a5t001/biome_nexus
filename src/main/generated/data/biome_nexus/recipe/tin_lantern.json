@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "N": {
+      "item": "biome_nexus:tin_nugget"
+    },
+    "T": {
+      "item": "biome_nexus:tin_torch"
+    }
+  },
+  "pattern": [
+    "NNN",
+    "NTN",
+    "NNN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "biome_nexus:tin_lantern"
+  }
+}

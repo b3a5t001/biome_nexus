@@ -36,6 +36,21 @@ public class ModModelProvider extends FabricModelProvider {
         iceRockBrickPool.slab(ModBlocks.ICE_ROCK_BRICK_SLAB);
         iceRockBrickPool.stairs(ModBlocks.ICE_ROCK_BRICK_STAIRS);
         iceRockBrickPool.wall(ModBlocks.ICE_ROCK_BRICK_WALL);
+        BlockStateModelGenerator.BlockTexturePool limestonePool =
+                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LIMESTONE);
+        limestonePool.slab(ModBlocks.LIMESTONE_SLAB);
+        limestonePool.stairs(ModBlocks.LIMESTONE_STAIRS);
+        limestonePool.wall(ModBlocks.LIMESTONE_WALL);
+        BlockStateModelGenerator.BlockTexturePool polishedLimestonePool =
+                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.POLISHED_LIMESTONE);
+        polishedLimestonePool.slab(ModBlocks.POLISHED_LIMESTONE_SLAB);
+        polishedLimestonePool.stairs(ModBlocks.POLISHED_LIMESTONE_STAIRS);
+        polishedLimestonePool.wall(ModBlocks.POLISHED_LIMESTONE_WALL);
+        BlockStateModelGenerator.BlockTexturePool limestoneBrickPool =
+                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.LIMESTONE_BRICKS);
+        limestoneBrickPool.slab(ModBlocks.LIMESTONE_BRICK_SLAB);
+        limestoneBrickPool.stairs(ModBlocks.LIMESTONE_BRICK_STAIRS);
+        limestoneBrickPool.wall(ModBlocks.LIMESTONE_BRICK_WALL);
         BlockStateModelGenerator.BlockTexturePool jadeBrickPool =
                 blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.JADE_BRICKS);
         jadeBrickPool.slab(ModBlocks.JADE_BRICK_SLAB);
@@ -50,6 +65,19 @@ public class ModModelProvider extends FabricModelProvider {
         sculkSlateBrickPool.stairs(ModBlocks.SCULK_SLATE_BRICK_STAIRS);
         sculkSlateBrickPool.wall(ModBlocks.SCULK_SLATE_BRICK_WALL);
         blockStateModelGenerator.registerSingleton(ModBlocks.SCULK_SLATE, TexturedModel.CUBE_COLUMN);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TIN_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_TIN_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_TIN_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TIN_BLOCK);
+        BlockStateModelGenerator.BlockTexturePool cutTinPool =
+                blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CUT_TIN);
+        cutTinPool.slab(ModBlocks.CUT_TIN_SLAB);
+        cutTinPool.stairs(ModBlocks.CUT_TIN_STAIRS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHISELED_TIN);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TIN_GRATE);
+        blockStateModelGenerator.registerDoor(ModBlocks.TIN_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.TIN_TRAPDOOR);
+        blockStateModelGenerator.registerTorch(ModBlocks.TIN_TORCH, ModBlocks.TIN_WALL_TORCH);
 
     }
 
@@ -59,6 +87,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.COPPER_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.JADE_BRICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.JADE_CRYSTAL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_TIN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TIN_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TIN_NUGGET, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.COPPER_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_AXE, Models.HANDHELD);

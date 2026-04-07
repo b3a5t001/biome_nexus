@@ -12,6 +12,9 @@ public class ModItemGroup {
                     entries.add(ModItems.COPPER_NUGGET);
                     entries.add(ModItems.JADE_BRICK);
                     entries.add(ModItems.JADE_CRYSTAL);
+                    entries.add(ModItems.RAW_TIN);
+                    entries.add(ModItems.TIN_INGOT);
+                    entries.add(ModItems.TIN_NUGGET);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(
@@ -53,6 +56,18 @@ public class ModItemGroup {
                     entries.add(ModBlocks.SULFUR_BLOCK);
                     entries.add(ModBlocks.GOLD_CHAIN);
                     entries.add(ModBlocks.GOLD_BARS);
+                    entries.add(ModBlocks.LIMESTONE);
+                    entries.add(ModBlocks.LIMESTONE_SLAB);
+                    entries.add(ModBlocks.LIMESTONE_STAIRS);
+                    entries.add(ModBlocks.LIMESTONE_WALL);
+                    entries.add(ModBlocks.POLISHED_LIMESTONE);
+                    entries.add(ModBlocks.POLISHED_LIMESTONE_SLAB);
+                    entries.add(ModBlocks.POLISHED_LIMESTONE_STAIRS);
+                    entries.add(ModBlocks.POLISHED_LIMESTONE_WALL);
+                    entries.add(ModBlocks.LIMESTONE_BRICKS);
+                    entries.add(ModBlocks.LIMESTONE_BRICK_SLAB);
+                    entries.add(ModBlocks.LIMESTONE_BRICK_STAIRS);
+                    entries.add(ModBlocks.LIMESTONE_BRICK_WALL);
                     entries.add(ModBlocks.ICE_ROCK);
                     entries.add(ModBlocks.ICE_ROCK_SLAB);
                     entries.add(ModBlocks.ICE_ROCK_STAIRS);
@@ -70,6 +85,17 @@ public class ModItemGroup {
                     entries.add(ModBlocks.JADE_BRICK_SLAB);
                     entries.add(ModBlocks.JADE_BRICK_STAIRS);
                     entries.add(ModBlocks.JADE_BRICK_WALL);
+                    entries.add(ModBlocks.TIN_BLOCK);
+                    entries.add(ModBlocks.RAW_TIN_BLOCK);
+                    entries.add(ModBlocks.CUT_TIN);
+                    entries.add(ModBlocks.CUT_TIN_SLAB);
+                    entries.add(ModBlocks.CUT_TIN_STAIRS);
+                    entries.add(ModBlocks.CHISELED_TIN);
+                    entries.add(ModBlocks.TIN_GRATE);
+                    entries.add(ModBlocks.TIN_CHAINS);
+                    entries.add(ModBlocks.TIN_DOOR);
+                    entries.add(ModBlocks.TIN_TRAPDOOR);
+                    entries.add(ModBlocks.TIN_BARS);
                     entries.add(ModBlocks.SCULK_SLATE);
                     entries.add(ModBlocks.SCULK_SLATE_BRICKS);
                     entries.add(ModBlocks.SCULK_SLATE_BRICK_SLAB);
@@ -82,6 +108,8 @@ public class ModItemGroup {
                     entries.add(ModBlocks.SULFUR_ORE);
                     entries.add(ModBlocks.JADE_ORE);
                     entries.add(ModBlocks.DEEPSLATE_JADE_ORE);
+                    entries.add(ModBlocks.TIN_ORE);
+                    entries.add(ModBlocks.DEEPSLATE_TIN_ORE);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(
@@ -97,6 +125,8 @@ public class ModItemGroup {
                     entries.add(ModBlocks.WAXED_OXIDISED_COPPER_LANTERN);
                     entries.add(ModItems.SULFUR_TORCH);
                     entries.add(ModBlocks.GOLD_LANTERN);
+                    entries.add(ModItems.TIN_TORCH);
+                    entries.add(ModBlocks.TIN_LANTERN);
                 }
         );
     }

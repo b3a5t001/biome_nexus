@@ -3,6 +3,10 @@
     "biome_nexus:ice_rock_slab",
     "biome_nexus:polished_ice_rock_slab",
     "biome_nexus:ice_rock_brick_slab",
-    "biome_nexus:jade_brick_slab"
+    "biome_nexus:limestone_slab",
+    "biome_nexus:polished_limestone_slab",
+    "biome_nexus:limestone_brick_slab",
+    "biome_nexus:jade_brick_slab",
+    "biome_nexus:cut_tin_slab"
   ]
 }

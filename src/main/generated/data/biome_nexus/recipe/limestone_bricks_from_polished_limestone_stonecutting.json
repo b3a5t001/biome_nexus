@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biome_nexus:polished_limestone"
+  },
+  "result": {
+    "count": 1,
+    "id": "biome_nexus:limestone_bricks"
+  }
+}

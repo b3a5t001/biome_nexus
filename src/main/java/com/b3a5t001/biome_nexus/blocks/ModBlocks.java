@@ -33,6 +33,11 @@ public class ModBlocks {
     public static final Block COPPER_WALL_TORCH = registerBlock("copper_wall_torch",
             new WallTorchBlock(ParticleTypes.SMALL_FLAME, AbstractBlock.Settings.copy(Blocks.WALL_TORCH)
                     .dropsLike(ModBlocks.COPPER_TORCH)),false);
+    public static final Block TIN_TORCH = registerBlock("tin_torch",
+            new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, AbstractBlock.Settings.copy(Blocks.TORCH)),false);
+    public static final Block TIN_WALL_TORCH = registerBlock("tin_wall_torch",
+            new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, AbstractBlock.Settings.copy(Blocks.WALL_TORCH)
+                    .dropsLike(ModBlocks.TIN_TORCH)),false);
 
     public static final Block GOLD_LANTERN = registerBlock("gold_lantern",
             new LanternBlock(AbstractBlock.Settings.copy(Blocks.LANTERN)),true);
@@ -104,7 +109,6 @@ public class ModBlocks {
     public static final Block ICE_ROCK_WALL = registerBlock("ice_rock_wall",
             new WallBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
                     .sounds(BlockSoundGroup.CALCITE).requiresTool()),true);
-    
     public static final Block POLISHED_ICE_ROCK = registerBlock("polished_ice_rock",
             new Block(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
                     .sounds(BlockSoundGroup.CALCITE).requiresTool()),true);
@@ -117,7 +121,6 @@ public class ModBlocks {
     public static final Block POLISHED_ICE_ROCK_WALL = registerBlock("polished_ice_rock_wall",
             new WallBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
                     .sounds(BlockSoundGroup.CALCITE).requiresTool()),true);
-    
     public static final Block ICE_ROCK_BRICKS = registerBlock("ice_rock_bricks",
             new Block(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
                     .sounds(BlockSoundGroup.CALCITE).requiresTool()),true);
@@ -131,6 +134,43 @@ public class ModBlocks {
             new WallBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
                     .sounds(BlockSoundGroup.CALCITE).requiresTool()),true);
     
+    public static final Block LIMESTONE = registerBlock("limestone",
+            new Block(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+    public static final Block LIMESTONE_SLAB = registerBlock("limestone_slab",
+            new SlabBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+    public static final Block LIMESTONE_STAIRS = registerBlock("limestone_stairs",
+            new StairsBlock(ModBlocks.LIMESTONE.getDefaultState(),AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+    public static final Block LIMESTONE_WALL = registerBlock("limestone_wall",
+            new WallBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+    public static final Block POLISHED_LIMESTONE = registerBlock("polished_limestone",
+            new Block(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+    public static final Block POLISHED_LIMESTONE_SLAB = registerBlock("polished_limestone_slab",
+            new SlabBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+    public static final Block POLISHED_LIMESTONE_STAIRS = registerBlock("polished_limestone_stairs",
+            new StairsBlock(ModBlocks.POLISHED_LIMESTONE.getDefaultState(),AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+    public static final Block POLISHED_LIMESTONE_WALL = registerBlock("polished_limestone_wall",
+            new WallBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+    public static final Block LIMESTONE_BRICKS = registerBlock("limestone_bricks",
+            new Block(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+    public static final Block LIMESTONE_BRICK_SLAB = registerBlock("limestone_brick_slab",
+            new SlabBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+    public static final Block LIMESTONE_BRICK_STAIRS = registerBlock("limestone_brick_stairs",
+            new StairsBlock(ModBlocks.LIMESTONE_BRICKS.getDefaultState(),AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+    public static final Block LIMESTONE_BRICK_WALL = registerBlock("limestone_brick_wall",
+            new WallBlock(AbstractBlock.Settings.create().mapColor(MapColor.LIGHT_BLUE).strength(1.0f, 3.0f)
+                    .sounds(BlockSoundGroup.BASALT).requiresTool()),true);
+
     public static final Block JADE_BRICKS = registerBlock("jade_bricks",
             new Block(AbstractBlock.Settings.create().mapColor(MapColor.EMERALD_GREEN).strength(2.0f, 6.0f)
                     .sounds(BlockSoundGroup.DEEPSLATE_TILES).requiresTool()),true);
@@ -168,6 +208,35 @@ public class ModBlocks {
     public static final Block SCULK_SLATE_BRICK_WALL = registerBlock("sculk_slate_brick_wall",
             new WallBlock(AbstractBlock.Settings.create().mapColor(MapColor.DEEPSLATE_GRAY).strength(2.0f, 6.0f)
                     .sounds(BlockSoundGroup.DEEPSLATE).requiresTool()),true);
+
+    public static final Block TIN_ORE = registerBlock("tin_ore",
+             new Block(AbstractBlock.Settings.copy(Blocks.IRON_ORE)),true);
+    public static final Block DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore",
+             new Block(AbstractBlock.Settings.copy(ModBlocks.TIN_ORE).sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.DEEPSLATE_GRAY)),true);
+    public static final Block RAW_TIN_BLOCK = registerBlock("raw_tin_block",
+             new Block(AbstractBlock.Settings.copy(Blocks.RAW_IRON_BLOCK).mapColor(MapColor.LIGHT_GRAY)),true);
+    public static final Block TIN_BLOCK = registerBlock("tin_block",
+             new Block(AbstractBlock.Settings.copy(Blocks.COPPER_BLOCK).mapColor(MapColor.LIGHT_GRAY)),true);
+    public static final Block CUT_TIN = registerBlock("cut_tin",
+             new Block(AbstractBlock.Settings.copy(Blocks.CUT_COPPER).mapColor(MapColor.LIGHT_GRAY)),true);
+    public static final Block CUT_TIN_SLAB = registerBlock("cut_tin_slab",
+             new SlabBlock(AbstractBlock.Settings.copy(Blocks.CUT_COPPER).mapColor(MapColor.LIGHT_GRAY)),true);
+    public static final Block CUT_TIN_STAIRS = registerBlock("cut_tin_stairs",
+             new StairsBlock(ModBlocks.CUT_TIN.getDefaultState(),AbstractBlock.Settings.copy(Blocks.CUT_COPPER).mapColor(MapColor.LIGHT_GRAY)),true);
+    public static final Block CHISELED_TIN = registerBlock("chiseled_tin",
+             new Block(AbstractBlock.Settings.copy(Blocks.CHISELED_COPPER).mapColor(MapColor.LIGHT_GRAY)),true);
+    public static final Block TIN_GRATE = registerBlock("tin_grate",
+             new Block(AbstractBlock.Settings.copy(Blocks.COPPER_GRATE).mapColor(MapColor.LIGHT_GRAY)),true);
+    public static final Block TIN_BARS = registerBlock("tin_bars",
+             new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS).mapColor(MapColor.LIGHT_GRAY)),true);
+    public static final Block TIN_CHAINS = registerBlock("tin_chains",
+             new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).mapColor(MapColor.LIGHT_GRAY)),true);
+    public static final Block TIN_LANTERN = registerBlock("tin_lantern",
+             new LanternBlock(AbstractBlock.Settings.copy(Blocks.LANTERN).mapColor(MapColor.LIGHT_GRAY)),true);
+    public static final Block TIN_DOOR = registerBlock("tin_door",
+             new DoorBlock(BlockSetType.COPPER,AbstractBlock.Settings.copy(Blocks.IRON_BARS).mapColor(MapColor.LIGHT_GRAY)),true);
+    public static final Block TIN_TRAPDOOR = registerBlock("tin_trapdoor",
+             new TrapdoorBlock(BlockSetType.COPPER,AbstractBlock.Settings.copy(Blocks.IRON_BARS).mapColor(MapColor.LIGHT_GRAY)),true);
 
 
     static {

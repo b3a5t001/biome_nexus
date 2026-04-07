@@ -1,0 +1,9 @@
+{
+  "asset_name": "tin",
+  "description": {
+    "color": "#8FA5A0",
+    "translate": "trim_material.biome_nexus.tin"
+  },
+  "ingredient": "biome_nexus:tin_ingot",
+  "item_model_index": 0.1
+}

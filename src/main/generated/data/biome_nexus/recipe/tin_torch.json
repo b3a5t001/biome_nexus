@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "tag": "minecraft:coals"
+    },
+    "I": {
+      "item": "biome_nexus:tin_nugget"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " C ",
+    " I ",
+    " S "
+  ],
+  "result": {
+    "count": 4,
+    "id": "biome_nexus:tin_torch"
+  }
+}

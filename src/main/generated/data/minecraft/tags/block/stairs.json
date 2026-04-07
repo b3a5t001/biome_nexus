@@ -3,6 +3,10 @@
     "biome_nexus:ice_rock_stairs",
     "biome_nexus:polished_ice_rock_stairs",
     "biome_nexus:ice_rock_brick_stairs",
-    "biome_nexus:jade_brick_stairs"
+    "biome_nexus:limestone_stairs",
+    "biome_nexus:polished_limestone_stairs",
+    "biome_nexus:limestone_brick_stairs",
+    "biome_nexus:jade_brick_stairs",
+    "biome_nexus:cut_tin_stairs"
   ]
 }

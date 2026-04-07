@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "I": {
+      "item": "biome_nexus:polished_limestone"
+    }
+  },
+  "pattern": [
+    "I  ",
+    "II ",
+    "III"
+  ],
+  "result": {
+    "count": 4,
+    "id": "biome_nexus:polished_limestone_stairs"
+  }
+}

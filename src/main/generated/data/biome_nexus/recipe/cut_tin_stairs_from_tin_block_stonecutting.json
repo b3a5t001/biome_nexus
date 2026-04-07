@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "biome_nexus:tin_block"
+  },
+  "result": {
+    "count": 4,
+    "id": "biome_nexus:cut_tin_stairs"
+  }
+}

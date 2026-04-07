@@ -60,7 +60,8 @@
                 "sulfur": "biome_nexus:trims/color_palettes/sulfur",
                 "ice": "biome_nexus:trims/color_palettes/ice",
                 "sculk": "biome_nexus:trims/color_palettes/sculk",
-                "jade": "biome_nexus:trims/color_palettes/jade"
+                "jade": "biome_nexus:trims/color_palettes/jade",
+                "tin": "biome_nexus:trims/color_palettes/tin"
             }
         }
     ]

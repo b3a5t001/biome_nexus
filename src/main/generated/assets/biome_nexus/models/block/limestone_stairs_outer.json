@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "biome_nexus:block/limestone",
+    "side": "biome_nexus:block/limestone",
+    "top": "biome_nexus:block/limestone"
+  }
+}
