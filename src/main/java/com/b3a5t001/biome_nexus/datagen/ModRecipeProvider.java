@@ -3,6 +3,7 @@ package com.b3a5t001.biome_nexus.datagen;
 import com.b3a5t001.biome_nexus.BiomeNexus;
 import com.b3a5t001.biome_nexus.blocks.ModBlocks;
 import com.b3a5t001.biome_nexus.items.ModItems;
+import com.b3a5t001.biome_nexus.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
@@ -34,6 +35,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 ,RecipeCategory.MISC, Items.COPPER_INGOT);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.JADE_CRYSTAL
                 ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.JADE_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.AURORITE_ALLOY
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.AURORITE_BLOCK);
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AURORITE_CRYSTAL_BLOCK, ModItems.AURORITE_CRYSTAL);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_TIN
                 ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_TIN_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_INGOT
@@ -71,6 +75,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Ingredient.fromTag(ItemTags.COALS),4)
                 .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "steel_ingot_from_iron_and_coal"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModItems.AURORITE_ALLOY, 3)
+                .input('S', ModTags.Items.STONE_VARIANTS)
+                .input('A', ModItems.AURORITE_CRYSTAL)
+                .pattern("AS ")
+                .pattern("SA ")
+                .pattern("   ")
+                .criterion(hasItem(ModItems.AURORITE_CRYSTAL), conditionsFromItem(ModItems.AURORITE_CRYSTAL))
+                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "aurorite_alloy_from_raw"));
 
         offerTorchRecipe(exporter, ModBlocks.SULFUR_TORCH, ModItems.SULFUR_DUST);
         offerLanternRecipe(exporter, ModBlocks.GOLD_LANTERN, ModItems.SULFUR_TORCH, Items.GOLD_NUGGET);
@@ -106,6 +118,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerChestplateRecipe(exporter, ModItems.STEEL_CHESTPLATE, ModItems.STEEL_INGOT);
         offerLeggingsRecipe(exporter, ModItems.STEEL_LEGGINGS, ModItems.STEEL_INGOT);
         offerBootsRecipe(exporter, ModItems.STEEL_BOOTS, ModItems.STEEL_INGOT);
+        offerSwordRecipe(exporter, ModItems.AURORITE_SWORD, ModItems.AURORITE_ALLOY);
+        offerShovelRecipe(exporter, ModItems.AURORITE_SHOVEL, ModItems.AURORITE_ALLOY);
+        offerPickaxeRecipe(exporter, ModItems.AURORITE_PICKAXE, ModItems.AURORITE_ALLOY);
+        offerAxeRecipe(exporter, ModItems.AURORITE_AXE, ModItems.AURORITE_ALLOY);
+        offerHoeRecipe(exporter, ModItems.AURORITE_HOE, ModItems.AURORITE_ALLOY);
+        offerHelmetRecipe(exporter, ModItems.AURORITE_HELMET, ModItems.AURORITE_ALLOY);
+        offerChestplateRecipe(exporter, ModItems.AURORITE_CHESTPLATE, ModItems.AURORITE_ALLOY);
+        offerLeggingsRecipe(exporter, ModItems.AURORITE_LEGGINGS, ModItems.AURORITE_ALLOY);
+        offerBootsRecipe(exporter, ModItems.AURORITE_BOOTS, ModItems.AURORITE_ALLOY);
 
         offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS,ModBlocks.ICE_ROCK, Items.BLUE_ICE);
         offerPolishedStoneRecipe(exporter, RecipeCategory.BUILDING_BLOCKS,ModBlocks.POLISHED_ICE_ROCK, ModBlocks.ICE_ROCK);
@@ -207,6 +228,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.STEEL_HELMET,ModItems.STEEL_LEGGINGS, ModItems.STEEL_HOE,ModItems.STEEL_PICKAXE,
                         ModItems.STEEL_SHOVEL, ModItems.STEEL_SWORD), RecipeCategory.MISC,
                 ModItems.STEEL_NUGGET, 0.4f, 100, "steel_nugget");
+        offerSmelting(exporter, List.of(ModItems.AURORITE_BOOTS,ModItems.AURORITE_AXE,ModItems.AURORITE_CHESTPLATE,
+                        ModItems.AURORITE_HELMET,ModItems.AURORITE_LEGGINGS, ModItems.AURORITE_HOE,ModItems.AURORITE_PICKAXE,
+                        ModItems.AURORITE_SHOVEL, ModItems.AURORITE_SWORD), RecipeCategory.MISC,
+                ModItems.AURORITE_CRYSTAL, 0.2f, 200, "aurorite_crystal");
+        offerBlasting(exporter, List.of(ModItems.AURORITE_BOOTS,ModItems.AURORITE_AXE,ModItems.AURORITE_CHESTPLATE,
+                        ModItems.AURORITE_HELMET,ModItems.AURORITE_LEGGINGS, ModItems.AURORITE_HOE,ModItems.AURORITE_PICKAXE,
+                        ModItems.AURORITE_SHOVEL, ModItems.AURORITE_SWORD), RecipeCategory.MISC,
+                ModItems.AURORITE_CRYSTAL, 0.2f, 100, "aurorite_crystal");
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_ROCK_SLAB, ModBlocks.ICE_ROCK,2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_ROCK_STAIRS, ModBlocks.ICE_ROCK);
@@ -372,9 +401,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public static void offerHelmetRecipe(RecipeExporter exporter, Item ouput, Item input){
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ouput)
                 .input('I', input.asItem())
+                .pattern("III")
                 .pattern("I I")
-                .pattern("III")
-                .pattern("III")
+                .pattern("   ")
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }

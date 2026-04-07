@@ -7,6 +7,10 @@
     "biome_nexus:steel_helmet",
     "biome_nexus:steel_chestplate",
     "biome_nexus:steel_leggings",
-    "biome_nexus:steel_boots"
+    "biome_nexus:steel_boots",
+    "biome_nexus:aurorite_helmet",
+    "biome_nexus:aurorite_chestplate",
+    "biome_nexus:aurorite_leggings",
+    "biome_nexus:aurorite_boots"
   ]
 }

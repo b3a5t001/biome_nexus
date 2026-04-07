@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "biome_nexus:block/aurorite_cluster",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "biome_nexus:block/aurorite_cluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "biome_nexus:block/aurorite_cluster",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "biome_nexus:block/aurorite_cluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "biome_nexus:block/aurorite_cluster"
+    },
+    "facing=west": {
+      "model": "biome_nexus:block/aurorite_cluster",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

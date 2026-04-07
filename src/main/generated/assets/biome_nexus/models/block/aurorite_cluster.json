@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "biome_nexus:block/aurorite_cluster"
+  }
+}

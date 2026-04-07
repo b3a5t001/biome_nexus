@@ -7,9 +7,9 @@
     }
   },
   "pattern": [
-    "I I",
     "III",
-    "III"
+    "I I",
+    "   "
   ],
   "result": {
     "count": 1,

@@ -115,6 +115,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STEEL_LANTERN);
         addDrop(ModBlocks.STEEL_CHAINS);
         addDrop(ModBlocks.STEEL_BARS);
+        addDrop(ModBlocks.AURORITE_BLOCK);
+        addDrop(ModBlocks.AURORITE_CRYSTAL_BLOCK);
+        addDrop(ModBlocks.AURORITE_CLUSTER,multipleOreDrops(ModBlocks.AURORITE_CLUSTER, ModItems.AURORITE_CRYSTAL,2,4));
+        addDrop(ModBlocks.SMALL_AURORITE_BUD,dropsWithSilkTouch(ModBlocks.SMALL_AURORITE_BUD));
+        addDrop(ModBlocks.MEDIUM_AURORITE_BUD,dropsWithSilkTouch(ModBlocks.MEDIUM_AURORITE_BUD));
+        addDrop(ModBlocks.LARGE_AURORITE_BUD,dropsWithSilkTouch(ModBlocks.LARGE_AURORITE_BUD));
     }
 
     public LootTable.Builder multipleOreDrops(Block block, Item drop, int min, int max) {

@@ -100,7 +100,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STEEL_BLOCK)
                 .add(ModBlocks.STEEL_CHAINS)
                 .add(ModBlocks.STEEL_BARS)
-                .add(ModBlocks.STEEL_LANTERN);
+                .add(ModBlocks.STEEL_LANTERN)
+                .add(ModBlocks.AURORITE_BLOCK)
+                .add(ModBlocks.BUDDING_AURORITE)
+                .add(ModBlocks.AURORITE_CLUSTER)
+                .add(ModBlocks.SMALL_AURORITE_BUD)
+                .add(ModBlocks.MEDIUM_AURORITE_BUD)
+                .add(ModBlocks.LARGE_AURORITE_BUD)
+                .add(ModBlocks.AURORITE_CRYSTAL_BLOCK);
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.SULFUR_BLOCK)
                 .add(ModBlocks.SULFUR_ORE)
@@ -143,7 +150,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.TIN_TRAPDOOR)
                 .add(ModBlocks.TIN_CHAINS)
                 .add(ModBlocks.TIN_BARS)
-                .add(ModBlocks.TIN_LANTERN);
+                .add(ModBlocks.TIN_LANTERN)
+                .add(ModBlocks.AURORITE_BLOCK)
+                .add(ModBlocks.AURORITE_CLUSTER)
+                .add(ModBlocks.AURORITE_CRYSTAL_BLOCK)
+                .add(ModBlocks.LARGE_AURORITE_BUD)
+                .add(ModBlocks.MEDIUM_AURORITE_BUD)
+                .add(ModBlocks.SMALL_AURORITE_BUD);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.GOLD_CHAIN)
                 .add(ModBlocks.GOLD_BARS)
@@ -160,8 +173,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
         getOrCreateTagBuilder(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_AURORITE_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+        getOrCreateTagBuilder(ModTags.Blocks.INCORRECT_FOR_AURORITE_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
         getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_STONE_TOOL);
         getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_IRON_TOOL);
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
         getOrCreateTagBuilder(BlockTags.SLABS)
                 .add(ModBlocks.ICE_ROCK_SLAB)

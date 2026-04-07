@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "group": "aurorite_crystal",
+  "ingredient": {
+    "item": "biome_nexus:aurorite_boots"
+  },
+  "result": {
+    "id": "biome_nexus:aurorite_crystal"
+  }
+}

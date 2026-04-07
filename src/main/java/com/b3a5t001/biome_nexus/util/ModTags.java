@@ -13,6 +13,8 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_COPPER_TOOL = createTag("incorrect_for_copper_tool");
         public static final TagKey<Block> NEEDS_STEEL_TOOL = createTag("needs_steel_tool");
         public static final TagKey<Block> INCORRECT_FOR_STEEL_TOOL = createTag("incorrect_for_steel_tool");
+        public static final TagKey<Block> NEEDS_AURORITE_TOOL = createTag("needs_aurorite_tool");
+        public static final TagKey<Block> INCORRECT_FOR_AURORITE_TOOL = createTag("incorrect_for_aurorite_tool");
 
         public static TagKey<Block> createTag(String name){
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(BiomeNexus.MOD_ID, name));
@@ -20,6 +22,7 @@ public class ModTags {
 
     }
     public static class Items{
+        public static final TagKey<Item> STONE_VARIANTS = createTag("stone_variants");
 
         public static TagKey<Item> createTag(String name){
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(BiomeNexus.MOD_ID, name));

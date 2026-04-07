@@ -17,34 +17,46 @@ public class ModItemGroup {
                     entries.add(ModItems.TIN_NUGGET);
                     entries.add(ModItems.STEEL_INGOT);
                     entries.add(ModItems.STEEL_NUGGET);
+                    entries.add(ModItems.AURORITE_CRYSTAL);
+                    entries.add(ModItems.AURORITE_ALLOY);
                     entries.add(ModItems.GRACE_SMITHING_TEMPLATE);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(
                 entries -> {
                     entries.add(ModItems.COPPER_SWORD);
+                    entries.add(ModItems.AURORITE_SWORD);
                     entries.add(ModItems.STEEL_SWORD);
                     entries.add(ModItems.COPPER_AXE);
+                    entries.add(ModItems.AURORITE_AXE);
                     entries.add(ModItems.STEEL_AXE);
                     entries.add(ModItems.COPPER_HELMET);
+                    entries.add(ModItems.AURORITE_HELMET);
                     entries.add(ModItems.STEEL_HELMET);
                     entries.add(ModItems.COPPER_CHESTPLATE);
+                    entries.add(ModItems.AURORITE_CHESTPLATE);
                     entries.add(ModItems.STEEL_CHESTPLATE);
                     entries.add(ModItems.COPPER_LEGGINGS);
+                    entries.add(ModItems.AURORITE_LEGGINGS);
                     entries.add(ModItems.STEEL_LEGGINGS);
                     entries.add(ModItems.COPPER_BOOTS);
+                    entries.add(ModItems.AURORITE_BOOTS);
                     entries.add(ModItems.STEEL_BOOTS);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(
                 entries -> {
                     entries.add(ModItems.COPPER_SHOVEL);
+                    entries.add(ModItems.AURORITE_SHOVEL);
                     entries.add(ModItems.STEEL_SHOVEL);
                     entries.add(ModItems.COPPER_PICKAXE);
+                    entries.add(ModItems.AURORITE_PICKAXE);
                     entries.add(ModItems.STEEL_PICKAXE);
                     entries.add(ModItems.COPPER_AXE);
+                    entries.add(ModItems.AURORITE_AXE);
                     entries.add(ModItems.STEEL_AXE);
                     entries.add(ModItems.COPPER_HOE);
+                    entries.add(ModItems.AURORITE_HOE);
                     entries.add(ModItems.STEEL_HOE);
                 }
         );
@@ -93,6 +105,8 @@ public class ModItemGroup {
                     entries.add(ModBlocks.ICE_ROCK_BRICK_SLAB);
                     entries.add(ModBlocks.ICE_ROCK_BRICK_STAIRS);
                     entries.add(ModBlocks.ICE_ROCK_BRICK_WALL);
+                    entries.add(ModBlocks.AURORITE_CRYSTAL_BLOCK);
+                    entries.add(ModBlocks.AURORITE_BLOCK);
                     entries.add(ModBlocks.JADE_BLOCK);
                     entries.add(ModBlocks.JADE_BRICKS);
                     entries.add(ModBlocks.JADE_BRICK_SLAB);
@@ -126,6 +140,12 @@ public class ModItemGroup {
                     entries.add(ModBlocks.DEEPSLATE_JADE_ORE);
                     entries.add(ModBlocks.TIN_ORE);
                     entries.add(ModBlocks.DEEPSLATE_TIN_ORE);
+                    entries.add(ModBlocks.AURORITE_CRYSTAL_BLOCK);
+                    entries.add(ModBlocks.BUDDING_AURORITE);
+                    entries.add(ModBlocks.AURORITE_CLUSTER);
+                    entries.add(ModBlocks.SMALL_AURORITE_BUD);
+                    entries.add(ModBlocks.MEDIUM_AURORITE_BUD);
+                    entries.add(ModBlocks.LARGE_AURORITE_BUD);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(

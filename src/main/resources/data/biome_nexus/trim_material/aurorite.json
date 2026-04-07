@@ -1,0 +1,12 @@
+{
+  "asset_name": "aurorite",
+  "description": {
+    "color": "#d66282",
+    "translate": "trim_material.biome_nexus.aurorite"
+  },
+  "ingredient": "biome_nexus:aurorite_alloy",
+  "item_model_index": 1.0,
+  "override_armor_materials": {
+    "biome_nexus:aurorite_armor": "aurorite_darker"
+  }
+}

@@ -102,6 +102,40 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.STEEL_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(34))));
 
+    public static final Item AURORITE_CRYSTAL = registerItem("aurorite_crystal",
+            new Item(new Item.Settings()));
+    public static final Item AURORITE_ALLOY = registerItem("aurorite_alloy",
+            new Item(new Item.Settings()));
+
+    public static final Item AURORITE_SWORD = registerItem("aurorite_sword",
+            new SwordItem(ModToolMaterials.AURORITE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.AURORITE, 3, -2.4f))));
+    public static final Item AURORITE_PICKAXE = registerItem("aurorite_pickaxe",
+            new PickaxeItem(ModToolMaterials.AURORITE, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.AURORITE, 1, -2.8f))));
+    public static final Item AURORITE_AXE = registerItem("aurorite_axe",
+            new AxeItem(ModToolMaterials.AURORITE, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.AURORITE, 3, -3.2f))));
+    public static final Item AURORITE_SHOVEL = registerItem("aurorite_shovel",
+            new ShovelItem(ModToolMaterials.AURORITE, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.AURORITE, 1.5f, -3.0f))));
+    public static final Item AURORITE_HOE = registerItem("aurorite_hoe",
+            new HoeItem(ModToolMaterials.AURORITE, new Item.Settings()
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.AURORITE, 0, -3f))));
+
+    public static final Item AURORITE_HELMET = registerItem("aurorite_helmet",
+            new ArmorItem(ModArmorMaterials.AURORITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(16))));
+    public static final Item AURORITE_CHESTPLATE = registerItem("aurorite_chestplate",
+            new ArmorItem(ModArmorMaterials.AURORITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(16))));
+    public static final Item AURORITE_LEGGINGS = registerItem("aurorite_leggings",
+            new ArmorItem(ModArmorMaterials.AURORITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(16))));
+    public static final Item AURORITE_BOOTS = registerItem("aurorite_boots",
+            new ArmorItem(ModArmorMaterials.AURORITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                        .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(16))));
+
     public static final Item GRACE_SMITHING_TEMPLATE = registerItem("grace_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(BiomeNexus.MOD_ID, "grace"), FeatureFlags.VANILLA));
 

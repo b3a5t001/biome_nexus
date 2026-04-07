@@ -26,6 +26,17 @@
   "item.biome_nexus.steel_chestplate": "Steel Chestplate",
   "item.biome_nexus.steel_leggings": "Steel Leggings",
   "item.biome_nexus.steel_boots": "Steel Boots",
+  "item.biome_nexus.aurorite_alloy": "Aurorite Alloy",
+  "item.biome_nexus.aurorite_crystal": "Aurorite Crystal",
+  "item.biome_nexus.aurorite_sword": "Aurorite Sword",
+  "item.biome_nexus.aurorite_axe": "Aurorite Axe",
+  "item.biome_nexus.aurorite_shovel": "Aurorite Shovel",
+  "item.biome_nexus.aurorite_pickaxe": "Aurorite Pickaxe",
+  "item.biome_nexus.aurorite_hoe": "Aurorite Hoe",
+  "item.biome_nexus.aurorite_helmet": "Aurorite Helmet",
+  "item.biome_nexus.aurorite_chestplate": "Aurorite Chestplate",
+  "item.biome_nexus.aurorite_leggings": "Aurorite Leggings",
+  "item.biome_nexus.aurorite_boots": "Aurorite Boots",
   "item.biome_nexus.grace_armor_trim_smithing_template": "Grace Smithing Template",
 
   "block.biome_nexus.sulfur_block": "Block Of Sulfur",
@@ -114,6 +125,13 @@
   "block.biome_nexus.steel_bars": "Steel Bars",
   "block.biome_nexus.steel_chains": "Steel Chains",
   "block.biome_nexus.steel_lantern": "Steel Lantern",
+  "block.biome_nexus.aurorite_block": "Block Of Aurorite",
+  "block.biome_nexus.aurorite_crystal_block": "Crystal Block Of Aurorite",
+  "block.biome_nexus.budding_aurorite": "Budding Aurorite",
+  "block.biome_nexus.aurorite_cluster": "Aurorite Cluster",
+  "block.biome_nexus.large_aurorite_bud": "Large Aurorite Bud",
+  "block.biome_nexus.medium_aurorite_bud": "Medium Aurorite Bud",
+  "block.biome_nexus.small_aurorite_bud": "Small Aurorite Bud",
 
   "trim_material.biome_nexus.sulfur" : "Sulfur Material",
   "trim_material.biome_nexus.ice" : "Ice Material",
@@ -121,6 +139,7 @@
   "trim_material.biome_nexus.jade" : "Jade Material",
   "trim_material.biome_nexus.tin" : "Tin Material",
   "trim_material.biome_nexus.steel" : "Steel Material",
+  "trim_material.biome_nexus.aurorite" : "Aurorite Material",
 
   "trim_pattern.biome_nexus.grace" : "Grace Armor Trim"
 }

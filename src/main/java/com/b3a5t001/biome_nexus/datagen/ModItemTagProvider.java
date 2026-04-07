@@ -1,6 +1,8 @@
 package com.b3a5t001.biome_nexus.datagen;
 
+import com.b3a5t001.biome_nexus.blocks.ModBlocks;
 import com.b3a5t001.biome_nexus.items.ModItems;
+import com.b3a5t001.biome_nexus.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Items;
@@ -21,6 +23,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
                 .add(ModItems.JADE_BRICK)
                 .add(ModItems.TIN_INGOT)
                 .add(ModItems.STEEL_INGOT)
+                .add(ModItems.AURORITE_ALLOY)
                 .add(Items.ECHO_SHARD)
                 .add(Items.BLUE_ICE);
 
@@ -29,19 +32,24 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.COPPER_SWORD)
-                .add(ModItems.STEEL_SWORD);
+                .add(ModItems.STEEL_SWORD)
+                .add(ModItems.AURORITE_SWORD);
         getOrCreateTagBuilder(ItemTags.AXES)
                 .add(ModItems.COPPER_AXE)
-                .add(ModItems.STEEL_AXE);
+                .add(ModItems.STEEL_AXE)
+                .add(ModItems.AURORITE_AXE);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.COPPER_PICKAXE)
-                .add(ModItems.STEEL_PICKAXE);
+                .add(ModItems.STEEL_PICKAXE)
+                .add(ModItems.AURORITE_PICKAXE);
         getOrCreateTagBuilder(ItemTags.SHOVELS)
                 .add(ModItems.COPPER_SHOVEL)
-                .add(ModItems.STEEL_SHOVEL);
+                .add(ModItems.STEEL_SHOVEL)
+                .add(ModItems.AURORITE_SHOVEL);
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.COPPER_HOE)
-                .add(ModItems.STEEL_HOE);
+                .add(ModItems.STEEL_HOE)
+                .add(ModItems.AURORITE_HOE);
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.COPPER_HELMET)
@@ -51,7 +59,24 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
                 .add(ModItems.STEEL_HELMET)
                 .add(ModItems.STEEL_CHESTPLATE)
                 .add(ModItems.STEEL_LEGGINGS)
-                .add(ModItems.STEEL_BOOTS);
+                .add(ModItems.STEEL_BOOTS)
+                .add(ModItems.AURORITE_HELMET)
+                .add(ModItems.AURORITE_CHESTPLATE)
+                .add(ModItems.AURORITE_LEGGINGS)
+                .add(ModItems.AURORITE_BOOTS);
+
+        getOrCreateTagBuilder(ModTags.Items.STONE_VARIANTS)
+                .add(Items.STONE)
+                .add(Items.GRANITE)
+                .add(Items.DIORITE)
+                .add(Items.ANDESITE)
+                .add(Items.CALCITE)
+                .add(Items.DRIPSTONE_BLOCK)
+                .add(Items.TUFF)
+                .add(Items.BLACKSTONE)
+                .add(Items.BASALT)
+                .add(Items.DEEPSLATE)
+                .add(ModBlocks.LIMESTONE.asItem());
 
     }
 }

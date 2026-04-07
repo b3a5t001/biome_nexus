@@ -58,7 +58,9 @@
                 "jade": "biome_nexus:trims/color_palettes/jade",
                 "tin": "biome_nexus:trims/color_palettes/tin",
                 "steel": "biome_nexus:trims/color_palettes/steel",
-                "steel_darker": "biome_nexus:trims/color_palettes/steel_darker"
+                "steel_darker": "biome_nexus:trims/color_palettes/steel_darker",
+                "aurorite": "biome_nexus:trims/color_palettes/aurorite",
+                "aurorite_darker": "biome_nexus:trims/color_palettes/aurorite_darker"
             }
         }
     ]

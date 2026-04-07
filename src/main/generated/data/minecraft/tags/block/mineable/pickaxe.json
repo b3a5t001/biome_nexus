@@ -82,6 +82,13 @@
     "biome_nexus:steel_block",
     "biome_nexus:steel_chains",
     "biome_nexus:steel_bars",
-    "biome_nexus:steel_lantern"
+    "biome_nexus:steel_lantern",
+    "biome_nexus:aurorite_block",
+    "biome_nexus:budding_aurorite",
+    "biome_nexus:aurorite_cluster",
+    "biome_nexus:small_aurorite_bud",
+    "biome_nexus:medium_aurorite_bud",
+    "biome_nexus:large_aurorite_bud",
+    "biome_nexus:aurorite_crystal_block"
   ]
 }

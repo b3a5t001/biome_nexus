@@ -37,6 +37,15 @@ public class ModArmorMaterials {
                 map.put(ArmorItem.Type.BODY, 11);
             }),17, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, () -> Ingredient.ofItems(ModItems.STEEL_INGOT),
                     List.of(new ArmorMaterial.Layer(Identifier.of(BiomeNexus.MOD_ID, "steel"))),2,0));
+    public static final RegistryEntry<ArmorMaterial> AURORITE_ARMOR_MATERIAL = registerArmorMaterial("aurorite_armor",
+            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map ->{
+                map.put(ArmorItem.Type.HELMET, 2);
+                map.put(ArmorItem.Type.CHESTPLATE, 5);
+                map.put(ArmorItem.Type.LEGGINGS, 6);
+                map.put(ArmorItem.Type.BOOTS, 2);
+                map.put(ArmorItem.Type.BODY, 5);
+            }),23, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, () -> Ingredient.ofItems(ModItems.AURORITE_ALLOY),
+                    List.of(new ArmorMaterial.Layer(Identifier.of(BiomeNexus.MOD_ID, "aurorite"))),0,0));
 
 
     public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aurorite_alloy": {
+      "conditions": {
+        "items": [
+          {
+            "items": "biome_nexus:aurorite_alloy"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "biome_nexus:aurorite_leggings"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aurorite_alloy"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "biome_nexus:aurorite_leggings"
+    ]
+  }
+}

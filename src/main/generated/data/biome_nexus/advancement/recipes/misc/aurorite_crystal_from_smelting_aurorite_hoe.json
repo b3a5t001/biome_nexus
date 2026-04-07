@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aurorite_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "biome_nexus:aurorite_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "biome_nexus:aurorite_crystal_from_smelting_aurorite_hoe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aurorite_hoe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "biome_nexus:aurorite_crystal_from_smelting_aurorite_hoe"
+    ]
+  }
+}

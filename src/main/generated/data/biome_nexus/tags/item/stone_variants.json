@@ -1,0 +1,15 @@
+{
+  "values": [
+    "minecraft:stone",
+    "minecraft:granite",
+    "minecraft:diorite",
+    "minecraft:andesite",
+    "minecraft:calcite",
+    "minecraft:dripstone_block",
+    "minecraft:tuff",
+    "minecraft:blackstone",
+    "minecraft:basalt",
+    "minecraft:deepslate",
+    "biome_nexus:limestone"
+  ]
+}

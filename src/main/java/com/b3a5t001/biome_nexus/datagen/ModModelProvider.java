@@ -79,6 +79,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTrapdoor(ModBlocks.TIN_TRAPDOOR);
         blockStateModelGenerator.registerTorch(ModBlocks.TIN_TORCH, ModBlocks.TIN_WALL_TORCH);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STEEL_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AURORITE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AURORITE_CRYSTAL_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BUDDING_AURORITE);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.SMALL_AURORITE_BUD);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.MEDIUM_AURORITE_BUD);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.LARGE_AURORITE_BUD);
+        blockStateModelGenerator.registerAmethyst(ModBlocks.AURORITE_CLUSTER);
 
     }
 
@@ -93,6 +100,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TIN_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.STEEL_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.STEEL_NUGGET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AURORITE_CRYSTAL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AURORITE_ALLOY, Models.GENERATED);
         itemModelGenerator.register(ModItems.GRACE_SMITHING_TEMPLATE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.COPPER_SWORD, Models.HANDHELD);
@@ -105,6 +114,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.STEEL_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STEEL_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STEEL_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.AURORITE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.AURORITE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.AURORITE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.AURORITE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.AURORITE_HOE, Models.HANDHELD);
 
 
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.COPPER_HELMET));
@@ -115,5 +129,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.STEEL_CHESTPLATE));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.STEEL_LEGGINGS));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.STEEL_BOOTS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.AURORITE_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.AURORITE_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.AURORITE_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) ModItems.AURORITE_BOOTS));
     }
 }

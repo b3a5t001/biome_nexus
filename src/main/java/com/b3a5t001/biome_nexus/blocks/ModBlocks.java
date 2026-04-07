@@ -1,6 +1,7 @@
 package com.b3a5t001.biome_nexus.blocks;
 
 import com.b3a5t001.biome_nexus.BiomeNexus;
+import com.b3a5t001.biome_nexus.blocks.custom.BuddingAuroriteBlock;
 import com.b3a5t001.biome_nexus.blocks.custom.OxidizableChainBlock;
 import com.b3a5t001.biome_nexus.blocks.custom.OxidizableLanternBlock;
 import com.b3a5t001.biome_nexus.blocks.custom.OxidizableBarsBlock;
@@ -246,6 +247,25 @@ public class ModBlocks {
             new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).mapColor(MapColor.GRAY)),true);
     public static final Block STEEL_LANTERN = registerBlock("steel_lantern",
             new LanternBlock(AbstractBlock.Settings.copy(Blocks.LANTERN).mapColor(MapColor.GRAY)),true);
+
+    public static final Block AURORITE_BLOCK = registerBlock("aurorite_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).mapColor(MapColor.PINK)),true);
+    public static final Block AURORITE_CRYSTAL_BLOCK = registerBlock("aurorite_crystal_block",
+            new AmethystBlock(AbstractBlock.Settings.copy(Blocks.AMETHYST_BLOCK).mapColor(MapColor.PINK)),true);
+    public static final Block BUDDING_AURORITE = registerBlock("budding_aurorite",
+            new BuddingAuroriteBlock(AbstractBlock.Settings.copy(Blocks.BUDDING_AMETHYST).mapColor(MapColor.PINK)),true);
+    public static final Block AURORITE_CLUSTER = registerBlock("aurorite_cluster",
+            new AmethystClusterBlock(7.0f,3.0f,
+                    AbstractBlock.Settings.copy(Blocks.AMETHYST_CLUSTER).mapColor(MapColor.PINK)),true);
+    public static final Block LARGE_AURORITE_BUD = registerBlock("large_aurorite_bud",
+            new AmethystClusterBlock(5.0f,3.0f,
+                    AbstractBlock.Settings.copy(Blocks.LARGE_AMETHYST_BUD).mapColor(MapColor.PINK)),true);
+    public static final Block MEDIUM_AURORITE_BUD = registerBlock("medium_aurorite_bud",
+            new AmethystClusterBlock(4.0f,3.0f,
+                    AbstractBlock.Settings.copy(Blocks.MEDIUM_AMETHYST_BUD).mapColor(MapColor.PINK)),true);
+    public static final Block SMALL_AURORITE_BUD = registerBlock("small_aurorite_bud",
+            new AmethystClusterBlock(3.0f,4.0f,
+                    AbstractBlock.Settings.copy(Blocks.SMALL_AMETHYST_BUD).mapColor(MapColor.PINK)),true);
 
 
     static {
