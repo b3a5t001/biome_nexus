@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.4,
+  "group": "bronze_nugget",
+  "ingredient": {
+    "item": "biome_nexus:bronze_axe"
+  },
+  "result": {
+    "id": "biome_nexus:bronze_nugget"
+  }
+}

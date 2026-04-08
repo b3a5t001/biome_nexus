@@ -32,27 +32,33 @@ public class ModChainBarsModelProvider implements DataProvider {
         ModBlockstateModelHelper.registerChain(registrar, ModBlocks.GOLD_CHAIN);
         ModBlockstateModelHelper.registerBars(registrar, ModBlocks.GOLD_BARS);
         ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.GOLD_LANTERN);
-        ModBlockstateModelHelper.registerChain(registrar, ModBlocks.TIN_CHAINS);
+        ModBlockstateModelHelper.registerChain(registrar, ModBlocks.TIN_CHAIN);
         ModBlockstateModelHelper.registerBars(registrar, ModBlocks.TIN_BARS);
         ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.TIN_LANTERN);
-        ModBlockstateModelHelper.registerChain(registrar, ModBlocks.STEEL_CHAINS);
+        ModBlockstateModelHelper.registerChain(registrar, ModBlocks.STEEL_CHAIN);
         ModBlockstateModelHelper.registerBars(registrar, ModBlocks.STEEL_BARS);
         ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.STEEL_LANTERN);
+        ModBlockstateModelHelper.registerChain(registrar, ModBlocks.BRONZE_CHAIN);
+        ModBlockstateModelHelper.registerBars(registrar, ModBlocks.BRONZE_BARS);
+        ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.BRONZE_LANTERN);
+        ModBlockstateModelHelper.registerChain(registrar, ModBlocks.COBALT_CHAIN);
+        ModBlockstateModelHelper.registerBars(registrar, ModBlocks.COBALT_BARS);
+        ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.COBALT_LANTERN);
 
         ModBlockstateModelHelper.registerChain(registrar, ModBlocks.COPPER_CHAIN, ModBlocks.WAXED_COPPER_CHAIN);
         ModBlockstateModelHelper.registerChain(registrar, ModBlocks.EXPOSED_COPPER_CHAIN, ModBlocks.WAXED_EXPOSED_COPPER_CHAIN);
         ModBlockstateModelHelper.registerChain(registrar, ModBlocks.WEATHERED_COPPER_CHAIN, ModBlocks.WAXED_WEATHERED_COPPER_CHAIN);
-        ModBlockstateModelHelper.registerChain(registrar, ModBlocks.OXIDISED_COPPER_CHAIN, ModBlocks.WAXED_OXIDISED_COPPER_CHAIN);
+        ModBlockstateModelHelper.registerChain(registrar, ModBlocks.OXIDIZED_COPPER_CHAIN, ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN);
 
         ModBlockstateModelHelper.registerBars(registrar, ModBlocks.COPPER_BARS, ModBlocks.WAXED_COPPER_BARS);
         ModBlockstateModelHelper.registerBars(registrar, ModBlocks.EXPOSED_COPPER_BARS, ModBlocks.WAXED_EXPOSED_COPPER_BARS);
         ModBlockstateModelHelper.registerBars(registrar, ModBlocks.WEATHERED_COPPER_BARS, ModBlocks.WAXED_WEATHERED_COPPER_BARS);
-        ModBlockstateModelHelper.registerBars(registrar, ModBlocks.OXIDISED_COPPER_BARS, ModBlocks.WAXED_OXIDISED_COPPER_BARS);
+        ModBlockstateModelHelper.registerBars(registrar, ModBlocks.OXIDIZED_COPPER_BARS, ModBlocks.WAXED_OXIDIZED_COPPER_BARS);
 
         ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.COPPER_LANTERN, ModBlocks.WAXED_COPPER_LANTERN);
         ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.EXPOSED_COPPER_LANTERN, ModBlocks.WAXED_EXPOSED_COPPER_LANTERN);
         ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.WEATHERED_COPPER_LANTERN, ModBlocks.WAXED_WEATHERED_COPPER_LANTERN);
-        ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.OXIDISED_COPPER_LANTERN, ModBlocks.WAXED_OXIDISED_COPPER_LANTERN);
+        ModBlockstateModelHelper.registerLantern(registrar, ModBlocks.OXIDIZED_COPPER_LANTERN, ModBlocks.WAXED_OXIDIZED_COPPER_LANTERN);
 
         return registrar.done();
     }

@@ -1,3 +1,7 @@
 {
-  "values": []
+  "values": [
+    "biome_nexus:crimsonite_ore",
+    "biome_nexus:raw_crimsonite_block",
+    "biome_nexus:crimsonite_block"
+  ]
 }

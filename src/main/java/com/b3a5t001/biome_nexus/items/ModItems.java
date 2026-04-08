@@ -4,6 +4,8 @@ import com.b3a5t001.biome_nexus.BiomeNexus;
 import com.b3a5t001.biome_nexus.blocks.ModBlocks;
 import com.b3a5t001.biome_nexus.items.armorweapon.ModArmorMaterials;
 import com.b3a5t001.biome_nexus.items.armorweapon.ModToolMaterials;
+import com.b3a5t001.biome_nexus.items.custom.ModSmithingTemplateItem;
+import com.b3a5t001.biome_nexus.sound.ModSoundEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -136,9 +138,123 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.AURORITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                         .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(16))));
 
+    public static final Item BRONZE_INGOT = registerItem("bronze_ingot",
+            new Item(new Item.Settings()));
+    public static final Item BRONZE_NUGGET = registerItem("bronze_nugget",
+            new Item(new Item.Settings()));
+
+    public static final Item BRONZE_SWORD = registerItem("bronze_sword",
+            new SwordItem(ModToolMaterials.BRONZE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.BRONZE, 3, -2.4f))));
+    public static final Item BRONZE_PICKAXE = registerItem("bronze_pickaxe",
+            new PickaxeItem(ModToolMaterials.BRONZE, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BRONZE, 1, -2.8f))));
+    public static final Item BRONZE_AXE = registerItem("bronze_axe",
+            new AxeItem(ModToolMaterials.BRONZE, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.BRONZE, 3, -3.2f))));
+    public static final Item BRONZE_SHOVEL = registerItem("bronze_shovel",
+            new ShovelItem(ModToolMaterials.BRONZE, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.BRONZE, 1.5f, -3.0f))));
+    public static final Item BRONZE_HOE = registerItem("bronze_hoe",
+            new HoeItem(ModToolMaterials.BRONZE, new Item.Settings()
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.BRONZE, 0, -3f))));
+
+    public static final Item BRONZE_HELMET = registerItem("bronze_helmet",
+            new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(19))));
+    public static final Item BRONZE_CHESTPLATE = registerItem("bronze_chestplate",
+            new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(19))));
+    public static final Item BRONZE_LEGGINGS = registerItem("bronze_leggings",
+            new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(19))));
+    public static final Item BRONZE_BOOTS = registerItem("bronze_boots",
+            new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(19))));
+
+    public static final Item RAW_COBALT = registerItem("raw_cobalt",
+            new Item(new Item.Settings()));
+    public static final Item COBALT_INGOT = registerItem("cobalt_ingot",
+            new Item(new Item.Settings()));
+    public static final Item COBALT_NUGGET = registerItem("cobalt_nugget",
+            new Item(new Item.Settings()));
+
+    public static final Item COBALT_SWORD = registerItem("cobalt_sword",
+            new SwordItem(ModToolMaterials.COBALT, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.COBALT, 3, -2.4f))));
+    public static final Item COBALT_PICKAXE = registerItem("cobalt_pickaxe",
+            new PickaxeItem(ModToolMaterials.COBALT, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.COBALT, 1, -2.8f))));
+    public static final Item COBALT_AXE = registerItem("cobalt_axe",
+            new AxeItem(ModToolMaterials.COBALT, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.COBALT, 3, -3.2f))));
+    public static final Item COBALT_SHOVEL = registerItem("cobalt_shovel",
+            new ShovelItem(ModToolMaterials.COBALT, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.COBALT, 1.5f, -3.0f))));
+    public static final Item COBALT_HOE = registerItem("cobalt_hoe",
+            new HoeItem(ModToolMaterials.COBALT, new Item.Settings()
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.COBALT, 0, -3f))));
+
+    public static final Item COBALT_HELMET = registerItem("cobalt_helmet",
+            new ArmorItem(ModArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(33))));
+    public static final Item COBALT_CHESTPLATE = registerItem("cobalt_chestplate",
+            new ArmorItem(ModArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(33))));
+    public static final Item COBALT_LEGGINGS = registerItem("cobalt_leggings",
+            new ArmorItem(ModArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(33))));
+    public static final Item COBALT_BOOTS = registerItem("cobalt_boots",
+            new ArmorItem(ModArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(33))));
+
+    public static final Item RAW_CRIMSONITE = registerItem("raw_crimsonite",
+            new Item(new Item.Settings()));
+    public static final Item CRIMSONITE_BILLET = registerItem("crimsonite_billet",
+            new Item(new Item.Settings()));
+    public static final Item CRIMSONITE_INGOT = registerItem("crimsonite_ingot",
+            new Item(new Item.Settings()));
+
+    public static final Item CRIMSONITE_SWORD = registerItem("crimsonite_sword",
+            new SwordItem(ModToolMaterials.CRIMSONITE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.CRIMSONITE, 3, -2.4f))));
+    public static final Item CRIMSONITE_PICKAXE = registerItem("crimsonite_pickaxe",
+            new PickaxeItem(ModToolMaterials.CRIMSONITE, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.CRIMSONITE, 1, -2.8f))));
+    public static final Item CRIMSONITE_AXE = registerItem("crimsonite_axe",
+            new AxeItem(ModToolMaterials.CRIMSONITE, new Item.Settings()
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.CRIMSONITE, 3, -3.2f))));
+    public static final Item CRIMSONITE_SHOVEL = registerItem("crimsonite_shovel",
+            new ShovelItem(ModToolMaterials.CRIMSONITE, new Item.Settings()
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.CRIMSONITE, 1.5f, -3.0f))));
+    public static final Item CRIMSONITE_HOE = registerItem("crimsonite_hoe",
+            new HoeItem(ModToolMaterials.CRIMSONITE, new Item.Settings()
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.CRIMSONITE, 0, -3f))));
+
+    public static final Item CRIMSONITE_HELMET = registerItem("crimsonite_helmet",
+            new ArmorItem(ModArmorMaterials.CRIMSONITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(37))));
+    public static final Item CRIMSONITE_CHESTPLATE = registerItem("crimsonite_chestplate",
+            new ArmorItem(ModArmorMaterials.CRIMSONITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(37))));
+    public static final Item CRIMSONITE_LEGGINGS = registerItem("crimsonite_leggings",
+            new ArmorItem(ModArmorMaterials.CRIMSONITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(37))));
+    public static final Item CRIMSONITE_BOOTS = registerItem("crimsonite_boots",
+            new ArmorItem(ModArmorMaterials.CRIMSONITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(37))));
+
+    public static final Item CRIMSONITE_UPGRADE_SMITHING_TEMPLATE = registerItem("crimsonite_upgrade_smithing_template",
+            ModSmithingTemplateItem.createCrimsoniteUpgrade());
     public static final Item GRACE_SMITHING_TEMPLATE = registerItem("grace_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(BiomeNexus.MOD_ID, "grace"), FeatureFlags.VANILLA));
+    public static final Item VINE_SMITHING_TEMPLATE = registerItem("vine_armor_trim_smithing_template",
+            SmithingTemplateItem.of(Identifier.of(BiomeNexus.MOD_ID, "vine"), FeatureFlags.VANILLA));
+    public static final Item GEM_SMITHING_TEMPLATE = registerItem("gem_armor_trim_smithing_template",
+            SmithingTemplateItem.of(Identifier.of(BiomeNexus.MOD_ID, "gem"), FeatureFlags.VANILLA));
 
+    public static final Item TEARS_MUSIC_DISC = registerItem("music_disc_tears",
+            new Item(new Item.Settings().jukeboxPlayable(ModSoundEvents.TEARS_KEY).maxCount(1)));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(BiomeNexus.MOD_ID, name), item);

@@ -1,5 +1,7 @@
 {
   "values": [
-    "biome_nexus:grace_armor_trim_smithing_template"
+    "biome_nexus:grace_armor_trim_smithing_template",
+    "biome_nexus:vine_armor_trim_smithing_template",
+    "biome_nexus:gem_armor_trim_smithing_template"
   ]
 }

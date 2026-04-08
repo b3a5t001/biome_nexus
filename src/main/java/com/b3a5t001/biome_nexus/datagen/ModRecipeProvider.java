@@ -40,35 +40,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.AURORITE_CRYSTAL_BLOCK, ModItems.AURORITE_CRYSTAL);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_TIN
                 ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_TIN_BLOCK);
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.TIN_INGOT
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.TIN_BLOCK);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN_INGOT)
-                .input('N', ModItems.TIN_NUGGET)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .criterion(hasItem(ModItems.TIN_NUGGET), conditionsFromItem(ModItems.TIN_NUGGET))
-                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "tin_ingot_from_nuggets"));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TIN_NUGGET, 9)
-                .input(ModItems.TIN_INGOT)
-                .criterion(hasItem(ModItems.TIN_INGOT), conditionsFromItem(ModItems.TIN_INGOT))
-                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "tin_nuggets_from_ingot"));
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.STEEL_INGOT
-                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.STEEL_BLOCK);
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STEEL_INGOT)
-                .input('N', ModItems.STEEL_NUGGET)
-                .pattern("NNN")
-                .pattern("NNN")
-                .pattern("NNN")
-                .criterion(hasItem(ModItems.STEEL_NUGGET), conditionsFromItem(ModItems.STEEL_NUGGET))
-                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "steel_ingot_from_nuggets"));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STEEL_NUGGET, 9)
-                .input(ModItems.STEEL_INGOT)
-                .criterion(hasItem(ModItems.STEEL_INGOT), conditionsFromItem(ModItems.STEEL_INGOT))
-                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "steel_nuggets_from_ingot"));
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_COBALT
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_COBALT_BLOCK);
+        offerNuggetIngotBlockGroup(exporter, ModBlocks.TIN_BLOCK, ModItems.TIN_INGOT, ModItems.TIN_NUGGET, "tin");
+        offerNuggetIngotBlockGroup(exporter, ModBlocks.STEEL_BLOCK,ModItems.STEEL_INGOT, ModItems.STEEL_NUGGET, "steel");
+        offerNuggetIngotBlockGroup(exporter, ModBlocks.BRONZE_BLOCK, ModItems.BRONZE_INGOT, ModItems.BRONZE_NUGGET, "bronze");
+        offerNuggetIngotBlockGroup(exporter, ModBlocks.COBALT_BLOCK, ModItems.COBALT_INGOT, ModItems.COBALT_NUGGET, "cobalt");
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RAW_CRIMSONITE
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_CRIMSONITE_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.CRIMSONITE_INGOT
+                ,RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRIMSONITE_BLOCK);
 
         offerSmithingTrimRecipe(exporter, ModItems.GRACE_SMITHING_TEMPLATE, Identifier.of(BiomeNexus.MOD_ID, "grace"));
         offerSmithingDuplicateRecipe(exporter, ModItems.GRACE_SMITHING_TEMPLATE, Blocks.COBBLESTONE);
+        offerSmithingTrimRecipe(exporter, ModItems.VINE_SMITHING_TEMPLATE, Identifier.of(BiomeNexus.MOD_ID, "vine"));
+        offerSmithingDuplicateRecipe(exporter, ModItems.VINE_SMITHING_TEMPLATE, Blocks.MOSS_BLOCK);
+        offerSmithingTrimRecipe(exporter, ModItems.GEM_SMITHING_TEMPLATE, Identifier.of(BiomeNexus.MOD_ID, "gem"));
+        offerSmithingDuplicateRecipe(exporter, ModItems.GEM_SMITHING_TEMPLATE, ModBlocks.TIN_BLOCK);
+        offerSmithingDuplicateRecipe(exporter, ModItems.CRIMSONITE_UPGRADE_SMITHING_TEMPLATE, Blocks.END_STONE);
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.STEEL_INGOT)
                 .input(Items.IRON_INGOT,4)
@@ -83,6 +72,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("   ")
                 .criterion(hasItem(ModItems.AURORITE_CRYSTAL), conditionsFromItem(ModItems.AURORITE_CRYSTAL))
                 .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "aurorite_alloy_from_raw"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModItems.BRONZE_INGOT, 2)
+                .input('C', Items.COPPER_INGOT)
+                .input('T', ModItems.TIN_INGOT)
+                .pattern("TC ")
+                .pattern("CT ")
+                .pattern("   ")
+                .criterion(hasItem(ModItems.TIN_INGOT), conditionsFromItem(ModItems.TIN_INGOT))
+                .criterion(hasItem(Items.COPPER_INGOT), conditionsFromItem(Items.COPPER_INGOT))
+                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "bronze_ingot_from_alloy"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModItems.CRIMSONITE_INGOT, 1)
+                .input('C', Items.DIAMOND)
+                .input('T', ModItems.CRIMSONITE_BILLET)
+                .pattern("TC ")
+                .pattern("CT ")
+                .pattern("   ")
+                .criterion(hasItem(ModItems.CRIMSONITE_INGOT), conditionsFromItem(ModItems.CRIMSONITE_INGOT))
+                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "crimsonite_ingot_from_billet"));
 
         offerTorchRecipe(exporter, ModBlocks.SULFUR_TORCH, ModItems.SULFUR_DUST);
         offerLanternRecipe(exporter, ModBlocks.GOLD_LANTERN, ModItems.SULFUR_TORCH, Items.GOLD_NUGGET);
@@ -94,11 +100,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerBarsRecipe(exporter, ModBlocks.COPPER_BARS, Items.COPPER_INGOT);
         offerTorchRecipe(exporter, ModBlocks.TIN_TORCH, ModItems.TIN_NUGGET);
         offerLanternRecipe(exporter, ModBlocks.TIN_LANTERN, ModItems.TIN_TORCH, ModItems.TIN_NUGGET);
-        offerChainRecipe(exporter, ModBlocks.TIN_CHAINS, ModItems.TIN_INGOT, ModItems.TIN_NUGGET);
+        offerChainRecipe(exporter, ModBlocks.TIN_CHAIN, ModItems.TIN_INGOT, ModItems.TIN_NUGGET);
         offerBarsRecipe(exporter, ModBlocks.TIN_BARS, ModItems.TIN_INGOT);
         offerLanternRecipe(exporter, ModBlocks.STEEL_LANTERN, Items.TORCH, ModItems.STEEL_NUGGET);
-        offerChainRecipe(exporter, ModBlocks.STEEL_CHAINS, ModItems.STEEL_INGOT, ModItems.STEEL_NUGGET);
+        offerChainRecipe(exporter, ModBlocks.STEEL_CHAIN, ModItems.STEEL_INGOT, ModItems.STEEL_NUGGET);
         offerBarsRecipe(exporter, ModBlocks.STEEL_BARS, ModItems.STEEL_INGOT);
+        offerLanternRecipe(exporter, ModBlocks.BRONZE_LANTERN, ModItems.COPPER_TORCH, ModItems.BRONZE_NUGGET);
+        offerChainRecipe(exporter, ModBlocks.BRONZE_CHAIN, ModItems.BRONZE_INGOT, ModItems.BRONZE_NUGGET);
+        offerBarsRecipe(exporter, ModBlocks.BRONZE_BARS, ModItems.BRONZE_INGOT);
+        offerLanternRecipe(exporter, ModBlocks.COBALT_LANTERN, Items.TORCH, ModItems.COBALT_NUGGET);
+        offerChainRecipe(exporter, ModBlocks.COBALT_CHAIN, ModItems.COBALT_INGOT, ModItems.COBALT_NUGGET);
+        offerBarsRecipe(exporter, ModBlocks.COBALT_BARS, ModItems.COBALT_INGOT);
 
         offerSwordRecipe(exporter, ModItems.COPPER_SWORD, Items.COPPER_INGOT);
         offerShovelRecipe(exporter, ModItems.COPPER_SHOVEL, Items.COPPER_INGOT);
@@ -118,6 +130,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerChestplateRecipe(exporter, ModItems.STEEL_CHESTPLATE, ModItems.STEEL_INGOT);
         offerLeggingsRecipe(exporter, ModItems.STEEL_LEGGINGS, ModItems.STEEL_INGOT);
         offerBootsRecipe(exporter, ModItems.STEEL_BOOTS, ModItems.STEEL_INGOT);
+        offerSwordRecipe(exporter, ModItems.BRONZE_SWORD, ModItems.BRONZE_INGOT);
+        offerShovelRecipe(exporter, ModItems.BRONZE_SHOVEL, ModItems.BRONZE_INGOT);
+        offerPickaxeRecipe(exporter, ModItems.BRONZE_PICKAXE, ModItems.BRONZE_INGOT);
+        offerAxeRecipe(exporter, ModItems.BRONZE_AXE, ModItems.BRONZE_INGOT);
+        offerHoeRecipe(exporter, ModItems.BRONZE_HOE, ModItems.BRONZE_INGOT);
+        offerHelmetRecipe(exporter, ModItems.BRONZE_HELMET, ModItems.BRONZE_INGOT);
+        offerChestplateRecipe(exporter, ModItems.BRONZE_CHESTPLATE, ModItems.BRONZE_INGOT);
+        offerLeggingsRecipe(exporter, ModItems.BRONZE_LEGGINGS, ModItems.BRONZE_INGOT);
+        offerBootsRecipe(exporter, ModItems.BRONZE_BOOTS, ModItems.BRONZE_INGOT);
+        offerSwordRecipe(exporter, ModItems.COBALT_SWORD, ModItems.COBALT_INGOT);
+        offerShovelRecipe(exporter, ModItems.COBALT_SHOVEL, ModItems.COBALT_INGOT);
+        offerPickaxeRecipe(exporter, ModItems.COBALT_PICKAXE, ModItems.COBALT_INGOT);
+        offerAxeRecipe(exporter, ModItems.COBALT_AXE, ModItems.COBALT_INGOT);
+        offerHoeRecipe(exporter, ModItems.COBALT_HOE, ModItems.COBALT_INGOT);
+        offerHelmetRecipe(exporter, ModItems.COBALT_HELMET, ModItems.COBALT_INGOT);
+        offerChestplateRecipe(exporter, ModItems.COBALT_CHESTPLATE, ModItems.COBALT_INGOT);
+        offerLeggingsRecipe(exporter, ModItems.COBALT_LEGGINGS, ModItems.COBALT_INGOT);
+        offerBootsRecipe(exporter, ModItems.COBALT_BOOTS, ModItems.COBALT_INGOT);
         offerSwordRecipe(exporter, ModItems.AURORITE_SWORD, ModItems.AURORITE_ALLOY);
         offerShovelRecipe(exporter, ModItems.AURORITE_SHOVEL, ModItems.AURORITE_ALLOY);
         offerPickaxeRecipe(exporter, ModItems.AURORITE_PICKAXE, ModItems.AURORITE_ALLOY);
@@ -211,6 +241,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 RecipeCategory.MISC, ModItems.TIN_INGOT, 0.6f, 200, "tin_ore");
         offerBlasting(exporter, List.of(ModBlocks.TIN_ORE,ModBlocks.DEEPSLATE_TIN_ORE,ModItems.RAW_TIN),
                 RecipeCategory.MISC, ModItems.TIN_INGOT, 0.6f, 100, "tin_ore");
+        offerSmelting(exporter, List.of(ModBlocks.COBALT_ORE,ModBlocks.DEEPSLATE_COBALT_ORE,ModItems.RAW_COBALT),
+                RecipeCategory.MISC, ModItems.COBALT_INGOT, 0.6f, 200, "cobalt_ore");
+        offerBlasting(exporter, List.of(ModBlocks.COBALT_ORE,ModBlocks.DEEPSLATE_COBALT_ORE,ModItems.RAW_COBALT),
+                RecipeCategory.MISC, ModItems.COBALT_INGOT, 0.6f, 100, "cobalt_ore");
+        offerSmelting(exporter, List.of(ModBlocks.CRIMSONITE_ORE,ModItems.RAW_CRIMSONITE),
+                RecipeCategory.MISC, ModItems.CRIMSONITE_BILLET, 0.6f, 200, "crimsonite_ore");
+        offerBlasting(exporter, List.of(ModBlocks.CRIMSONITE_ORE,ModItems.RAW_CRIMSONITE),
+                RecipeCategory.MISC, ModItems.CRIMSONITE_BILLET, 0.6f, 100, "crimsinite_ore");
 
         offerSmelting(exporter, List.of(ModItems.COPPER_BOOTS,ModItems.COPPER_AXE,ModItems.COPPER_CHESTPLATE,
                         ModItems.COPPER_HELMET,ModItems.COPPER_LEGGINGS, ModItems.COPPER_HOE,ModItems.COPPER_PICKAXE,
@@ -228,6 +266,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         ModItems.STEEL_HELMET,ModItems.STEEL_LEGGINGS, ModItems.STEEL_HOE,ModItems.STEEL_PICKAXE,
                         ModItems.STEEL_SHOVEL, ModItems.STEEL_SWORD), RecipeCategory.MISC,
                 ModItems.STEEL_NUGGET, 0.4f, 100, "steel_nugget");
+        offerSmelting(exporter, List.of(ModItems.BRONZE_BOOTS,ModItems.BRONZE_AXE,ModItems.BRONZE_CHESTPLATE,
+                        ModItems.BRONZE_HELMET,ModItems.BRONZE_LEGGINGS, ModItems.BRONZE_HOE,ModItems.BRONZE_PICKAXE,
+                        ModItems.BRONZE_SHOVEL, ModItems.BRONZE_SWORD), RecipeCategory.MISC,
+                ModItems.BRONZE_NUGGET, 0.4f, 200, "bronze_nugget");
+        offerBlasting(exporter, List.of(ModItems.BRONZE_BOOTS,ModItems.BRONZE_AXE,ModItems.BRONZE_CHESTPLATE,
+                        ModItems.BRONZE_HELMET,ModItems.BRONZE_LEGGINGS, ModItems.BRONZE_HOE,ModItems.BRONZE_PICKAXE,
+                        ModItems.BRONZE_SHOVEL, ModItems.BRONZE_SWORD), RecipeCategory.MISC,
+                ModItems.BRONZE_NUGGET, 0.4f, 100, "bronze_nugget");
+        offerSmelting(exporter, List.of(ModItems.COBALT_BOOTS,ModItems.COBALT_AXE,ModItems.COBALT_CHESTPLATE,
+                        ModItems.COBALT_HELMET,ModItems.COBALT_LEGGINGS, ModItems.COBALT_HOE,ModItems.COBALT_PICKAXE,
+                        ModItems.COBALT_SHOVEL, ModItems.COBALT_SWORD), RecipeCategory.MISC,
+                ModItems.COBALT_NUGGET, 0.4f, 200, "cobalt_nugget");
+        offerBlasting(exporter, List.of(ModItems.COBALT_BOOTS,ModItems.COBALT_AXE,ModItems.COBALT_CHESTPLATE,
+                        ModItems.COBALT_HELMET,ModItems.COBALT_LEGGINGS, ModItems.COBALT_HOE,ModItems.COBALT_PICKAXE,
+                        ModItems.COBALT_SHOVEL, ModItems.COBALT_SWORD), RecipeCategory.MISC,
+                ModItems.COBALT_NUGGET, 0.4f, 100, "cobalt_nugget");
         offerSmelting(exporter, List.of(ModItems.AURORITE_BOOTS,ModItems.AURORITE_AXE,ModItems.AURORITE_CHESTPLATE,
                         ModItems.AURORITE_HELMET,ModItems.AURORITE_LEGGINGS, ModItems.AURORITE_HOE,ModItems.AURORITE_PICKAXE,
                         ModItems.AURORITE_SHOVEL, ModItems.AURORITE_SWORD), RecipeCategory.MISC,
@@ -297,10 +351,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_TIN_SLAB, ModBlocks.CUT_TIN, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_TIN_STAIRS, ModBlocks.CUT_TIN);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_TIN, ModBlocks.CUT_TIN);
+
     }
 
-    public static void offerStairsRecipe(RecipeExporter exporter, Block ouput, Block input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ouput, 4)
+    public static void offerStairsRecipe(RecipeExporter exporter, Block output, Block input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 4)
                 .input('I', input.asItem())
                 .pattern("I  ")
                 .pattern("II ")
@@ -308,8 +363,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }
-    public static void offerTorchRecipe(RecipeExporter exporter, Block ouput, Item input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ouput, 4)
+    public static void offerTorchRecipe(RecipeExporter exporter, Block output, Item input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 4)
                 .input('C', ItemTags.COALS)
                 .input('I', input.asItem())
                 .input('S', Items.STICK)
@@ -319,8 +374,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }
-    public static void offerLanternRecipe(RecipeExporter exporter, Block ouput, Item torch, Item nugget){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ouput, 1)
+    public static void offerLanternRecipe(RecipeExporter exporter, Block output, Item torch, Item nugget){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1)
                 .input('T', torch)
                 .input('N', nugget)
                 .pattern("NNN")
@@ -329,8 +384,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(torch), conditionsFromItem(torch))
                 .offerTo(exporter);
     }
-    public static void offerChainRecipe(RecipeExporter exporter, Block ouput, Item ingot, Item nugget){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ouput, 1)
+    public static void offerChainRecipe(RecipeExporter exporter, Block output, Item ingot, Item nugget){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1)
                 .input('I', ingot)
                 .input('N', nugget)
                 .pattern(" N ")
@@ -339,8 +394,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ingot), conditionsFromItem(ingot))
                 .offerTo(exporter);
     }
-    public static void offerBarsRecipe(RecipeExporter exporter, Block ouput, Item ingot){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ouput, 16)
+    public static void offerBarsRecipe(RecipeExporter exporter, Block output, Item ingot){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 16)
                 .input('I', ingot)
                 .pattern("   ")
                 .pattern("III")
@@ -348,8 +403,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ingot), conditionsFromItem(ingot))
                 .offerTo(exporter);
     }
-    public static void offerSwordRecipe(RecipeExporter exporter, Item ouput, Item input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ouput)
+    public static void offerSwordRecipe(RecipeExporter exporter, Item output, Item input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .input('I', input.asItem())
                 .input('S', Items.STICK)
                 .pattern(" I ")
@@ -358,8 +413,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }
-    public static void offerShovelRecipe(RecipeExporter exporter, Item ouput, Item input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ouput)
+    public static void offerShovelRecipe(RecipeExporter exporter, Item output, Item input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
                 .input('I', input.asItem())
                 .input('S', Items.STICK)
                 .pattern(" I ")
@@ -368,8 +423,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }
-    public static void offerPickaxeRecipe(RecipeExporter exporter, Item ouput, Item input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ouput)
+    public static void offerPickaxeRecipe(RecipeExporter exporter, Item output, Item input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
                 .input('I', input.asItem())
                 .input('S', Items.STICK)
                 .pattern("III")
@@ -378,8 +433,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }
-    public static void offerAxeRecipe(RecipeExporter exporter, Item ouput, Item input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ouput)
+    public static void offerAxeRecipe(RecipeExporter exporter, Item output, Item input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
                 .input('I', input.asItem())
                 .input('S', Items.STICK)
                 .pattern("II ")
@@ -388,8 +443,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }
-    public static void offerHoeRecipe(RecipeExporter exporter, Item ouput, Item input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ouput)
+    public static void offerHoeRecipe(RecipeExporter exporter, Item output, Item input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
                 .input('I', input.asItem())
                 .input('S', Items.STICK)
                 .pattern("II ")
@@ -398,8 +453,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }
-    public static void offerHelmetRecipe(RecipeExporter exporter, Item ouput, Item input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ouput)
+    public static void offerHelmetRecipe(RecipeExporter exporter, Item output, Item input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .input('I', input.asItem())
                 .pattern("III")
                 .pattern("I I")
@@ -407,8 +462,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }
-    public static void offerChestplateRecipe(RecipeExporter exporter, Item ouput, Item input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ouput)
+    public static void offerChestplateRecipe(RecipeExporter exporter, Item output, Item input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .input('I', input.asItem())
                 .pattern("I I")
                 .pattern("III")
@@ -416,8 +471,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }
-    public static void offerLeggingsRecipe(RecipeExporter exporter, Item ouput, Item input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ouput)
+    public static void offerLeggingsRecipe(RecipeExporter exporter, Item output, Item input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .input('I', input.asItem())
                 .pattern("III")
                 .pattern("I I")
@@ -425,8 +480,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(input), conditionsFromItem(input))
                 .offerTo(exporter);
     }
-    public static void offerBootsRecipe(RecipeExporter exporter, Item ouput, Item input){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ouput)
+    public static void offerBootsRecipe(RecipeExporter exporter, Item output, Item input){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .input('I', input.asItem())
                 .pattern("I I")
                 .pattern("I I")
@@ -444,5 +499,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("DDD")
                 .criterion(hasItem(toDuplicate), conditionsFromItem(toDuplicate))
                 .offerTo(exporter);
+    }
+    private static void offerNuggetIngotBlockGroup(RecipeExporter exporter, Block block, Item ingot, Item nugget, String name){
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ingot
+                ,RecipeCategory.BUILDING_BLOCKS, block);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ingot)
+                .input('N', nugget)
+                .pattern("NNN")
+                .pattern("NNN")
+                .pattern("NNN")
+                .criterion(hasItem(nugget), conditionsFromItem(nugget))
+                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, name + "_ingot_from_nuggets"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, nugget, 9)
+                .input(ingot)
+                .criterion(hasItem(ingot), conditionsFromItem(ingot))
+                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, name + "_nuggets_from_ingot"));
     }
 }

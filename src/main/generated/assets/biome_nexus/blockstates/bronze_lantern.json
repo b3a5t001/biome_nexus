@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "biome_nexus:block/bronze_lantern"
+    },
+    "hanging=true": {
+      "model": "biome_nexus:block/bronze_lantern_hanging"
+    }
+  }
+}

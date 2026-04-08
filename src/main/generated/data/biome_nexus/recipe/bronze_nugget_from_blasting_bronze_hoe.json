@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.4,
+  "group": "bronze_nugget",
+  "ingredient": {
+    "item": "biome_nexus:bronze_hoe"
+  },
+  "result": {
+    "id": "biome_nexus:bronze_nugget"
+  }
+}

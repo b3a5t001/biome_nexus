@@ -1,0 +1,12 @@
+{
+  "asset_name": "cobalt",
+  "description": {
+    "color": "#4d738f",
+    "translate": "trim_material.biome_nexus.cobalt"
+  },
+  "ingredient": "biome_nexus:cobalt_ingot",
+  "item_model_index": 0.9,
+  "override_armor_materials": {
+    "biome_nexus:cobalt_armor": "cobalt_darker"
+  }
+}

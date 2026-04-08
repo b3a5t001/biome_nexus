@@ -41,24 +41,24 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WAXED_EXPOSED_COPPER_LANTERN);
         addDrop(ModBlocks.WEATHERED_COPPER_LANTERN);
         addDrop(ModBlocks.WAXED_WEATHERED_COPPER_LANTERN);
-        addDrop(ModBlocks.OXIDISED_COPPER_LANTERN);
-        addDrop(ModBlocks.WAXED_OXIDISED_COPPER_LANTERN);
+        addDrop(ModBlocks.OXIDIZED_COPPER_LANTERN);
+        addDrop(ModBlocks.WAXED_OXIDIZED_COPPER_LANTERN);
         addDrop(ModBlocks.COPPER_CHAIN);
         addDrop(ModBlocks.WAXED_COPPER_CHAIN);
         addDrop(ModBlocks.EXPOSED_COPPER_CHAIN);
         addDrop(ModBlocks.WAXED_EXPOSED_COPPER_CHAIN);
         addDrop(ModBlocks.WEATHERED_COPPER_CHAIN);
         addDrop(ModBlocks.WAXED_WEATHERED_COPPER_CHAIN);
-        addDrop(ModBlocks.OXIDISED_COPPER_CHAIN);
-        addDrop(ModBlocks.WAXED_OXIDISED_COPPER_CHAIN);
+        addDrop(ModBlocks.OXIDIZED_COPPER_CHAIN);
+        addDrop(ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN);
         addDrop(ModBlocks.COPPER_BARS);
         addDrop(ModBlocks.WAXED_COPPER_BARS);
         addDrop(ModBlocks.EXPOSED_COPPER_BARS);
         addDrop(ModBlocks.WAXED_EXPOSED_COPPER_BARS);
         addDrop(ModBlocks.WEATHERED_COPPER_BARS);
         addDrop(ModBlocks.WAXED_WEATHERED_COPPER_BARS);
-        addDrop(ModBlocks.OXIDISED_COPPER_BARS);
-        addDrop(ModBlocks.WAXED_OXIDISED_COPPER_BARS);
+        addDrop(ModBlocks.OXIDIZED_COPPER_BARS);
+        addDrop(ModBlocks.WAXED_OXIDIZED_COPPER_BARS);
         addDrop(ModBlocks.LIMESTONE);
         addDrop(ModBlocks.LIMESTONE_SLAB, slabDrops(ModBlocks.LIMESTONE_SLAB));
         addDrop(ModBlocks.LIMESTONE_STAIRS);
@@ -107,20 +107,36 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.TIN_TORCH, drops(ModItems.TIN_TORCH));
         addDrop(ModBlocks.TIN_WALL_TORCH, drops(ModItems.TIN_TORCH));
         addDrop(ModBlocks.TIN_LANTERN);
-        addDrop(ModBlocks.TIN_CHAINS);
+        addDrop(ModBlocks.TIN_CHAIN);
         addDrop(ModBlocks.TIN_BARS);
         addDrop(ModBlocks.TIN_DOOR, doorDrops(ModBlocks.TIN_DOOR));
         addDrop(ModBlocks.TIN_TRAPDOOR);
         addDrop(ModBlocks.STEEL_BLOCK);
         addDrop(ModBlocks.STEEL_LANTERN);
-        addDrop(ModBlocks.STEEL_CHAINS);
+        addDrop(ModBlocks.STEEL_CHAIN);
         addDrop(ModBlocks.STEEL_BARS);
+        addDrop(ModBlocks.BRONZE_BLOCK);
+        addDrop(ModBlocks.BRONZE_LANTERN);
+        addDrop(ModBlocks.BRONZE_CHAIN);
+        addDrop(ModBlocks.BRONZE_BARS);
         addDrop(ModBlocks.AURORITE_BLOCK);
         addDrop(ModBlocks.AURORITE_CRYSTAL_BLOCK);
         addDrop(ModBlocks.AURORITE_CLUSTER,multipleOreDrops(ModBlocks.AURORITE_CLUSTER, ModItems.AURORITE_CRYSTAL,2,4));
         addDrop(ModBlocks.SMALL_AURORITE_BUD,dropsWithSilkTouch(ModBlocks.SMALL_AURORITE_BUD));
         addDrop(ModBlocks.MEDIUM_AURORITE_BUD,dropsWithSilkTouch(ModBlocks.MEDIUM_AURORITE_BUD));
         addDrop(ModBlocks.LARGE_AURORITE_BUD,dropsWithSilkTouch(ModBlocks.LARGE_AURORITE_BUD));
+        addDrop(ModBlocks.COBALT_ORE, multipleOreDrops(ModBlocks.COBALT_ORE, ModItems.RAW_COBALT,1,1));
+        addDrop(ModBlocks.DEEPSLATE_COBALT_ORE, multipleOreDrops(ModBlocks.DEEPSLATE_COBALT_ORE, ModItems.RAW_COBALT,1,1));
+        addDrop(ModBlocks.RAW_COBALT_BLOCK);
+        addDrop(ModBlocks.COBALT_BLOCK);
+        addDrop(ModBlocks.COBALT_LANTERN);
+        addDrop(ModBlocks.COBALT_CHAIN);
+        addDrop(ModBlocks.COBALT_BARS);
+        addDrop(ModBlocks.CRIMSONITE_ORE, multipleOreDrops(ModBlocks.CRIMSONITE_ORE, ModItems.RAW_CRIMSONITE,1,1));
+        addDrop(ModBlocks.RAW_CRIMSONITE_BLOCK);
+        addDrop(ModBlocks.CRIMSONITE_BLOCK);
+
+
     }
 
     public LootTable.Builder multipleOreDrops(Block block, Item drop, int min, int max) {

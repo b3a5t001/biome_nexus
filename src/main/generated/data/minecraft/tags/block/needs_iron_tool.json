@@ -4,8 +4,19 @@
     "biome_nexus:gold_bars",
     "biome_nexus:gold_lantern",
     "biome_nexus:steel_block",
-    "biome_nexus:steel_chains",
+    "biome_nexus:steel_chain",
     "biome_nexus:steel_bars",
-    "biome_nexus:steel_lantern"
+    "biome_nexus:steel_lantern",
+    "biome_nexus:bronze_block",
+    "biome_nexus:bronze_chain",
+    "biome_nexus:bronze_bars",
+    "biome_nexus:bronze_lantern",
+    "biome_nexus:cobalt_ore",
+    "biome_nexus:deepslate_cobalt_ore",
+    "biome_nexus:raw_cobalt_block",
+    "biome_nexus:cobalt_block",
+    "biome_nexus:cobalt_chain",
+    "biome_nexus:cobalt_bars",
+    "biome_nexus:cobalt_lantern"
   ]
 }

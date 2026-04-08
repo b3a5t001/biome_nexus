@@ -1,7 +1,10 @@
 {
   "values": [
     "biome_nexus:copper_pickaxe",
+    "biome_nexus:crimsonite_pickaxe",
     "biome_nexus:steel_pickaxe",
+    "biome_nexus:cobalt_pickaxe",
+    "biome_nexus:bronze_pickaxe",
     "biome_nexus:aurorite_pickaxe"
   ]
 }

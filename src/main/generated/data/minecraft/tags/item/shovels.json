@@ -1,7 +1,10 @@
 {
   "values": [
     "biome_nexus:copper_shovel",
+    "biome_nexus:crimsonite_shovel",
     "biome_nexus:steel_shovel",
+    "biome_nexus:cobalt_shovel",
+    "biome_nexus:bronze_shovel",
     "biome_nexus:aurorite_shovel"
   ]
 }

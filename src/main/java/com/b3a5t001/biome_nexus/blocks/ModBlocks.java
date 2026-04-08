@@ -59,9 +59,9 @@ public class ModBlocks {
             new OxidizableChainBlock(Oxidizable.OxidationLevel.WEATHERED,AbstractBlock.Settings.copy(Blocks.CHAIN).ticksRandomly()),true);
     public static final Block WAXED_WEATHERED_COPPER_CHAIN = registerBlock("waxed_weathered_copper_chain",
             new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN)),true);
-    public static final Block OXIDISED_COPPER_CHAIN = registerBlock("oxidised_copper_chain",
+    public static final Block OXIDIZED_COPPER_CHAIN = registerBlock("oxidized_copper_chain",
             new OxidizableChainBlock(Oxidizable.OxidationLevel.OXIDIZED,AbstractBlock.Settings.copy(Blocks.CHAIN).ticksRandomly()),true);
-    public static final Block WAXED_OXIDISED_COPPER_CHAIN = registerBlock("waxed_oxidised_copper_chain",
+    public static final Block WAXED_OXIDIZED_COPPER_CHAIN = registerBlock("waxed_oxidized_copper_chain",
             new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN)),true);
 
     public static final Block COPPER_LANTERN = registerBlock("copper_lantern",
@@ -76,9 +76,9 @@ public class ModBlocks {
             new OxidizableLanternBlock(Oxidizable.OxidationLevel.WEATHERED,AbstractBlock.Settings.copy(Blocks.LANTERN).ticksRandomly()),true);
     public static final Block WAXED_WEATHERED_COPPER_LANTERN = registerBlock("waxed_weathered_copper_lantern",
             new LanternBlock(AbstractBlock.Settings.copy(Blocks.LANTERN)),true);
-    public static final Block OXIDISED_COPPER_LANTERN = registerBlock("oxidised_copper_lantern",
+    public static final Block OXIDIZED_COPPER_LANTERN = registerBlock("oxidized_copper_lantern",
             new OxidizableLanternBlock(Oxidizable.OxidationLevel.OXIDIZED,AbstractBlock.Settings.copy(Blocks.LANTERN).ticksRandomly()),true);
-    public static final Block WAXED_OXIDISED_COPPER_LANTERN = registerBlock("waxed_oxidised_copper_lantern",
+    public static final Block WAXED_OXIDIZED_COPPER_LANTERN = registerBlock("waxed_oxidized_copper_lantern",
             new LanternBlock(AbstractBlock.Settings.copy(Blocks.LANTERN)),true);
 
     public static final Block COPPER_BARS = registerBlock("copper_bars",
@@ -93,9 +93,9 @@ public class ModBlocks {
             new OxidizableBarsBlock(Oxidizable.OxidationLevel.WEATHERED,AbstractBlock.Settings.copy(Blocks.IRON_BARS).ticksRandomly()),true);
     public static final Block WAXED_WEATHERED_COPPER_BARS = registerBlock("waxed_weathered_copper_bars",
             new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS)),true);
-    public static final Block OXIDISED_COPPER_BARS = registerBlock("oxidised_copper_bars",
+    public static final Block OXIDIZED_COPPER_BARS = registerBlock("oxidized_copper_bars",
             new OxidizableBarsBlock(Oxidizable.OxidationLevel.OXIDIZED,AbstractBlock.Settings.copy(Blocks.IRON_BARS).ticksRandomly()),true);
-    public static final Block WAXED_OXIDISED_COPPER_BARS = registerBlock("waxed_oxidised_copper_bars",
+    public static final Block WAXED_OXIDIZED_COPPER_BARS = registerBlock("waxed_oxidized_copper_bars",
             new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS)),true);
     
     public static final Block ICE_ROCK = registerBlock("ice_rock",
@@ -230,7 +230,7 @@ public class ModBlocks {
              new Block(AbstractBlock.Settings.copy(Blocks.COPPER_GRATE).mapColor(MapColor.LIGHT_GRAY)),true);
     public static final Block TIN_BARS = registerBlock("tin_bars",
              new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS).mapColor(MapColor.LIGHT_GRAY)),true);
-    public static final Block TIN_CHAINS = registerBlock("tin_chains",
+    public static final Block TIN_CHAIN = registerBlock("tin_chain",
              new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).mapColor(MapColor.LIGHT_GRAY)),true);
     public static final Block TIN_LANTERN = registerBlock("tin_lantern",
              new LanternBlock(AbstractBlock.Settings.copy(Blocks.LANTERN).mapColor(MapColor.LIGHT_GRAY)),true);
@@ -243,7 +243,7 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.copy(Blocks.NETHERITE_BLOCK).mapColor(MapColor.GRAY)),true);
     public static final Block STEEL_BARS = registerBlock("steel_bars",
             new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS).mapColor(MapColor.GRAY)),true);
-    public static final Block STEEL_CHAINS = registerBlock("steel_chains",
+    public static final Block STEEL_CHAIN = registerBlock("steel_chain",
             new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).mapColor(MapColor.GRAY)),true);
     public static final Block STEEL_LANTERN = registerBlock("steel_lantern",
             new LanternBlock(AbstractBlock.Settings.copy(Blocks.LANTERN).mapColor(MapColor.GRAY)),true);
@@ -267,21 +267,53 @@ public class ModBlocks {
             new AmethystClusterBlock(3.0f,4.0f,
                     AbstractBlock.Settings.copy(Blocks.SMALL_AMETHYST_BUD).mapColor(MapColor.PINK)),true);
 
+    public static final Block BRONZE_BLOCK = registerBlock("bronze_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).mapColor(MapColor.DIRT_BROWN)),true);
+    public static final Block BRONZE_BARS = registerBlock("bronze_bars",
+            new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS).mapColor(MapColor.DIRT_BROWN)),true);
+    public static final Block BRONZE_CHAIN = registerBlock("bronze_chain",
+            new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).mapColor(MapColor.DIRT_BROWN)),true);
+    public static final Block BRONZE_LANTERN = registerBlock("bronze_lantern",
+            new LanternBlock(AbstractBlock.Settings.copy(Blocks.LANTERN).mapColor(MapColor.DIRT_BROWN)),true);
+
+    public static final Block COBALT_ORE = registerBlock("cobalt_ore",
+            new Block(AbstractBlock.Settings.copy(Blocks.IRON_ORE)),true);
+    public static final Block DEEPSLATE_COBALT_ORE = registerBlock("deepslate_cobalt_ore",
+            new Block(AbstractBlock.Settings.copy(ModBlocks.COBALT_ORE).sounds(BlockSoundGroup.DEEPSLATE).mapColor(MapColor.DEEPSLATE_GRAY)),true);
+    public static final Block RAW_COBALT_BLOCK = registerBlock("raw_cobalt_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.RAW_IRON_BLOCK).mapColor(MapColor.BLUE)),true);
+    public static final Block COBALT_BLOCK = registerBlock("cobalt_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).mapColor(MapColor.BLUE)),true);
+    public static final Block COBALT_BARS = registerBlock("cobalt_bars",
+            new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS).mapColor(MapColor.BLUE)),true);
+    public static final Block COBALT_CHAIN = registerBlock("cobalt_chain",
+            new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).mapColor(MapColor.BLUE)),true);
+    public static final Block COBALT_LANTERN = registerBlock("cobalt_lantern",
+            new LanternBlock(AbstractBlock.Settings.copy(Blocks.LANTERN).mapColor(MapColor.BLUE)),true);
+
+    public static final Block CRIMSONITE_ORE = registerBlock("crimsonite_ore",
+            new Block(AbstractBlock.Settings.copy(Blocks.END_STONE).strength(30.0F, 1000.0f)),true);
+    public static final Block RAW_CRIMSONITE_BLOCK = registerBlock("raw_crimsonite_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.RAW_COPPER_BLOCK).mapColor(MapColor.RED).strength(30.0F, 1000.0f)),true);
+    public static final Block CRIMSONITE_BLOCK = registerBlock("crimsonite_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.NETHERITE_BLOCK).mapColor(MapColor.RED).strength(30.0F)),true);
+
+
 
     static {
         OxidizableChainBlock.registerOxidationPair(COPPER_CHAIN, EXPOSED_COPPER_CHAIN);
         OxidizableChainBlock.registerOxidationPair(EXPOSED_COPPER_CHAIN, WEATHERED_COPPER_CHAIN);
-        OxidizableChainBlock.registerOxidationPair(WEATHERED_COPPER_CHAIN, OXIDISED_COPPER_CHAIN);
+        OxidizableChainBlock.registerOxidationPair(WEATHERED_COPPER_CHAIN, OXIDIZED_COPPER_CHAIN);
     }
     static {
         OxidizableLanternBlock.registerOxidationPair(COPPER_LANTERN, EXPOSED_COPPER_LANTERN);
         OxidizableLanternBlock.registerOxidationPair(EXPOSED_COPPER_LANTERN, WEATHERED_COPPER_LANTERN);
-        OxidizableLanternBlock.registerOxidationPair(WEATHERED_COPPER_LANTERN, OXIDISED_COPPER_LANTERN);
+        OxidizableLanternBlock.registerOxidationPair(WEATHERED_COPPER_LANTERN, OXIDIZED_COPPER_LANTERN);
     }
     static {
         OxidizableBarsBlock.registerOxidationPair(COPPER_BARS, EXPOSED_COPPER_BARS);
         OxidizableBarsBlock.registerOxidationPair(EXPOSED_COPPER_BARS, WEATHERED_COPPER_BARS);
-        OxidizableBarsBlock.registerOxidationPair(WEATHERED_COPPER_BARS, OXIDISED_COPPER_BARS);
+        OxidizableBarsBlock.registerOxidationPair(WEATHERED_COPPER_BARS, OXIDIZED_COPPER_BARS);
     }
 
     private static Block registerBlock(String name, Block block, boolean hasItem){

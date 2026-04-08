@@ -1,0 +1,10 @@
+{
+  "tears": {
+    "sounds": [
+      {
+        "name": "biome_nexus:tears",
+        "stream": true
+      }
+    ]
+  }
+}

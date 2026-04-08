@@ -40,7 +40,11 @@
                 "trims/models/armor/bolt",
                 "trims/models/armor/bolt_leggings",
                 "biome_nexus:trims/models/armor/grace",
-                "biome_nexus:trims/models/armor/grace_leggings"
+                "biome_nexus:trims/models/armor/grace_leggings",
+                "biome_nexus:trims/models/armor/vine",
+                "biome_nexus:trims/models/armor/vine_leggings",
+                "biome_nexus:trims/models/armor/gem",
+                "biome_nexus:trims/models/armor/gem_leggings"
             ],
             "palette_key": "trims/color_palettes/trim_palette",
             "permutations": {
@@ -66,8 +70,14 @@
                 "tin": "biome_nexus:trims/color_palettes/tin",
                 "steel": "biome_nexus:trims/color_palettes/steel",
                 "steel_darker": "biome_nexus:trims/color_palettes/steel_darker",
+                "bronze": "biome_nexus:trims/color_palettes/bronze",
+                "bronze_darker": "biome_nexus:trims/color_palettes/bronze_darker",
                 "aurorite": "biome_nexus:trims/color_palettes/aurorite",
-                "aurorite_darker": "biome_nexus:trims/color_palettes/aurorite_darker"
+                "aurorite_darker": "biome_nexus:trims/color_palettes/aurorite_darker",
+                "cobalt": "biome_nexus:trims/color_palettes/cobalt",
+                "cobalt_darker": "biome_nexus:trims/color_palettes/cobalt_darker",
+                "crimsonite": "biome_nexus:trims/color_palettes/crimsonite",
+                "crimsonite_darker": "biome_nexus:trims/color_palettes/crimsonite_darker"
             }
         }
     ]

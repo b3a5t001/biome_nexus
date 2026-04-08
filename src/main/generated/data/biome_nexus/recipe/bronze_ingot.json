@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "biome_nexus:bronze_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "biome_nexus:bronze_ingot"
+  }
+}

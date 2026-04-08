@@ -1,0 +1,12 @@
+{
+  "asset_name": "bronze",
+  "description": {
+    "color": "#947563",
+    "translate": "trim_material.biome_nexus.bronze"
+  },
+  "ingredient": "biome_nexus:bronze_ingot",
+  "item_model_index": 0.5,
+  "override_armor_materials": {
+    "biome_nexus:bronze_armor": "bronze_darker"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.biome_nexus.jukebox_song.tears.desc"
+  },
+  "length_in_seconds":180,
+  "sound_event": "biome_nexus:tears"
+}

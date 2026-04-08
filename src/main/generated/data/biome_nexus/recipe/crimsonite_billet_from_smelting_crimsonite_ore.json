@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.6,
+  "group": "crimsonite_ore",
+  "ingredient": {
+    "item": "biome_nexus:crimsonite_ore"
+  },
+  "result": {
+    "id": "biome_nexus:crimsonite_billet"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.4,
+  "group": "cobalt_nugget",
+  "ingredient": {
+    "item": "biome_nexus:cobalt_boots"
+  },
+  "result": {
+    "id": "biome_nexus:cobalt_nugget"
+  }
+}

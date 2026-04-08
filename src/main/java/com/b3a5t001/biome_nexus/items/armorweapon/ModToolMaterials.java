@@ -13,11 +13,17 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     COPPER(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL, 191, 5.0F,
-            1.5F, 17, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
-    STEEL(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL, 1645, 9.0f,
+            1.0F, 17, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    STEEL(ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL, 1672, 9.0f,
             3.0f, 16, () -> Ingredient.ofItems(ModItems.STEEL_INGOT)),
+    BRONZE(ModTags.Blocks.INCORRECT_FOR_BRONZE_TOOL, 987, 7.0f,
+            2.0f, 11, () -> Ingredient.ofItems(ModItems.BRONZE_INGOT)),
     AURORITE(ModTags.Blocks.INCORRECT_FOR_AURORITE_TOOL, 264, 6.0f,
-            2.0f, 24, () -> Ingredient.ofItems(ModItems.AURORITE_ALLOY));
+            2.0f, 24, () -> Ingredient.ofItems(ModItems.AURORITE_ALLOY)),
+    COBALT(ModTags.Blocks.INCORRECT_FOR_COBALT_TOOL, 1561, 9.0f,
+            4.0f, 15, () -> Ingredient.ofItems(ModItems.COBALT_INGOT)),
+    CRIMSONITE(ModTags.Blocks.INCORRECT_FOR_CRIMSONITE_TOOL, 2245, 38.7f,
+            5.0f, 9, () -> Ingredient.ofItems(ModItems.CRIMSONITE_INGOT));
 
 
     private final TagKey<Block> inverseTag;

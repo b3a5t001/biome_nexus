@@ -1,7 +1,10 @@
 {
   "values": [
     "biome_nexus:copper_axe",
+    "biome_nexus:crimsonite_axe",
     "biome_nexus:steel_axe",
+    "biome_nexus:cobalt_axe",
+    "biome_nexus:bronze_axe",
     "biome_nexus:aurorite_axe"
   ]
 }

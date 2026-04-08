@@ -1,7 +1,10 @@
 {
   "values": [
     "biome_nexus:copper_sword",
+    "biome_nexus:crimsonite_sword",
     "biome_nexus:steel_sword",
+    "biome_nexus:cobalt_sword",
+    "biome_nexus:bronze_sword",
     "biome_nexus:aurorite_sword"
   ]
 }

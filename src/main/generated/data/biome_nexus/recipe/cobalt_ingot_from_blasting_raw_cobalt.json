@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.6,
+  "group": "cobalt_ore",
+  "ingredient": {
+    "item": "biome_nexus:raw_cobalt"
+  },
+  "result": {
+    "id": "biome_nexus:cobalt_ingot"
+  }
+}

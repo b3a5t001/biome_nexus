@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "minecraft:diamond"
+    },
+    "T": {
+      "item": "biome_nexus:crimsonite_billet"
+    }
+  },
+  "pattern": [
+    "TC ",
+    "CT ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "biome_nexus:crimsonite_ingot"
+  }
+}

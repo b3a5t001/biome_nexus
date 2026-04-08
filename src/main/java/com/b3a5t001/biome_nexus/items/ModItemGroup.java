@@ -17,47 +17,89 @@ public class ModItemGroup {
                     entries.add(ModItems.TIN_NUGGET);
                     entries.add(ModItems.STEEL_INGOT);
                     entries.add(ModItems.STEEL_NUGGET);
+                    entries.add(ModItems.BRONZE_INGOT);
+                    entries.add(ModItems.BRONZE_NUGGET);
+                    entries.add(ModItems.COBALT_INGOT);
+                    entries.add(ModItems.RAW_COBALT);
+                    entries.add(ModItems.COBALT_NUGGET);
                     entries.add(ModItems.AURORITE_CRYSTAL);
                     entries.add(ModItems.AURORITE_ALLOY);
+                    entries.add(ModItems.RAW_CRIMSONITE);
+                    entries.add(ModItems.CRIMSONITE_BILLET);
+                    entries.add(ModItems.CRIMSONITE_INGOT);
+                    entries.add(ModItems.CRIMSONITE_UPGRADE_SMITHING_TEMPLATE);
                     entries.add(ModItems.GRACE_SMITHING_TEMPLATE);
+                    entries.add(ModItems.VINE_SMITHING_TEMPLATE);
+                    entries.add(ModItems.GEM_SMITHING_TEMPLATE);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(
                 entries -> {
                     entries.add(ModItems.COPPER_SWORD);
                     entries.add(ModItems.AURORITE_SWORD);
+                    entries.add(ModItems.BRONZE_SWORD);
+                    entries.add(ModItems.COBALT_SWORD);
                     entries.add(ModItems.STEEL_SWORD);
+                    entries.add(ModItems.CRIMSONITE_SWORD);
                     entries.add(ModItems.COPPER_AXE);
                     entries.add(ModItems.AURORITE_AXE);
+                    entries.add(ModItems.BRONZE_AXE);
+                    entries.add(ModItems.COBALT_AXE);
                     entries.add(ModItems.STEEL_AXE);
+                    entries.add(ModItems.CRIMSONITE_AXE);
                     entries.add(ModItems.COPPER_HELMET);
                     entries.add(ModItems.AURORITE_HELMET);
+                    entries.add(ModItems.BRONZE_HELMET);
+                    entries.add(ModItems.COBALT_HELMET);
                     entries.add(ModItems.STEEL_HELMET);
+                    entries.add(ModItems.CRIMSONITE_HELMET);
                     entries.add(ModItems.COPPER_CHESTPLATE);
                     entries.add(ModItems.AURORITE_CHESTPLATE);
+                    entries.add(ModItems.BRONZE_CHESTPLATE);
+                    entries.add(ModItems.COBALT_CHESTPLATE);
                     entries.add(ModItems.STEEL_CHESTPLATE);
+                    entries.add(ModItems.CRIMSONITE_CHESTPLATE);
                     entries.add(ModItems.COPPER_LEGGINGS);
                     entries.add(ModItems.AURORITE_LEGGINGS);
+                    entries.add(ModItems.BRONZE_LEGGINGS);
+                    entries.add(ModItems.COBALT_LEGGINGS);
                     entries.add(ModItems.STEEL_LEGGINGS);
+                    entries.add(ModItems.CRIMSONITE_LEGGINGS);
                     entries.add(ModItems.COPPER_BOOTS);
                     entries.add(ModItems.AURORITE_BOOTS);
+                    entries.add(ModItems.BRONZE_BOOTS);
+                    entries.add(ModItems.COBALT_BOOTS);
                     entries.add(ModItems.STEEL_BOOTS);
+                    entries.add(ModItems.CRIMSONITE_BOOTS);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(
                 entries -> {
                     entries.add(ModItems.COPPER_SHOVEL);
                     entries.add(ModItems.AURORITE_SHOVEL);
+                    entries.add(ModItems.BRONZE_SHOVEL);
+                    entries.add(ModItems.COBALT_SHOVEL);
                     entries.add(ModItems.STEEL_SHOVEL);
+                    entries.add(ModItems.CRIMSONITE_SHOVEL);
                     entries.add(ModItems.COPPER_PICKAXE);
                     entries.add(ModItems.AURORITE_PICKAXE);
+                    entries.add(ModItems.BRONZE_PICKAXE);
+                    entries.add(ModItems.COBALT_PICKAXE);
                     entries.add(ModItems.STEEL_PICKAXE);
+                    entries.add(ModItems.CRIMSONITE_PICKAXE);
                     entries.add(ModItems.COPPER_AXE);
                     entries.add(ModItems.AURORITE_AXE);
+                    entries.add(ModItems.BRONZE_AXE);
+                    entries.add(ModItems.COBALT_AXE);
                     entries.add(ModItems.STEEL_AXE);
+                    entries.add(ModItems.CRIMSONITE_AXE);
                     entries.add(ModItems.COPPER_HOE);
                     entries.add(ModItems.AURORITE_HOE);
+                    entries.add(ModItems.BRONZE_HOE);
+                    entries.add(ModItems.COBALT_HOE);
                     entries.add(ModItems.STEEL_HOE);
+                    entries.add(ModItems.CRIMSONITE_HOE);
+                    entries.add(ModItems.TEARS_MUSIC_DISC);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(
@@ -65,19 +107,19 @@ public class ModItemGroup {
                     entries.add(ModBlocks.COPPER_CHAIN);
                     entries.add(ModBlocks.EXPOSED_COPPER_CHAIN);
                     entries.add(ModBlocks.WEATHERED_COPPER_CHAIN);
-                    entries.add(ModBlocks.OXIDISED_COPPER_CHAIN);
+                    entries.add(ModBlocks.OXIDIZED_COPPER_CHAIN);
                     entries.add(ModBlocks.COPPER_BARS);
                     entries.add(ModBlocks.EXPOSED_COPPER_BARS);
                     entries.add(ModBlocks.WEATHERED_COPPER_BARS);
-                    entries.add(ModBlocks.OXIDISED_COPPER_BARS);
+                    entries.add(ModBlocks.OXIDIZED_COPPER_BARS);
                     entries.add(ModBlocks.WAXED_COPPER_CHAIN);
                     entries.add(ModBlocks.WAXED_EXPOSED_COPPER_CHAIN);
                     entries.add(ModBlocks.WAXED_WEATHERED_COPPER_CHAIN);
-                    entries.add(ModBlocks.WAXED_OXIDISED_COPPER_CHAIN);
+                    entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_CHAIN);
                     entries.add(ModBlocks.WAXED_COPPER_BARS);
                     entries.add(ModBlocks.WAXED_EXPOSED_COPPER_BARS);
                     entries.add(ModBlocks.WAXED_WEATHERED_COPPER_BARS);
-                    entries.add(ModBlocks.WAXED_OXIDISED_COPPER_BARS);
+                    entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_BARS);
                     entries.add(ModBlocks.SULFUR_BLOCK);
                     entries.add(ModBlocks.GOLD_CHAIN);
                     entries.add(ModBlocks.GOLD_BARS);
@@ -119,18 +161,27 @@ public class ModItemGroup {
                     entries.add(ModBlocks.CUT_TIN_STAIRS);
                     entries.add(ModBlocks.CHISELED_TIN);
                     entries.add(ModBlocks.TIN_GRATE);
-                    entries.add(ModBlocks.TIN_CHAINS);
+                    entries.add(ModBlocks.TIN_CHAIN);
                     entries.add(ModBlocks.TIN_BARS);
                     entries.add(ModBlocks.TIN_DOOR);
                     entries.add(ModBlocks.TIN_TRAPDOOR);
+                    entries.add(ModBlocks.BRONZE_BLOCK);
+                    entries.add(ModBlocks.BRONZE_CHAIN);
+                    entries.add(ModBlocks.BRONZE_BARS);
+                    entries.add(ModBlocks.RAW_COBALT_BLOCK);
+                    entries.add(ModBlocks.COBALT_BLOCK);
+                    entries.add(ModBlocks.COBALT_CHAIN);
+                    entries.add(ModBlocks.COBALT_BARS);
                     entries.add(ModBlocks.STEEL_BLOCK);
-                    entries.add(ModBlocks.STEEL_CHAINS);
+                    entries.add(ModBlocks.STEEL_CHAIN);
                     entries.add(ModBlocks.STEEL_BARS);
                     entries.add(ModBlocks.SCULK_SLATE);
                     entries.add(ModBlocks.SCULK_SLATE_BRICKS);
                     entries.add(ModBlocks.SCULK_SLATE_BRICK_SLAB);
                     entries.add(ModBlocks.SCULK_SLATE_BRICK_STAIRS);
                     entries.add(ModBlocks.SCULK_SLATE_BRICK_WALL);
+                    entries.add(ModBlocks.RAW_CRIMSONITE_BLOCK);
+                    entries.add(ModBlocks.CRIMSONITE_BLOCK);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(
@@ -140,6 +191,9 @@ public class ModItemGroup {
                     entries.add(ModBlocks.DEEPSLATE_JADE_ORE);
                     entries.add(ModBlocks.TIN_ORE);
                     entries.add(ModBlocks.DEEPSLATE_TIN_ORE);
+                    entries.add(ModBlocks.COBALT_ORE);
+                    entries.add(ModBlocks.DEEPSLATE_COBALT_ORE);
+                    entries.add(ModBlocks.CRIMSONITE_ORE);
                     entries.add(ModBlocks.AURORITE_CRYSTAL_BLOCK);
                     entries.add(ModBlocks.BUDDING_AURORITE);
                     entries.add(ModBlocks.AURORITE_CLUSTER);
@@ -154,16 +208,18 @@ public class ModItemGroup {
                     entries.add(ModBlocks.COPPER_LANTERN);
                     entries.add(ModBlocks.EXPOSED_COPPER_LANTERN);
                     entries.add(ModBlocks.WEATHERED_COPPER_LANTERN);
-                    entries.add(ModBlocks.OXIDISED_COPPER_LANTERN);
+                    entries.add(ModBlocks.OXIDIZED_COPPER_LANTERN);
                     entries.add(ModBlocks.WAXED_COPPER_LANTERN);
                     entries.add(ModBlocks.WAXED_EXPOSED_COPPER_LANTERN);
                     entries.add(ModBlocks.WAXED_WEATHERED_COPPER_LANTERN);
-                    entries.add(ModBlocks.WAXED_OXIDISED_COPPER_LANTERN);
+                    entries.add(ModBlocks.WAXED_OXIDIZED_COPPER_LANTERN);
                     entries.add(ModItems.SULFUR_TORCH);
                     entries.add(ModBlocks.GOLD_LANTERN);
                     entries.add(ModItems.TIN_TORCH);
                     entries.add(ModBlocks.TIN_LANTERN);
                     entries.add(ModBlocks.STEEL_LANTERN);
+                    entries.add(ModBlocks.COBALT_LANTERN);
+                    entries.add(ModBlocks.BRONZE_LANTERN);
                 }
         );
     }

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "I": {
+      "item": "biome_nexus:cobalt_ingot"
+    }
+  },
+  "pattern": [
+    "   ",
+    "III",
+    "III"
+  ],
+  "result": {
+    "count": 16,
+    "id": "biome_nexus:cobalt_bars"
+  }
+}

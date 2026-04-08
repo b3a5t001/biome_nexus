@@ -15,6 +15,12 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_STEEL_TOOL = createTag("incorrect_for_steel_tool");
         public static final TagKey<Block> NEEDS_AURORITE_TOOL = createTag("needs_aurorite_tool");
         public static final TagKey<Block> INCORRECT_FOR_AURORITE_TOOL = createTag("incorrect_for_aurorite_tool");
+        public static final TagKey<Block> NEEDS_BRONZE_TOOL = createTag("needs_bronze_tool");
+        public static final TagKey<Block> INCORRECT_FOR_BRONZE_TOOL = createTag("incorrect_for_bronze_tool");
+        public static final TagKey<Block> NEEDS_COBALT_TOOL = createTag("needs_cobalt_tool");
+        public static final TagKey<Block> INCORRECT_FOR_COBALT_TOOL = createTag("incorrect_for_cobalt_tool");
+        public static final TagKey<Block> NEEDS_CRIMSONITE_TOOL = createTag("needs_crimsonite_tool");
+        public static final TagKey<Block> INCORRECT_FOR_CRIMSONITE_TOOL = createTag("incorrect_for_crimsonite_tool");
 
         public static TagKey<Block> createTag(String name){
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(BiomeNexus.MOD_ID, name));

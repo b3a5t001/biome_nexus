@@ -59,8 +59,14 @@
                 "tin": "biome_nexus:trims/color_palettes/tin",
                 "steel": "biome_nexus:trims/color_palettes/steel",
                 "steel_darker": "biome_nexus:trims/color_palettes/steel_darker",
+                "bronze": "biome_nexus:trims/color_palettes/bronze",
+                "bronze_darker": "biome_nexus:trims/color_palettes/bronze_darker",
                 "aurorite": "biome_nexus:trims/color_palettes/aurorite",
-                "aurorite_darker": "biome_nexus:trims/color_palettes/aurorite_darker"
+                "aurorite_darker": "biome_nexus:trims/color_palettes/aurorite_darker",
+                "cobalt": "biome_nexus:trims/color_palettes/cobalt",
+                "cobalt_darker": "biome_nexus:trims/color_palettes/cobalt_darker",
+                "crimsonite": "biome_nexus:trims/color_palettes/crimsonite",
+                "crimsonite_darker": "biome_nexus:trims/color_palettes/crimsonite_darker"
             }
         }
     ]

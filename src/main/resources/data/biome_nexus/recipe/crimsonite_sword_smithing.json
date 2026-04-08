@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "biome_nexus:crimsonite_ingot"
+  },
+  "base": {
+    "item": "biome_nexus:steel_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "biome_nexus:crimsonite_sword"
+  },
+  "template": {
+    "item": "biome_nexus:crimsonite_upgrade_smithing_template"
+  }
+}

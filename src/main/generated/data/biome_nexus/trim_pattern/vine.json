@@ -1,0 +1,8 @@
+{
+  "asset_id": "biome_nexus:vine",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.biome_nexus.vine"
+  },
+  "template_item": "biome_nexus:vine_armor_trim_smithing_template"
+}

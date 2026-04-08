@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "T": {
+      "item": "biome_nexus:tin_ingot"
+    }
+  },
+  "pattern": [
+    "TC ",
+    "CT ",
+    "   "
+  ],
+  "result": {
+    "count": 2,
+    "id": "biome_nexus:bronze_ingot"
+  }
+}

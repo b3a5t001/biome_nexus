@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.6,
+  "group": "cobalt_ore",
+  "ingredient": {
+    "item": "biome_nexus:deepslate_cobalt_ore"
+  },
+  "result": {
+    "id": "biome_nexus:cobalt_ingot"
+  }
+}

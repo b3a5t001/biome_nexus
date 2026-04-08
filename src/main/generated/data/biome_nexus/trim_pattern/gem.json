@@ -1,0 +1,8 @@
+{
+  "asset_id": "biome_nexus:gem",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.biome_nexus.gem"
+  },
+  "template_item": "biome_nexus:gem_armor_trim_smithing_template"
+}

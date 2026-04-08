@@ -1,7 +1,10 @@
 {
   "values": [
     "biome_nexus:copper_hoe",
+    "biome_nexus:crimsonite_hoe",
     "biome_nexus:steel_hoe",
+    "biome_nexus:cobalt_hoe",
+    "biome_nexus:bronze_hoe",
     "biome_nexus:aurorite_hoe"
   ]
 }
