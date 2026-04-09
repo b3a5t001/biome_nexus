@@ -3,6 +3,7 @@ package com.b3a5t001.biome_nexus;
 import com.b3a5t001.biome_nexus.blocks.BlockEventHandler;
 import com.b3a5t001.biome_nexus.blocks.ModBlocks;
 import com.b3a5t001.biome_nexus.entities.ModEntityEvents;
+import com.b3a5t001.biome_nexus.blocks.entity.ModBlockEntities;
 import com.b3a5t001.biome_nexus.items.ModItemGroup;
 import com.b3a5t001.biome_nexus.items.ModItems;
 import com.b3a5t001.biome_nexus.sound.ModSoundEvents;
@@ -20,6 +21,7 @@ public class BiomeNexus implements ModInitializer {
 	public void onInitialize() {
 		ModItems.init();
 		ModBlocks.init();
+		ModBlockEntities.init();
 		ModItemGroup.init();
 		BlockEventHandler.init();
 		ModSoundEvents.init();

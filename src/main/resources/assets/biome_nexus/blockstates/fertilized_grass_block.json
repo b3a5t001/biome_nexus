@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "fert_stage=1,snowy=false": { "model": "minecraft:block/grass_block" },
+    "fert_stage=2,snowy=false": { "model": "minecraft:block/grass_block" },
+    "fert_stage=3,snowy=false": { "model": "minecraft:block/grass_block" },
+    "fert_stage=4,snowy=false": { "model": "minecraft:block/grass_block" },
+    "fert_stage=5,snowy=false": { "model": "minecraft:block/grass_block" },
+    "fert_stage=1,snowy=true": { "model": "minecraft:block/grass_block_snow" },
+    "fert_stage=2,snowy=true": { "model": "minecraft:block/grass_block_snow" },
+    "fert_stage=3,snowy=true": { "model": "minecraft:block/grass_block_snow" },
+    "fert_stage=4,snowy=true": { "model": "minecraft:block/grass_block_snow" },
+    "fert_stage=5,snowy=true": { "model": "minecraft:block/grass_block_snow" }
+  }
+}

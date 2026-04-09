@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "fert_stage=1": { "model": "minecraft:block/soul_sand" },
+    "fert_stage=2": { "model": "minecraft:block/soul_sand" },
+    "fert_stage=3": { "model": "minecraft:block/soul_sand" },
+    "fert_stage=4": { "model": "minecraft:block/soul_sand" },
+    "fert_stage=5": { "model": "minecraft:block/soul_sand" }
+  }
+}

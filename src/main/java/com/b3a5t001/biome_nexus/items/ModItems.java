@@ -5,6 +5,7 @@ import com.b3a5t001.biome_nexus.blocks.ModBlocks;
 import com.b3a5t001.biome_nexus.items.armorweapon.ModArmorMaterials;
 import com.b3a5t001.biome_nexus.items.armorweapon.ModToolMaterials;
 import com.b3a5t001.biome_nexus.items.custom.ModSmithingTemplateItem;
+import com.b3a5t001.biome_nexus.items.custom.SulfurDustItem;
 import com.b3a5t001.biome_nexus.sound.ModSoundEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -16,7 +17,7 @@ import net.minecraft.util.math.Direction;
 
 public class ModItems {
     public static final Item SULFUR_DUST = registerItem("sulfur_dust",
-            new BoneMealItem(new Item.Settings()));
+            new SulfurDustItem(new Item.Settings()));
     public static final Item COPPER_NUGGET = registerItem("copper_nugget",
             new Item(new Item.Settings()));
     public static final Item SULFUR_TORCH = registerItem("sulfur_torch",

@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "biome_nexus:fertilized_farmland",
+    "biome_nexus:fertilized_grass_block",
+    "biome_nexus:fertilized_dirt",
+    "biome_nexus:fertilized_coarse_dirt",
+    "biome_nexus:fertilized_podzol",
+    "biome_nexus:fertilized_mycelium",
+    "biome_nexus:fertilized_rooted_dirt",
+    "biome_nexus:fertilized_mud",
+    "biome_nexus:fertilized_clay",
+    "biome_nexus:fertilized_sand",
+    "biome_nexus:fertilized_red_sand",
+    "biome_nexus:fertilized_soul_sand"
+  ]
+}
