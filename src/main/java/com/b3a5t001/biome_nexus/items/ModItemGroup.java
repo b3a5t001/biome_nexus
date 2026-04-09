@@ -100,6 +100,7 @@ public class ModItemGroup {
                     entries.add(ModItems.STEEL_HOE);
                     entries.add(ModItems.CRIMSONITE_HOE);
                     entries.add(ModItems.TEARS_MUSIC_DISC);
+                    entries.add(ModItems.LAVA_CHICKEN_MUSIC_DISC);
                 }
         );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "C": {
+      "tag": "biome_nexus:crystals"
+    },
+    "X": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    " C ",
+    " X ",
+    " X "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:spyglass"
+  }
+}

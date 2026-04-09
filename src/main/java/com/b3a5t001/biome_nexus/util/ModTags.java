@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.Biome;
 
 public class ModTags {
     public static class Blocks{
@@ -29,9 +30,22 @@ public class ModTags {
     }
     public static class Items{
         public static final TagKey<Item> STONE_VARIANTS = createTag("stone_variants");
+        public static final TagKey<Item> CRYSTALS = createTag("crystals");
+        public static final TagKey<Item> EXPLOSIVE_POWDERS = createTag("explosive_powders");
 
         public static TagKey<Item> createTag(String name){
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(BiomeNexus.MOD_ID, name));
+        }
+    }
+
+    public static class Biomes{
+        public static final TagKey<Biome> PLAINS_VARIANTS = createTag("plains_variants");
+        public static final TagKey<Biome> IS_CAVE = createTag("is_cave");
+        public static final TagKey<Biome> IS_FROZEN = createTag("is_frozen");
+        public static final TagKey<Biome> IS_COLD = createTag("is_cold");
+
+        public static TagKey<Biome> createTag(String name){
+            return TagKey.of(RegistryKeys.BIOME, Identifier.of(BiomeNexus.MOD_ID, name));
         }
     }
 }

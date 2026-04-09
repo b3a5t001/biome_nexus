@@ -12,12 +12,14 @@ import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.Biome;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -351,6 +353,46 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_TIN_SLAB, ModBlocks.CUT_TIN, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_TIN_STAIRS, ModBlocks.CUT_TIN);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_TIN, ModBlocks.CUT_TIN);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, Items.TNT, 1)
+                .input('G', ModTags.Items.EXPLOSIVE_POWDERS)
+                .input('S', ItemTags.SAND)
+                .pattern("GSG")
+                .pattern("SGS")
+                .pattern("GSG")
+                .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.GUNPOWDER))
+                .criterion(hasItem(ModItems.SULFUR_DUST), conditionsFromItem(ModItems.SULFUR_DUST))
+                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "tnt"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, Items.SPYGLASS, 1)
+                .input('C', ModTags.Items.CRYSTALS)
+                .input('X', Items.COPPER_INGOT)
+                .pattern(" C ")
+                .pattern(" X ")
+                .pattern(" X ")
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                .criterion(hasItem(ModItems.JADE_CRYSTAL), conditionsFromItem(ModItems.JADE_CRYSTAL))
+                .criterion(hasItem(ModItems.AURORITE_CRYSTAL), conditionsFromItem(ModItems.AURORITE_CRYSTAL))
+                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "spyglass"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.REDSTONE, Items.CALIBRATED_SCULK_SENSOR, 1)
+                .input('C', ModTags.Items.CRYSTALS)
+                .input('X', Items.SCULK_SENSOR)
+                .pattern(" C ")
+                .pattern("CXC")
+                .pattern("   ")
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                .criterion(hasItem(ModItems.JADE_CRYSTAL), conditionsFromItem(ModItems.JADE_CRYSTAL))
+                .criterion(hasItem(ModItems.AURORITE_CRYSTAL), conditionsFromItem(ModItems.AURORITE_CRYSTAL))
+                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "calibrated_sculk_sensor"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, Items.TINTED_GLASS, 2)
+                .input('C', ModTags.Items.CRYSTALS)
+                .input('G', Items.GLASS)
+                .pattern(" C ")
+                .pattern("CGC")
+                .pattern(" C ")
+                .criterion(hasItem(Items.AMETHYST_SHARD), conditionsFromItem(Items.AMETHYST_SHARD))
+                .criterion(hasItem(ModItems.JADE_CRYSTAL), conditionsFromItem(ModItems.JADE_CRYSTAL))
+                .criterion(hasItem(ModItems.AURORITE_CRYSTAL), conditionsFromItem(ModItems.AURORITE_CRYSTAL))
+                .offerTo(exporter, Identifier.of(BiomeNexus.MOD_ID, "tinted_glass"));
 
     }
 

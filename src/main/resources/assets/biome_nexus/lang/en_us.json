@@ -78,6 +78,8 @@
   "item.biome_nexus.crimsonite_upgrade_smithing_template": "Crimsonite Upgrade Smithing Template",
   "item.biome_nexus.music_disc_tears": "Music Disc - Tears",
   "item.biome_nexus.jukebox_song.tears.desc": "Tears - Amos Rody",
+  "item.biome_nexus.music_disc_lava_chicken": "Music Disc - Lava Chicken",
+  "item.biome_nexus.jukebox_song.lava_chicken.desc": "Lava Chicken - HyperPixel",
 
   "block.biome_nexus.sulfur_block": "Block Of Sulfur",
   "block.biome_nexus.sulfur_ore": "Sulfur Ore",

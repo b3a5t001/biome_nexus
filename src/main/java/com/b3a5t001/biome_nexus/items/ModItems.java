@@ -16,7 +16,7 @@ import net.minecraft.util.math.Direction;
 
 public class ModItems {
     public static final Item SULFUR_DUST = registerItem("sulfur_dust",
-            new Item(new Item.Settings()));
+            new BoneMealItem(new Item.Settings()));
     public static final Item COPPER_NUGGET = registerItem("copper_nugget",
             new Item(new Item.Settings()));
     public static final Item SULFUR_TORCH = registerItem("sulfur_torch",
@@ -255,6 +255,8 @@ public class ModItems {
 
     public static final Item TEARS_MUSIC_DISC = registerItem("music_disc_tears",
             new Item(new Item.Settings().jukeboxPlayable(ModSoundEvents.TEARS_KEY).maxCount(1)));
+    public static final Item LAVA_CHICKEN_MUSIC_DISC = registerItem("music_disc_lava_chicken",
+            new Item(new Item.Settings().jukeboxPlayable(ModSoundEvents.LAVA_CHICKEN_KEY).maxCount(1)));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(BiomeNexus.MOD_ID, name), item);

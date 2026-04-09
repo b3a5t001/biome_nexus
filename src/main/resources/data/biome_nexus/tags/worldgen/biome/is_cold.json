@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#biome_nexus:is_frozen",
+    "minecraft:taiga",
+    "minecraft:cold_ocean",
+    "minecraft:deep_cold_ocean",
+    "minecraft:old_growth_pine_taiga",
+    "minecraft:old_growth_spruce_taiga",
+    "minecraft:windswept_forest",
+    "minecraft:windswept_gravelly_hills",
+    "minecraft:windswept_hills"
+  ]
+}

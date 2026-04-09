@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "item.biome_nexus.jukebox_song.lava_chicken.desc"
+  },
+  "length_in_seconds":140,
+  "sound_event": "biome_nexus:lava_chicken"
+}

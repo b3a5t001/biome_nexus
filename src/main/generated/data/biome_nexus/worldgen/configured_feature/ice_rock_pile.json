@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:forest_rock",
+  "config": {
+    "state": {
+      "Name": "biome_nexus:ice_rock"
+    }
+  }
+}

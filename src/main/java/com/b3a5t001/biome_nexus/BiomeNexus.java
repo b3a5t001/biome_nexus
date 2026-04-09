@@ -2,12 +2,13 @@ package com.b3a5t001.biome_nexus;
 
 import com.b3a5t001.biome_nexus.blocks.BlockEventHandler;
 import com.b3a5t001.biome_nexus.blocks.ModBlocks;
+import com.b3a5t001.biome_nexus.entities.ModEntityEvents;
 import com.b3a5t001.biome_nexus.items.ModItemGroup;
 import com.b3a5t001.biome_nexus.items.ModItems;
 import com.b3a5t001.biome_nexus.sound.ModSoundEvents;
+import com.b3a5t001.biome_nexus.world.worldgen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.sound.BlockSoundGroup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +23,8 @@ public class BiomeNexus implements ModInitializer {
 		ModItemGroup.init();
 		BlockEventHandler.init();
 		ModSoundEvents.init();
+		ModEntityEvents.init();
+		ModWorldGeneration.init();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

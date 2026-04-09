@@ -110,5 +110,15 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
                 .add(Items.DEEPSLATE)
                 .add(ModBlocks.LIMESTONE.asItem());
 
+        getOrCreateTagBuilder(ModTags.Items.CRYSTALS)
+                .add(Items.AMETHYST_SHARD)
+                .add(ModItems.JADE_CRYSTAL)
+                .add(ModItems.AURORITE_CRYSTAL);
+
+        getOrCreateTagBuilder(ModTags.Items.EXPLOSIVE_POWDERS)
+                .add(Items.GUNPOWDER)
+                .add(ModItems.SULFUR_DUST);
+
+
     }
 }

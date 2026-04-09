@@ -123,6 +123,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GEM_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRIMSONITE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.TEARS_MUSIC_DISC, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LAVA_CHICKEN_MUSIC_DISC, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.COPPER_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.COPPER_AXE, Models.HANDHELD);

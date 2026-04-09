@@ -257,5 +257,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.LIMESTONE);
         getOrCreateTagBuilder(BlockTags.SCULK_REPLACEABLE_WORLD_GEN)
                 .add(ModBlocks.LIMESTONE);
+        getOrCreateTagBuilder(BlockTags.DEEPSLATE_ORE_REPLACEABLES)
+                .add(ModBlocks.LIMESTONE);
     }
 }
