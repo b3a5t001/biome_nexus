@@ -2,11 +2,13 @@ package com.b3a5t001.biome_nexus.world;
 
 import com.b3a5t001.biome_nexus.BiomeNexus;
 import com.b3a5t001.biome_nexus.blocks.ModBlocks;
+import com.b3a5t001.biome_nexus.util.ModTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
@@ -26,6 +28,11 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> SCULK_SLATE_KEY = registryKey("sculk_slate");
     public static final RegistryKey<ConfiguredFeature<?, ?>> JADE_ORE_KEY = registryKey("jade_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> LUSH_JADE_ORE_KEY = registryKey("cave_jade_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> NETHER_SULFUR_ORE_KEY = registryKey("nether_sulfur_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> END_CRIMSONITE_ORE_KEY = registryKey("end_crimsonite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> QUARTZ_ORE_KEY = registryKey("quartz_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> NETHER_GOLD_ORE_KEY = registryKey("nether_gold_ore");
+
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> ICE_ROCK_PILE_KEY = registryKey("ice_rock_pile");
 
@@ -34,6 +41,9 @@ public class ModConfiguredFeatures {
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context){
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest netherReplaceables = new TagMatchRuleTest(ModTags.Blocks.NETHER_ORE_REPLACEABLES);
+        RuleTest overworldBaseStone = new TagMatchRuleTest(BlockTags.BASE_STONE_OVERWORLD);
+        RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
         List<OreFeatureConfig.Target> tinOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.TIN_ORE.getDefaultState()),
@@ -45,14 +55,19 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.JADE_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.DEEPSLATE_JADE_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> limestone =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.LIMESTONE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.LIMESTONE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(overworldBaseStone, ModBlocks.LIMESTONE.getDefaultState()));
         List<OreFeatureConfig.Target> sculkSlate =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.SCULK_SLATE.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.SCULK_SLATE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(overworldBaseStone, ModBlocks.SCULK_SLATE.getDefaultState()));
         List<OreFeatureConfig.Target> iceRock =
-                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.ICE_ROCK.getDefaultState()),
-                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.ICE_ROCK.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(overworldBaseStone, ModBlocks.ICE_ROCK.getDefaultState()));
+        List<OreFeatureConfig.Target> sulfurOre =
+                List.of(OreFeatureConfig.createTarget(netherReplaceables, ModBlocks.SULFUR_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> quartzOre =
+                List.of(OreFeatureConfig.createTarget(netherReplaceables, Blocks.NETHER_QUARTZ_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> netherGoldOre =
+                List.of(OreFeatureConfig.createTarget(netherReplaceables, Blocks.NETHER_GOLD_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> crimsoniteOre =
+                List.of(OreFeatureConfig.createTarget(endReplaceables, ModBlocks.CRIMSONITE_ORE.getDefaultState()));
 
         register(context, TIN_ORE_KEY, Feature.ORE, new OreFeatureConfig(tinOres, 8));
         register(context, PLAINS_TIN_ORE_KEY, Feature.ORE, new OreFeatureConfig(tinOres, 20));
@@ -63,6 +78,10 @@ public class ModConfiguredFeatures {
         register(context, LUSH_JADE_ORE_KEY, Feature.ORE, new OreFeatureConfig(jadeOres, 12));
         register(context, SCULK_SLATE_KEY, Feature.ORE, new OreFeatureConfig(sculkSlate, 64));
         register(context, ICE_ROCK_KEY, Feature.ORE, new OreFeatureConfig(iceRock, 64));
+        register(context, NETHER_SULFUR_ORE_KEY, Feature.ORE, new OreFeatureConfig(sulfurOre, 10,0.4f));
+        register(context, END_CRIMSONITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(crimsoniteOre,4,1.0f));
+        register(context, QUARTZ_ORE_KEY, Feature.ORE, new OreFeatureConfig(quartzOre, 14));
+        register(context, NETHER_GOLD_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherGoldOre, 10));
 
 
         register(context, ICE_ROCK_PILE_KEY, Feature.FOREST_ROCK,

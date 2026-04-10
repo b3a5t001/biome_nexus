@@ -28,5 +28,13 @@ public class ModOrePlacement {
                 ModPlacedFeatures.SCULK_SLATE_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.tag(ModTags.Biomes.IS_FROZEN), GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.ICE_ROCK_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.NETHER_SULFUR_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.END_CRIMSONTE_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BASALT_DELTAS), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.QUARTZ_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BASALT_DELTAS), GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.NETHER_GOLD_ORE_PLACED_KEY);
     }
 }

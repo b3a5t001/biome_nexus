@@ -22,6 +22,10 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> LUSH_JADE_ORE_PLACED_KEY = registryKey("lush_jade_ore_placed");
     public static final RegistryKey<PlacedFeature> SCULK_SLATE_PLACED_KEY = registryKey("sculk_slate_placed");
     public static final RegistryKey<PlacedFeature> ICE_ROCK_PLACED_KEY = registryKey("ice_rock_placed");
+    public static final RegistryKey<PlacedFeature> NETHER_SULFUR_ORE_PLACED_KEY = registryKey("nether_sulfur_ore_placed");
+    public static final RegistryKey<PlacedFeature> END_CRIMSONTE_ORE_PLACED_KEY = registryKey("end_crimsonite_ore_placed");
+    public static final RegistryKey<PlacedFeature> QUARTZ_ORE_PLACED_KEY = registryKey("quartz_ore_placed");
+    public static final RegistryKey<PlacedFeature> NETHER_GOLD_ORE_PLACED_KEY = registryKey("nether_gold_ore_placed");
 
     public static final RegistryKey<PlacedFeature> ICE_ROCK_PILE_PLACED_KEY = registryKey("ice_rock_pile_placed");
     public static final RegistryKey<PlacedFeature> AURORITE_GEODE_PLACED_KEY = registryKey("aurorite_geode_placed");
@@ -56,6 +60,16 @@ public class ModPlacedFeatures {
         register(context, ICE_ROCK_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICE_ROCK_KEY),
                 ModOrePlacement.modifiersWithCount(2,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(128))));
+        register(context, NETHER_SULFUR_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_SULFUR_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(10,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(128))));
+        register(context, END_CRIMSONTE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_CRIMSONITE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(10,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))));
+        register(context, QUARTZ_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.QUARTZ_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(16, PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE));
+        register(context, NETHER_GOLD_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_GOLD_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(10, PlacedFeatures.TEN_ABOVE_AND_BELOW_RANGE));
 
         register(context, ICE_ROCK_PILE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ICE_ROCK_PILE_KEY));
         register(context, AURORITE_GEODE_PLACED_KEY ,configuredFeatures.getOrThrow(ModConfiguredFeatures.AURORITE_GEODE_KEY),

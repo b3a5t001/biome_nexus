@@ -17,7 +17,7 @@ import net.minecraft.util.math.Direction;
 
 public class ModItems {
     public static final Item SULFUR_DUST = registerItem("sulfur_dust",
-            new SulfurDustItem(new Item.Settings()));
+            new BoneMealItem(new Item.Settings()));
     public static final Item COPPER_NUGGET = registerItem("copper_nugget",
             new Item(new Item.Settings()));
     public static final Item SULFUR_TORCH = registerItem("sulfur_torch",
@@ -38,7 +38,7 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.COPPER, 1, -2.8f))));
     public static final Item COPPER_AXE = registerItem("copper_axe",
             new AxeItem(ModToolMaterials.COPPER, new Item.Settings()
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.COPPER, 3, -3.2f))));
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.COPPER, 7, -3.2f))));
     public static final Item COPPER_SHOVEL = registerItem("copper_shovel",
             new ShovelItem(ModToolMaterials.COPPER, new Item.Settings()
                     .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.COPPER, 1.5f, -3.0f))));
@@ -84,7 +84,7 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.STEEL, 1, -2.8f))));
     public static final Item STEEL_AXE = registerItem("steel_axe",
             new AxeItem(ModToolMaterials.STEEL, new Item.Settings()
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.STEEL, 3, -3.2f))));
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.STEEL, 5, -3.2f))));
     public static final Item STEEL_SHOVEL = registerItem("steel_shovel",
             new ShovelItem(ModToolMaterials.STEEL, new Item.Settings()
                     .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.STEEL, 1.5f, -3.0f))));
@@ -118,7 +118,7 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.AURORITE, 1, -2.8f))));
     public static final Item AURORITE_AXE = registerItem("aurorite_axe",
             new AxeItem(ModToolMaterials.AURORITE, new Item.Settings()
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.AURORITE, 3, -3.2f))));
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.AURORITE, 6, -3.2f))));
     public static final Item AURORITE_SHOVEL = registerItem("aurorite_shovel",
             new ShovelItem(ModToolMaterials.AURORITE, new Item.Settings()
                     .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.AURORITE, 1.5f, -3.0f))));
@@ -152,7 +152,7 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BRONZE, 1, -2.8f))));
     public static final Item BRONZE_AXE = registerItem("bronze_axe",
             new AxeItem(ModToolMaterials.BRONZE, new Item.Settings()
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.BRONZE, 3, -3.2f))));
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.BRONZE, 6, -3.2f))));
     public static final Item BRONZE_SHOVEL = registerItem("bronze_shovel",
             new ShovelItem(ModToolMaterials.BRONZE, new Item.Settings()
                     .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.BRONZE, 1.5f, -3.0f))));
@@ -188,7 +188,7 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.COBALT, 1, -2.8f))));
     public static final Item COBALT_AXE = registerItem("cobalt_axe",
             new AxeItem(ModToolMaterials.COBALT, new Item.Settings()
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.COBALT, 3, -3.2f))));
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.COBALT, 4, -3.2f))));
     public static final Item COBALT_SHOVEL = registerItem("cobalt_shovel",
             new ShovelItem(ModToolMaterials.COBALT, new Item.Settings()
                     .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.COBALT, 1.5f, -3.0f))));
@@ -224,7 +224,7 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.CRIMSONITE, 1, -2.8f))));
     public static final Item CRIMSONITE_AXE = registerItem("crimsonite_axe",
             new AxeItem(ModToolMaterials.CRIMSONITE, new Item.Settings()
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.CRIMSONITE, 3, -3.2f))));
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.CRIMSONITE, 4, -3.2f))));
     public static final Item CRIMSONITE_SHOVEL = registerItem("crimsonite_shovel",
             new ShovelItem(ModToolMaterials.CRIMSONITE, new Item.Settings()
                     .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.CRIMSONITE, 1.5f, -3.0f))));

@@ -205,6 +205,8 @@
   "trim_pattern.biome_nexus.gem" : "Gem Armor Trim",
 
   "tag.item.biome_nexus.stone_variants" : "Stone Variants",
+  "tag.item.biome_nexus.crystals" : "Crystals",
+  "tag.item.biome_nexus.explosive_powders" : "Explosive Powders",
   "tag.block.biome_nexus.needs_copper_tool" : "Needs Copper Tool",
   "tag.block.biome_nexus.needs_steel_tool" : "Needs Steel Tool",
   "tag.block.biome_nexus.needs_bronze_tool" : "Needs Bronze Tool",
@@ -217,6 +219,7 @@
   "tag.block.biome_nexus.incorrect_for_aurorite_tool" : "Incorrect For Aurorite Tool",
   "tag.block.biome_nexus.incorrect_for_cobalt_tool" : "Incorrect For Cobalt Tool",
   "tag.block.biome_nexus.incorrect_for_crimsonite_tool" : "Incorrect For Crimsonite Tool",
+  "tag.block.biome_nexus.nether_ore_replaceables" : "Nether Ore Replaceables",
 
   "item.biome_nexus.crimsonite_upgrade.applies_to": "Steel Equipment ",
   "item.biome_nexus.crimsonite_upgrade.ingredients": "Crimsonite Ingot",

@@ -4,6 +4,7 @@ import com.b3a5t001.biome_nexus.blocks.ModBlocks;
 import com.b3a5t001.biome_nexus.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
@@ -259,5 +260,20 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.LIMESTONE);
         getOrCreateTagBuilder(BlockTags.DEEPSLATE_ORE_REPLACEABLES)
                 .add(ModBlocks.LIMESTONE);
+        getOrCreateTagBuilder(BlockTags.DIRT)
+                .add(ModBlocks.FERTILIZED_DIRT)
+                .add(ModBlocks.FERTILIZED_COARSE_DIRT)
+                .add(ModBlocks.FERTILIZED_ROOTED_DIRT)
+                .add(ModBlocks.FERTILIZED_GRASS_BLOCK)
+                .add(ModBlocks.FERTILIZED_MUD)
+                .add(ModBlocks.FERTILIZED_MYCELIUM)
+                .add(ModBlocks.FERTILIZED_PODZOL);
+        getOrCreateTagBuilder(BlockTags.SAND)
+                .add(ModBlocks.FERTILIZED_SAND)
+                .add(ModBlocks.FERTILIZED_RED_SAND);
+        getOrCreateTagBuilder(ModTags.Blocks.NETHER_ORE_REPLACEABLES)
+                .add(Blocks.NETHERRACK)
+                .add(Blocks.BASALT)
+                .add(Blocks.BLACKSTONE);
     }
 }
