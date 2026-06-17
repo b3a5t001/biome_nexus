@@ -27,6 +27,6 @@ public class BiomeNexus implements ModInitializer {
 		ModSoundEvents.init();
 		ModEntityEvents.init();
 		ModWorldGeneration.init();
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Initialised Biome Nexus");
 	}
 }

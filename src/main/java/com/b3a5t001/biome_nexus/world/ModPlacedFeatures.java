@@ -53,7 +53,7 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-64), YOffset.fixed(64))));
         register(context, LUSH_JADE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.LUSH_JADE_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(10,
-                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(365), YOffset.fixed(0))));
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(0), YOffset.fixed(365))));
         register(context, SCULK_SLATE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SCULK_SLATE_KEY),
                 ModOrePlacement.modifiersWithCount(2,
                         HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(0))));
