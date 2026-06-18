@@ -2,8 +2,13 @@ package com.b3a5t001.biome_nexus;
 
 import com.b3a5t001.biome_nexus.blocks.ModBlocks;
 import com.b3a5t001.biome_nexus.blocks.fertilized.FertilizedBlockUtil;
+import com.b3a5t001.biome_nexus.client.ClientPlayerData;
+import com.b3a5t001.biome_nexus.client.PlayerLevelHUD;
+import com.b3a5t001.biome_nexus.network.ModPackets;
+import com.b3a5t001.biome_nexus.network.LevelSyncPayload;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.MinecraftClient;
@@ -75,5 +80,22 @@ public class BiomeNexusClient implements ClientModInitializer {
             String text = "Fertilized: stage " + state.get(FertilizedBlockUtil.FERT_STAGE) + "/5";
             drawContext.drawText(client.textRenderer, text, 4, 4, 0xFFD700, true);
         });
+
+        HudRenderCallback.EVENT.register(
+                PlayerLevelHUD::render
+        );
+
+        ClientPlayNetworking.registerGlobalReceiver(
+                LevelSyncPayload.ID,
+                (payload, context) -> {
+
+                    int level = payload.level();
+
+                    context.client().execute(() -> {
+                        ClientPlayerData.setPlayerLevel(level);
+                    });
+
+                }
+        );
     }
 }
