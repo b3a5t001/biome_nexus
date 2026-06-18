@@ -6,6 +6,8 @@ import com.b3a5t001.biome_nexus.entities.ModEntityEvents;
 import com.b3a5t001.biome_nexus.blocks.entity.ModBlockEntities;
 import com.b3a5t001.biome_nexus.items.ModItemGroup;
 import com.b3a5t001.biome_nexus.items.ModItems;
+import com.b3a5t001.biome_nexus.player.SkillRegistry;
+import com.b3a5t001.biome_nexus.player.events.SkillEvents;
 import com.b3a5t001.biome_nexus.server.PlayerJoinHandler;
 import com.b3a5t001.biome_nexus.sound.ModSoundEvents;
 import com.b3a5t001.biome_nexus.world.worldgen.ModWorldGeneration;
@@ -29,6 +31,8 @@ public class BiomeNexus implements ModInitializer {
 		ModEntityEvents.init();
 		ModWorldGeneration.init();
 		PlayerJoinHandler.register();
+		SkillRegistry.register();
+		SkillEvents.register();
 		LOGGER.info("Initialised Biome Nexus");
 	}
 }

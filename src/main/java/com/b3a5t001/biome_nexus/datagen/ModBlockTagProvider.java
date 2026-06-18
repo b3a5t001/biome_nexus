@@ -275,5 +275,22 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks.NETHERRACK)
                 .add(Blocks.BASALT)
                 .add(Blocks.BLACKSTONE);
+        getOrCreateTagBuilder(ModTags.Blocks.ORES)
+                .add(Blocks.IRON_ORE)
+                .add(Blocks.REDSTONE_ORE)
+                .add(Blocks.LAPIS_ORE)
+                .add(Blocks.GOLD_ORE)
+                .add(Blocks.DIAMOND_ORE)
+                .add(Blocks.COAL_ORE)
+                .add(Blocks.COPPER_ORE)
+                .add(Blocks.EMERALD_ORE)
+                .add(Blocks.DEEPSLATE_IRON_ORE)
+                .add(Blocks.DEEPSLATE_REDSTONE_ORE)
+                .add(Blocks.DEEPSLATE_LAPIS_ORE)
+                .add(Blocks.DEEPSLATE_GOLD_ORE)
+                .add(Blocks.DEEPSLATE_DIAMOND_ORE)
+                .add(Blocks.DEEPSLATE_COAL_ORE)
+                .add(Blocks.DEEPSLATE_COPPER_ORE)
+                .add(Blocks.DEEPSLATE_EMERALD_ORE);
     }
 }
