@@ -17,5 +17,11 @@ public class PlayerData {
     public void setPlayerLevel(int level){
         this.playerLevel = level;
     }
-    private void checkLevelUp(){}
+    private void checkLevelUp(){
+        int requiredPoints = playerLevel * 10;
+        if(playerPoints >= requiredPoints){
+            playerPoints -= requiredPoints;
+            playerLevel++;
+        }
+    }
 }
