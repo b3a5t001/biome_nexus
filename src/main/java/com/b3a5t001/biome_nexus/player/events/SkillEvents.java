@@ -1,31 +1,22 @@
 package com.b3a5t001.biome_nexus.player.events;
 
-import com.b3a5t001.biome_nexus.player.PlayerSkills;
-import com.b3a5t001.biome_nexus.player.SkillType;
+import com.b3a5t001.biome_nexus.player.*;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.world.World;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import net.minecraft.server.world.ServerWorld;
 
 public class SkillEvents {
-    private static final Map<World, Map<UUID, PlayerSkills>> PLAYER_SKILLS = new HashMap<>();
-
     public static void register() {
 
         PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
+            if (!(world instanceof ServerWorld serverWorld)) return;
 
-            Map<UUID, PlayerSkills> worldSkills = PLAYER_SKILLS.computeIfAbsent(
-                    world,
-                    key -> new HashMap<>()
+            PlayerData data = PlayerDataManager.getPlayerData(
+                    serverWorld,
+                    player.getUuid()
             );
-
-            PlayerSkills skills = worldSkills.computeIfAbsent(
-                    player.getUuid(),
-                    uuid -> new PlayerSkills()
-            );
+            PlayerSkillState playerState = PlayerSkillState.getServerState(serverWorld);
+            
+            PlayerSkills skills = playerState.getRuntimeSkill(player.getUuid(), data);
 
             skills.getSkill(SkillType.MINING).onBlockMined(state);
         });

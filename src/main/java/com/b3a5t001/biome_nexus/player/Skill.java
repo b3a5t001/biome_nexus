@@ -23,6 +23,7 @@ public abstract class Skill {
     }
     public void addExperience(int amount){
         experience += amount;
+        System.out.println("XP NOW: " + experience);
         checkLevelUp();
     }
     protected void checkLevelUp(){
@@ -33,6 +34,7 @@ public abstract class Skill {
     }
     protected void levelUp(){
         level++;
+        System.out.println("LEVEL UP " + type + "TO LEVEL " + level);
         onLevelUp();
     }
     protected abstract int getExperienceRequired();

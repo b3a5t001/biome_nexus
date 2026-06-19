@@ -11,6 +11,7 @@ import java.util.UUID;
 
 public class PlayerSkillState extends PersistentState {
     private final Map<UUID, PlayerData> players = new HashMap<>();
+    private final Map<UUID, PlayerSkills> runtimeSkills = new HashMap<>();
 
     public PlayerData getPlayerData(UUID uuid) {
         return players.computeIfAbsent(uuid, id ->
@@ -23,8 +24,19 @@ public class PlayerSkillState extends PersistentState {
             null
     );
     private static PlayerSkillState fromNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-        return new PlayerSkillState();
+        PlayerSkillState state = new PlayerSkillState();
+        NbtCompound playersNbt = nbt.getCompound("players");
+        for (String key : playersNbt.getKeys()) {
+            UUID uuid = UUID.fromString(key);
+            PlayerData data = PlayerData.fromNbt(playersNbt.getCompound(key));
+            state.players.put(uuid, data);
+        }
+        return state;
     }
+    public PlayerSkills getRuntimeSkill(UUID uuid,PlayerData data) {
+        return runtimeSkills.computeIfAbsent(uuid, id -> new PlayerSkills(data));
+    }
+
     public static PlayerSkillState getServerState(ServerWorld world) {
         return world.getPersistentStateManager().getOrCreate(
                 TYPE,
@@ -39,9 +51,11 @@ public class PlayerSkillState extends PersistentState {
     @Override
     public NbtCompound writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
         NbtCompound playersNbt = new NbtCompound();
-        for (UUID uuid : players.keySet()) {
-            playersNbt.putBoolean(uuid.toString(), true);
+
+        for (var entry : players.entrySet()) {
+            playersNbt.put(entry.getKey().toString(), entry.getValue().writeNbt());
         }
+
         nbt.put("players", playersNbt);
         return nbt;
     }

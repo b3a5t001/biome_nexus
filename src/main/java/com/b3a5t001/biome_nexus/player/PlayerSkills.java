@@ -9,8 +9,8 @@ public class PlayerSkills {
 
     private final Map<SkillType, Skill> skills = new HashMap<>();
 
-    public PlayerSkills() {
-        System.out.println("NEW PLAYER SKILLS CREATED");
+    public PlayerSkills(PlayerData data){
+        //TODO:fix player skill persistence.
         skills.put(SkillType.MINING, new MiningSkill());
     }
 
