@@ -1,10 +1,13 @@
 package com.b3a5t001.biome_nexus.player;
 
 import net.minecraft.nbt.NbtCompound;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PlayerData {
     private int playerLevel = 1;
     private int playerPoints = 0;
+    private final Map<String, SkillData> skillData = new HashMap<>();
 
     public int getPlayerLevel(){
         return this.playerLevel;
@@ -29,11 +32,21 @@ public class PlayerData {
             playerLevel++;
         }
     }
+    public SkillData getSkillData(String skillKey) {
+        return skillData.computeIfAbsent(skillKey, k -> new SkillData());
+    }
+
     public NbtCompound writeNbt() {
         NbtCompound nbt = new NbtCompound();
 
         nbt.putInt("playerLevel", playerLevel);
         nbt.putInt("playerPoints", playerPoints);
+
+        NbtCompound skillsNbt = new NbtCompound();
+        for (var entry : skillData.entrySet()) {
+            skillsNbt.put(entry.getKey(), entry.getValue().writeNbt());
+        }
+        nbt.put("skills", skillsNbt);
 
         return nbt;
     }
@@ -43,7 +56,11 @@ public class PlayerData {
         data.playerLevel = nbt.getInt("playerLevel");
         data.playerPoints = nbt.getInt("playerPoints");
 
+        NbtCompound skillsNbt = nbt.getCompound("skills");
+        for (String key : skillsNbt.getKeys()) {
+            data.skillData.put(key, SkillData.fromNbt(skillsNbt.getCompound(key)));
+        }
+
         return data;
     }
-
 }

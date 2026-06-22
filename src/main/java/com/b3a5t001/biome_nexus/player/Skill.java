@@ -4,12 +4,18 @@ import net.minecraft.block.BlockState;
 
 public abstract class Skill {
     protected final SkillType type;
+    protected SkillData skillData;
+    protected final PlayerSkills owner;
 
-    protected int level= 1;
+    protected int level = 1;
     protected int experience = 0;
 
-    public Skill(SkillType type){
-        this.type  = type;
+    public Skill(SkillType type, SkillData skillData, PlayerSkills owner) {
+        this.type = type;
+        this.skillData = skillData;
+        this.owner = owner;
+        this.level = skillData.getLevel();
+        this.experience = skillData.getExperience();
     }
     public SkillType getType(){
         return type;
@@ -31,6 +37,10 @@ public abstract class Skill {
             experience -= getExperienceRequired();
             levelUp();
         }
+        skillData.setLevel(level);
+        skillData.setExperience(experience);
+
+        owner.markDirty();
     }
     protected void levelUp(){
         level++;

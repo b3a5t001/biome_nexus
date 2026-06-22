@@ -1,19 +1,20 @@
 package com.b3a5t001.biome_nexus.player.skills;
 
+import com.b3a5t001.biome_nexus.player.PlayerSkills;
 import com.b3a5t001.biome_nexus.player.SkillType;
 import com.b3a5t001.biome_nexus.player.Skill;
+import com.b3a5t001.biome_nexus.player.SkillData;
 import net.minecraft.block.BlockState;
 import net.minecraft.registry.tag.BlockTags;
 
 public class MiningSkill extends Skill {
-    public MiningSkill() {
-        super(SkillType.MINING);
+    public MiningSkill(SkillData skillData, PlayerSkills playerSkills) {
+        super(SkillType.MINING, skillData, playerSkills);
     }
 
     @Override
     public void onBlockMined(BlockState state){
         if (state.isIn(BlockTags.COAL_ORES)){
-            System.out.println("+25xp");
             addExperience(25);
         }
     }
@@ -25,7 +26,6 @@ public class MiningSkill extends Skill {
 
     @Override
     protected void onLevelUp() {
-        System.out.println("Mining leveled up to " + level);
-    }
+            }
 
 }

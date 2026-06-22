@@ -23,18 +23,32 @@ public class PlayerSkillState extends PersistentState {
             PlayerSkillState::fromNbt,
             null
     );
-    private static PlayerSkillState fromNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
+    private static PlayerSkillState fromNbt(
+            NbtCompound nbt,
+            RegistryWrapper.WrapperLookup registryLookup
+    ) {
+        System.out.println("=== LOADING PLAYER SKILLS ===");
+
         PlayerSkillState state = new PlayerSkillState();
+
         NbtCompound playersNbt = nbt.getCompound("players");
+
         for (String key : playersNbt.getKeys()) {
+            System.out.println("Loading UUID: " + key);
+
             UUID uuid = UUID.fromString(key);
             PlayerData data = PlayerData.fromNbt(playersNbt.getCompound(key));
+
             state.players.put(uuid, data);
         }
+
         return state;
     }
-    public PlayerSkills getRuntimeSkill(UUID uuid,PlayerData data) {
-        return runtimeSkills.computeIfAbsent(uuid, id -> new PlayerSkills(data));
+    public PlayerSkills getRuntimeSkill(UUID uuid) {
+        return runtimeSkills.computeIfAbsent(uuid, id -> {
+            PlayerData data = players.get(uuid);
+            return new PlayerSkills(data, this);
+        });
     }
 
     public static PlayerSkillState getServerState(ServerWorld world) {
@@ -48,12 +62,30 @@ public class PlayerSkillState extends PersistentState {
         return players.containsKey(uuid);
     }
 
+    public void rebuildRuntime() {
+        runtimeSkills.clear();
+
+        for (var entry : players.entrySet()) {
+            UUID uuid = entry.getKey();
+            PlayerData data = entry.getValue();
+
+            runtimeSkills.put(uuid, new PlayerSkills(data, this));
+        }
+    }
+
     @Override
     public NbtCompound writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
+        System.out.println("=== SAVING PLAYER SKILLS ===");
+
         NbtCompound playersNbt = new NbtCompound();
 
         for (var entry : players.entrySet()) {
-            playersNbt.put(entry.getKey().toString(), entry.getValue().writeNbt());
+            System.out.println("Saving UUID: " + entry.getKey());
+
+            playersNbt.put(
+                    entry.getKey().toString(),
+                    entry.getValue().writeNbt()
+            );
         }
 
         nbt.put("players", playersNbt);

@@ -8,13 +8,19 @@ import java.util.Map;
 public class PlayerSkills {
 
     private final Map<SkillType, Skill> skills = new HashMap<>();
+    private final PlayerSkillState playerSkillState;
 
-    public PlayerSkills(PlayerData data){
-        //TODO:fix player skill persistence.
-        skills.put(SkillType.MINING, new MiningSkill());
+    public PlayerSkills(PlayerData data, PlayerSkillState playerSkillState) {
+        this.playerSkillState = playerSkillState;
+        SkillData miningData = data.getSkillData("mining");
+        skills.put(SkillType.MINING, new MiningSkill(miningData, this));
     }
 
     public Skill getSkill(SkillType type) {
         return skills.get(type);
+    }
+
+    public void markDirty() {
+        playerSkillState.markDirty();
     }
 }
