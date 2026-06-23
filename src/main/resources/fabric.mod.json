@@ -16,8 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.b3a5t001.biome_nexus.BiomeNexus",
-			"com.b3a5t001.biome_nexus.network.ModNetworking"
+			"com.b3a5t001.biome_nexus.BiomeNexus"
 		],
 		"client": [
 			"com.b3a5t001.biome_nexus.BiomeNexusClient"

@@ -5,5 +5,5 @@ import net.minecraft.util.Identifier;
 
 public class ModPackets {
     public static final Identifier LEVEL_SYNC =
-            Identifier.of("biome_nexus", "level_sync");
+            Identifier.of(BiomeNexus.MOD_ID, "level_sync");
 }

@@ -44,7 +44,8 @@ public abstract class Skill {
     }
     protected void levelUp(){
         level++;
-        System.out.println("LEVEL UP " + type + "TO LEVEL " + level);
+        System.out.println("LEVEL UP " + type + " TO LEVEL " + level);
+        owner.skillLevelUp(type, level);
         onLevelUp();
     }
     protected abstract int getExperienceRequired();

@@ -2,6 +2,7 @@ package com.b3a5t001.biome_nexus.player;
 
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.PersistentState;
 
@@ -44,10 +45,10 @@ public class PlayerSkillState extends PersistentState {
 
         return state;
     }
-    public PlayerSkills getRuntimeSkill(UUID uuid) {
+    public PlayerSkills getRuntimeSkill(UUID uuid, ServerPlayerEntity player) {
         return runtimeSkills.computeIfAbsent(uuid, id -> {
             PlayerData data = players.get(uuid);
-            return new PlayerSkills(data, this);
+            return new PlayerSkills(data, this, player);
         });
     }
 
@@ -62,14 +63,14 @@ public class PlayerSkillState extends PersistentState {
         return players.containsKey(uuid);
     }
 
-    public void rebuildRuntime() {
+    public void rebuildRuntime(ServerPlayerEntity player) {
         runtimeSkills.clear();
 
         for (var entry : players.entrySet()) {
             UUID uuid = entry.getKey();
             PlayerData data = entry.getValue();
 
-            runtimeSkills.put(uuid, new PlayerSkills(data, this));
+            runtimeSkills.put(uuid, new PlayerSkills(data, this, player));
         }
     }
 
