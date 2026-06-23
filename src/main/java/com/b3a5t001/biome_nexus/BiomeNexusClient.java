@@ -4,7 +4,6 @@ import com.b3a5t001.biome_nexus.blocks.ModBlocks;
 import com.b3a5t001.biome_nexus.blocks.fertilized.FertilizedBlockUtil;
 import com.b3a5t001.biome_nexus.client.ClientPlayerData;
 import com.b3a5t001.biome_nexus.client.PlayerLevelHUD;
-import com.b3a5t001.biome_nexus.network.ModPackets;
 import com.b3a5t001.biome_nexus.network.LevelSyncPayload;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;

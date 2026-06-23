@@ -9,14 +9,20 @@ public class PlayerData {
     private int playerPoints = 0;
     private final Map<String, SkillData> skillData = new HashMap<>();
 
+    private int getRequiredPoints(){
+        return (int)(5 * Math.pow(1.5, playerLevel - 1));
+    }
+
     public int getPlayerLevel(){
         return this.playerLevel;
     }
     public int getPlayerPoints(){
         return this.playerPoints;
     }
+
     public void addPlayerPoints(int points){
-        playerPoints ++;
+        playerPoints += points;
+        System.out.println("Player Points: " + playerPoints);
         checkLevelUp();
     }
     public void setPlayerLevel(int level){
@@ -26,10 +32,11 @@ public class PlayerData {
         this.playerPoints = points;
     }
     private void checkLevelUp(){
-        int requiredPoints = playerLevel * 10;
-        if(playerPoints >= requiredPoints){
-            playerPoints -= requiredPoints;
+        if(playerPoints >= getRequiredPoints()){
+            playerPoints -= getRequiredPoints();
             playerLevel++;
+
+            System.out.println("PLAYER LEVEL UP! NEW LEVEL: " + playerLevel);
         }
     }
     public SkillData getSkillData(String skillKey) {

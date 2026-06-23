@@ -15,7 +15,7 @@ public class MiningSkill extends Skill {
     @Override
     public void onBlockMined(BlockState state){
         if (state.isIn(BlockTags.COAL_ORES)){
-            addExperience(25);
+            addExperience(35);
         }
     }
 

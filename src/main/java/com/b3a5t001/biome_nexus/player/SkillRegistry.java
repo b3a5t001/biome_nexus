@@ -5,7 +5,6 @@ import com.b3a5t001.biome_nexus.player.skills.MiningSkill;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
-import java.util.function.Function;
 
 public class SkillRegistry {private static Map<SkillType, BiFunction<SkillData, PlayerSkills, Skill>> SKILLS = new HashMap<>();
 

@@ -16,6 +16,7 @@ public abstract class Skill {
         this.owner = owner;
         this.level = skillData.getLevel();
         this.experience = skillData.getExperience();
+
     }
     public SkillType getType(){
         return type;
