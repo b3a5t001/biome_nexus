@@ -1,5 +1,6 @@
 package com.b3a5t001.biome_nexus.player;
 
+import com.b3a5t001.biome_nexus.player.magic.ManaManager;
 import net.minecraft.nbt.NbtCompound;
 import java.util.HashMap;
 import java.util.Map;
@@ -8,6 +9,10 @@ public class PlayerData {
     private int playerLevel = 1;
     private int playerPoints = 0;
     private final Map<String, SkillData> skillData = new HashMap<>();
+
+    private Runnable onLevelUp;
+
+    private ManaManager manaManager = new ManaManager();
 
     private int getRequiredPoints(){
         return (int)(5 * Math.pow(1.5, playerLevel - 1));
@@ -22,7 +27,6 @@ public class PlayerData {
 
     public void addPlayerPoints(int points){
         playerPoints += points;
-        System.out.println("Player Points: " + playerPoints);
         checkLevelUp();
     }
     public void setPlayerLevel(int level){
@@ -36,7 +40,9 @@ public class PlayerData {
             playerPoints -= getRequiredPoints();
             playerLevel++;
 
-            System.out.println("PLAYER LEVEL UP! NEW LEVEL: " + playerLevel);
+            if(onLevelUp != null){
+                onLevelUp.run();
+            }
         }
     }
     public SkillData getSkillData(String skillKey) {
@@ -69,5 +75,12 @@ public class PlayerData {
         }
 
         return data;
+    }
+    public void setOnLevelUp(Runnable callBack){
+        this.onLevelUp = callBack;
+    }
+
+    public ManaManager getManaManager() {
+        return manaManager;
     }
 }

@@ -28,14 +28,12 @@ public class PlayerSkillState extends PersistentState {
             NbtCompound nbt,
             RegistryWrapper.WrapperLookup registryLookup
     ) {
-        System.out.println("=== LOADING PLAYER SKILLS ===");
 
         PlayerSkillState state = new PlayerSkillState();
 
         NbtCompound playersNbt = nbt.getCompound("players");
 
         for (String key : playersNbt.getKeys()) {
-            System.out.println("Loading UUID: " + key);
 
             UUID uuid = UUID.fromString(key);
             PlayerData data = PlayerData.fromNbt(playersNbt.getCompound(key));
@@ -76,12 +74,10 @@ public class PlayerSkillState extends PersistentState {
 
     @Override
     public NbtCompound writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-        System.out.println("=== SAVING PLAYER SKILLS ===");
 
         NbtCompound playersNbt = new NbtCompound();
 
         for (var entry : players.entrySet()) {
-            System.out.println("Saving UUID: " + entry.getKey());
 
             playersNbt.put(
                     entry.getKey().toString(),

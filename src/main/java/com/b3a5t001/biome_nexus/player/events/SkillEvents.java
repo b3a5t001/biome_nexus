@@ -16,6 +16,7 @@ public class SkillEvents {
             
             PlayerSkills skills = playerState.getRuntimeSkill(serverPlayer.getUuid(), serverPlayer);
             skills.getSkill(SkillType.MINING).onBlockMined(state);
+            skills.getSkill(SkillType.FARMING).onBlockMined(state);
         });
     }
 }

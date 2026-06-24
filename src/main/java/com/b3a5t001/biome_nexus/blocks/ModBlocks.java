@@ -5,11 +5,6 @@ import com.b3a5t001.biome_nexus.blocks.custom.BuddingAuroriteBlock;
 import com.b3a5t001.biome_nexus.blocks.custom.OxidizableBarsBlock;
 import com.b3a5t001.biome_nexus.blocks.custom.OxidizableChainBlock;
 import com.b3a5t001.biome_nexus.blocks.custom.OxidizableLanternBlock;
-import com.b3a5t001.biome_nexus.blocks.fertilized.FertilizedBaseBlock;
-import com.b3a5t001.biome_nexus.blocks.fertilized.FertilizedFarmBlock;
-import com.b3a5t001.biome_nexus.blocks.fertilized.FertilizedFallingBlock;
-import com.b3a5t001.biome_nexus.blocks.fertilized.FertilizedSoulSandBlock;
-import com.b3a5t001.biome_nexus.blocks.fertilized.FertilizedSpreadableBlock;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -17,7 +12,6 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
@@ -28,32 +22,6 @@ public class ModBlocks {
     public static final Block SULFUR_ORE = registerBlock("sulfur_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3,7),AbstractBlock.Settings.create().requiresTool().mapColor(MapColor.DARK_CRIMSON)
                     .sounds(BlockSoundGroup.NETHER_GOLD_ORE).strength(2f, 4.0f)),true);
-
-    // Fertilized soil variants (no direct item)
-    public static final Block FERTILIZED_FARMLAND = registerBlock("fertilized_farmland",
-            new FertilizedFarmBlock(Blocks.FARMLAND, AbstractBlock.Settings.copy(Blocks.FARMLAND)), false);
-    public static final Block FERTILIZED_GRASS_BLOCK = registerBlock("fertilized_grass_block",
-            new FertilizedSpreadableBlock(Blocks.GRASS_BLOCK, AbstractBlock.Settings.copy(Blocks.GRASS_BLOCK)), false);
-    public static final Block FERTILIZED_DIRT = registerBlock("fertilized_dirt",
-            new FertilizedBaseBlock(Blocks.DIRT, AbstractBlock.Settings.copy(Blocks.DIRT)), false);
-    public static final Block FERTILIZED_COARSE_DIRT = registerBlock("fertilized_coarse_dirt",
-            new FertilizedBaseBlock(Blocks.COARSE_DIRT, AbstractBlock.Settings.copy(Blocks.COARSE_DIRT)), false);
-    public static final Block FERTILIZED_PODZOL = registerBlock("fertilized_podzol",
-            new FertilizedSpreadableBlock(Blocks.PODZOL, AbstractBlock.Settings.copy(Blocks.PODZOL)), false);
-    public static final Block FERTILIZED_MYCELIUM = registerBlock("fertilized_mycelium",
-            new FertilizedSpreadableBlock(Blocks.MYCELIUM, AbstractBlock.Settings.copy(Blocks.MYCELIUM)), false);
-    public static final Block FERTILIZED_ROOTED_DIRT = registerBlock("fertilized_rooted_dirt",
-            new FertilizedBaseBlock(Blocks.ROOTED_DIRT, AbstractBlock.Settings.copy(Blocks.ROOTED_DIRT)), false);
-    public static final Block FERTILIZED_MUD = registerBlock("fertilized_mud",
-            new FertilizedBaseBlock(Blocks.MUD, AbstractBlock.Settings.copy(Blocks.MUD)), false);
-    public static final Block FERTILIZED_CLAY = registerBlock("fertilized_clay",
-            new FertilizedBaseBlock(Blocks.CLAY, AbstractBlock.Settings.copy(Blocks.CLAY)), false);
-    public static final Block FERTILIZED_SAND = registerBlock("fertilized_sand",
-            new FertilizedFallingBlock(Blocks.SAND, AbstractBlock.Settings.copy(Blocks.SAND)), false);
-    public static final Block FERTILIZED_RED_SAND = registerBlock("fertilized_red_sand",
-            new FertilizedFallingBlock(Blocks.RED_SAND, AbstractBlock.Settings.copy(Blocks.RED_SAND)), false);
-    public static final Block FERTILIZED_SOUL_SAND = registerBlock("fertilized_soul_sand",
-            new FertilizedSoulSandBlock(Blocks.SOUL_SAND, AbstractBlock.Settings.copy(Blocks.SOUL_SAND)), false);
 
     public static final Block SULFUR_TORCH = registerBlock("sulfur_torch",
             new TorchBlock(ParticleTypes.SMALL_FLAME, AbstractBlock.Settings.copy(Blocks.TORCH)),false);

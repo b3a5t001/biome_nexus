@@ -4,6 +4,7 @@ import com.b3a5t001.biome_nexus.player.PlayerSkills;
 import com.b3a5t001.biome_nexus.player.SkillType;
 import com.b3a5t001.biome_nexus.player.Skill;
 import com.b3a5t001.biome_nexus.player.SkillData;
+import com.b3a5t001.biome_nexus.util.ModTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -14,8 +15,16 @@ public class MiningSkill extends Skill {
 
     @Override
     public void onBlockMined(BlockState state){
-        if (state.isIn(BlockTags.COAL_ORES)){
-            addExperience(35);
+        if (state.isIn(ModTags.Blocks.COMMON)){
+            addExperience(5);
+        }else if(state.isIn(ModTags.Blocks.UNCOMMON)){
+            addExperience(10);
+        }else if(state.isIn(ModTags.Blocks.RARE)){
+            addExperience(25);
+        }else if(state.isIn(ModTags.Blocks.EPIC)){
+            addExperience(50);
+        }else if(state.isIn(ModTags.Blocks.LEGENDARY)){
+            addExperience(100);
         }
     }
 

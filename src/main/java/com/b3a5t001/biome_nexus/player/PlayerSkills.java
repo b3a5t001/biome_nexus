@@ -2,6 +2,7 @@ package com.b3a5t001.biome_nexus.player;
 
 import com.b3a5t001.biome_nexus.network.LevelSyncPayload;
 import com.b3a5t001.biome_nexus.network.SkillLevelUpPayload;
+import com.b3a5t001.biome_nexus.player.skills.FarmingSkill;
 import com.b3a5t001.biome_nexus.player.skills.MiningSkill;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -21,18 +22,11 @@ public class PlayerSkills {
         this.playerSkillState = playerSkillState;
         this.player = player;
         this.data = data;
-        SkillData miningData = data.getSkillData("mining");
-        skills.put(SkillType.MINING, new MiningSkill(miningData, this));
-    }
-    public void skillLevelUp(SkillType type, int level){
-        data.addPlayerPoints(1);
-        ServerPlayNetworking.send(player,
-                new SkillLevelUpPayload(type, level));
 
-        ServerPlayNetworking.send(player,
-                new LevelSyncPayload(data.getPlayerLevel()));
-        
-        if (data.getPlayerLevel() > 1) {
+        data.setOnLevelUp(() -> {
+            ServerPlayNetworking.send(player,
+                    new LevelSyncPayload(data.getPlayerLevel()));
+
             player.getServer().getPlayerManager().broadcast(
                     Text.literal(
                             player.getName().getString() +
@@ -41,7 +35,17 @@ public class PlayerSkills {
                     ),
                     false
             );
-        }
+        });
+
+        SkillData miningData = data.getSkillData("mining");
+        SkillData farmingData = data.getSkillData("farming");
+        skills.put(SkillType.MINING, new MiningSkill(miningData, this));
+        skills.put(SkillType.FARMING, new FarmingSkill(farmingData, this));
+    }
+    public void skillLevelUp(SkillType type, int level){
+        data.addPlayerPoints(1);
+        ServerPlayNetworking.send(player,
+                new SkillLevelUpPayload(type, level));
     }
 
     public Skill getSkill(SkillType type) {

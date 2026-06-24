@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:diamond_ore",
+    "minecraft:deepslate_diamond_ore",
+    "minecraft:emerald_ore",
+    "minecraft:deepslate_emerald_ore",
+    "biome_nexus:cobalt_ore",
+    "biome_nexus:deepslate_cobalt_ore"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "values": [
+    "minecraft:coal_ore",
+    "minecraft:deepslate_coal_ore",
+    "minecraft:copper_ore",
+    "minecraft:deepslate_copper_ore",
+    "minecraft:lapis_ore",
+    "minecraft:deepslate_lapis_ore",
+    "minecraft:nether_quartz_ore",
+    "biome_nexus:tin_ore",
+    "biome_nexus:deepslate_tin_ore",
+    "biome_nexus:jade_ore",
+    "biome_nexus:deepslate_jade_ore"
+  ]
+}

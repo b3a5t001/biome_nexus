@@ -23,7 +23,6 @@ public class SkillData {
     }
 
     public NbtCompound writeNbt() {
-        System.out.println("Saving SkillData -> Level: " + level + " XP: " + experience);
         NbtCompound nbt = new NbtCompound();
         nbt.putInt("level", level);
         nbt.putInt("experience", experience);
@@ -31,7 +30,6 @@ public class SkillData {
     }
 
     public static SkillData fromNbt(NbtCompound nbt) {
-        System.out.println("Loading SkillData -> Level: " + nbt.getInt("level") + " XP: " + nbt.getInt("experience"));
         SkillData data = new SkillData();
         data.level = nbt.getInt("level");
         data.experience = nbt.getInt("experience");

@@ -1,0 +1,19 @@
+{
+  "values": [
+    "minecraft:stone",
+    "minecraft:granite",
+    "minecraft:diorite",
+    "minecraft:andesite",
+    "minecraft:tuff",
+    "minecraft:deepslate",
+    "minecraft:netherrack",
+    "minecraft:basalt",
+    "minecraft:blackstone",
+    "minecraft:end_stone",
+    "biome_nexus:limestone",
+    "biome_nexus:ice_rock",
+    "biome_nexus:sculk_slate",
+    "biome_nexus:aurorite_cluster",
+    "minecraft:amethyst_cluster"
+  ]
+}

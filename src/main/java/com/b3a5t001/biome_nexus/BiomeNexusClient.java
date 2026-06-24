@@ -1,8 +1,8 @@
 package com.b3a5t001.biome_nexus;
 
 import com.b3a5t001.biome_nexus.blocks.ModBlocks;
-import com.b3a5t001.biome_nexus.blocks.fertilized.FertilizedBlockUtil;
 import com.b3a5t001.biome_nexus.client.ClientPlayerData;
+import com.b3a5t001.biome_nexus.client.ManaHud;
 import com.b3a5t001.biome_nexus.client.PlayerLevelHUD;
 import com.b3a5t001.biome_nexus.network.LevelSyncPayload;
 import net.fabricmc.api.ClientModInitializer;
@@ -70,18 +70,12 @@ public class BiomeNexusClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.MEDIUM_AURORITE_BUD);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.LARGE_AURORITE_BUD);
 
-        HudRenderCallback.EVENT.register((drawContext, tickDelta) -> {
-            MinecraftClient client = MinecraftClient.getInstance();
-            if (client.player == null || client.world == null) return;
-            if (!(client.crosshairTarget instanceof BlockHitResult hit)) return;
-            BlockState state = client.world.getBlockState(hit.getBlockPos());
-            if (!state.contains(FertilizedBlockUtil.FERT_STAGE)) return;
-            String text = "Fertilized: stage " + state.get(FertilizedBlockUtil.FERT_STAGE) + "/5";
-            drawContext.drawText(client.textRenderer, text, 4, 4, 0xFFD700, true);
-        });
 
         HudRenderCallback.EVENT.register(
                 PlayerLevelHUD::render
+        );
+        HudRenderCallback.EVENT.register(
+                ManaHud::render
         );
 
         ClientPlayNetworking.registerGlobalReceiver(
