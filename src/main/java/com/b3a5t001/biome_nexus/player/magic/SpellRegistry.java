@@ -3,6 +3,7 @@ package com.b3a5t001.biome_nexus.player.magic;
 import com.b3a5t001.biome_nexus.player.magic.spells.FireboltSpell;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -11,18 +12,25 @@ public class SpellRegistry {
 
     private static final Map<String, Spell> SPELLS = new LinkedHashMap<>();
 
-    static{
-        register(new FireboltSpell());
-    }
+    public static final Spell FIREBOLT_SPELL = register(new FireboltSpell());
+
     public static Spell get(String id){
         return SPELLS.get(id);
     }
 
     public static Collection<Spell> all(){
-        return SPELLS.values();
+        return Collections.unmodifiableCollection(SPELLS.values());
     }
 
-    private static void register(Spell spell){
-        SPELLS.put(spell.getName(), spell);
+    public static void init() {
+    }
+
+    public static Spell register(Spell spell){
+        if (SPELLS.containsKey(spell.getId())) {
+            throw new IllegalArgumentException("Duplicate spell id: " + spell.getId());
+        }
+
+        SPELLS.put(spell.getId(), spell);
+        return spell;
     }
 }

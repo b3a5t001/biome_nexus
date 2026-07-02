@@ -43,6 +43,10 @@ public class PlayerSkills {
         skills.put(SkillType.FARMING, new FarmingSkill(farmingData, this));
     }
     public void skillLevelUp(SkillType type, int level){
+        if (!canGainSkillExperience()) {
+            return;
+        }
+
         data.addPlayerPoints(1);
         ServerPlayNetworking.send(player,
                 new SkillLevelUpPayload(type, level));
@@ -50,6 +54,10 @@ public class PlayerSkills {
 
     public Skill getSkill(SkillType type) {
         return skills.get(type);
+    }
+
+    public boolean canGainSkillExperience() {
+        return !player.isCreative() && !player.isSpectator();
     }
 
     public void markDirty() {

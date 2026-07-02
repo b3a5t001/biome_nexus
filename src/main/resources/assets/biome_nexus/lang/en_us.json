@@ -221,6 +221,12 @@
   "tag.block.biome_nexus.incorrect_for_crimsonite_tool" : "Incorrect For Crimsonite Tool",
   "tag.block.biome_nexus.nether_ore_replaceables" : "Nether Ore Replaceables",
 
+  "category.biome_nexus.magic": "Biome Nexus Magic",
+  "key.biome_nexus.cast_spell": "Cast Spell",
+  "key.biome_nexus.open_spell_book": "Open Spell Book",
+  "screen.biome_nexus.spell_book": "Spell Book",
+  "key.biome_nexus.cast_firebolt": "Cast Firebolt",
+
   "item.biome_nexus.crimsonite_upgrade.applies_to": "Steel Equipment ",
   "item.biome_nexus.crimsonite_upgrade.ingredients": "Crimsonite Ingot",
   "upgrade.biome_nexus.crimsonite_upgrade": "Crimsonite Upgrade",

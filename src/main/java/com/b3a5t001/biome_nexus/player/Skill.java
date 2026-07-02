@@ -29,6 +29,10 @@ public abstract class Skill {
         return  experience;
     }
     public void addExperience(int amount){
+        if (!owner.canGainSkillExperience()) {
+            return;
+        }
+
         experience += amount;
         checkLevelUp();
     }

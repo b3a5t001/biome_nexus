@@ -2,14 +2,17 @@ package com.b3a5t001.biome_nexus;
 
 import com.b3a5t001.biome_nexus.blocks.BlockEventHandler;
 import com.b3a5t001.biome_nexus.blocks.ModBlocks;
-import com.b3a5t001.biome_nexus.client.ClientNetworking;
 import com.b3a5t001.biome_nexus.entities.ModEntityEvents;
 import com.b3a5t001.biome_nexus.items.ModItemGroup;
 import com.b3a5t001.biome_nexus.items.ModItems;
+import com.b3a5t001.biome_nexus.network.CastSpellPayload;
 import com.b3a5t001.biome_nexus.network.LevelSyncPayload;
+import com.b3a5t001.biome_nexus.network.ManaSyncPayload;
 import com.b3a5t001.biome_nexus.network.SkillLevelUpPayload;
 import com.b3a5t001.biome_nexus.player.SkillRegistry;
 import com.b3a5t001.biome_nexus.player.events.SkillEvents;
+import com.b3a5t001.biome_nexus.player.magic.SpellEvents;
+import com.b3a5t001.biome_nexus.player.magic.SpellRegistry;
 import com.b3a5t001.biome_nexus.server.PlayerJoinHandler;
 import com.b3a5t001.biome_nexus.sound.ModSoundEvents;
 import com.b3a5t001.biome_nexus.world.worldgen.ModWorldGeneration;
@@ -33,6 +36,14 @@ public class BiomeNexus implements ModInitializer {
 				SkillLevelUpPayload.ID,
 				SkillLevelUpPayload.CODEC
 		);
+		PayloadTypeRegistry.playS2C().register(
+				ManaSyncPayload.ID,
+				ManaSyncPayload.CODEC
+		);
+		PayloadTypeRegistry.playC2S().register(
+				CastSpellPayload.ID,
+				CastSpellPayload.CODEC
+		);
 		ModItems.init();
 		ModBlocks.init();
 		ModItemGroup.init();
@@ -43,7 +54,8 @@ public class BiomeNexus implements ModInitializer {
 		PlayerJoinHandler.register();
 		SkillRegistry.register();
 		SkillEvents.register();
-		ClientNetworking.register();
+		SpellRegistry.init();
+		SpellEvents.register();
 		LOGGER.info("Initialised Biome Nexus");
 	}
 }

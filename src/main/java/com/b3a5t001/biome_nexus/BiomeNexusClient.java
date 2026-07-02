@@ -1,18 +1,15 @@
 package com.b3a5t001.biome_nexus;
 
 import com.b3a5t001.biome_nexus.blocks.ModBlocks;
-import com.b3a5t001.biome_nexus.client.ClientPlayerData;
+import com.b3a5t001.biome_nexus.client.ClientNetworking;
+import com.b3a5t001.biome_nexus.client.ClientSpellKeybinds;
 import com.b3a5t001.biome_nexus.client.ManaHud;
 import com.b3a5t001.biome_nexus.client.PlayerLevelHUD;
-import com.b3a5t001.biome_nexus.network.LevelSyncPayload;
+import com.b3a5t001.biome_nexus.client.SelectedSpellHud;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
-import net.minecraft.block.BlockState;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.util.hit.BlockHitResult;
 
 public class BiomeNexusClient implements ClientModInitializer {
     @Override
@@ -77,18 +74,11 @@ public class BiomeNexusClient implements ClientModInitializer {
         HudRenderCallback.EVENT.register(
                 ManaHud::render
         );
-
-        ClientPlayNetworking.registerGlobalReceiver(
-                LevelSyncPayload.ID,
-                (payload, context) -> {
-
-                    int level = payload.level();
-
-                    context.client().execute(() -> {
-                        ClientPlayerData.setPlayerLevel(level);
-                    });
-
-                }
+        HudRenderCallback.EVENT.register(
+                SelectedSpellHud::render
         );
+
+        ClientNetworking.register();
+        ClientSpellKeybinds.register();
     }
 }

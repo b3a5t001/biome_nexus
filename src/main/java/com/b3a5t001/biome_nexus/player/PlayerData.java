@@ -60,6 +60,7 @@ public class PlayerData {
             skillsNbt.put(entry.getKey(), entry.getValue().writeNbt());
         }
         nbt.put("skills", skillsNbt);
+        nbt.put("mana", manaManager.writeNbt());
 
         return nbt;
     }
@@ -72,6 +73,10 @@ public class PlayerData {
         NbtCompound skillsNbt = nbt.getCompound("skills");
         for (String key : skillsNbt.getKeys()) {
             data.skillData.put(key, SkillData.fromNbt(skillsNbt.getCompound(key)));
+        }
+
+        if (nbt.contains("mana")) {
+            data.manaManager = ManaManager.fromNbt(nbt.getCompound("mana"));
         }
 
         return data;

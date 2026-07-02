@@ -1,6 +1,7 @@
 package com.b3a5t001.biome_nexus.client;
 
 import com.b3a5t001.biome_nexus.network.LevelSyncPayload;
+import com.b3a5t001.biome_nexus.network.ManaSyncPayload;
 import com.b3a5t001.biome_nexus.network.SkillLevelUpPayload;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.MinecraftClient;
@@ -16,6 +17,15 @@ public class ClientNetworking {
                 });
             }
     );
+
+        ClientPlayNetworking.registerGlobalReceiver(
+                ManaSyncPayload.ID,
+                (payload, context) -> {
+                    context.client().execute(() -> {
+                        ClientPlayerData.setMana(payload.mana(), payload.maxMana());
+                    });
+                }
+        );
 
         ClientPlayNetworking.registerGlobalReceiver(
                 SkillLevelUpPayload.ID,

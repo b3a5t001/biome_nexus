@@ -11,6 +11,7 @@ public class SkillEvents {
         PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
             if (!(world instanceof ServerWorld serverWorld)) return;
             if (!(player instanceof ServerPlayerEntity serverPlayer)) return;
+            if (serverPlayer.isCreative() || serverPlayer.isSpectator()) return;
 
             PlayerSkillState playerState = PlayerSkillState.getServerState(serverWorld);
             

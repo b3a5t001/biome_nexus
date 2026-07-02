@@ -3,6 +3,7 @@ package com.b3a5t001.biome_nexus.server;
 import com.b3a5t001.biome_nexus.network.LevelSyncPayload;
 import com.b3a5t001.biome_nexus.player.PlayerData;
 import com.b3a5t001.biome_nexus.player.PlayerDataManager;
+import com.b3a5t001.biome_nexus.player.magic.SpellCaster;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 
@@ -17,6 +18,7 @@ public class PlayerJoinHandler {
                     handler.player,
                     new LevelSyncPayload(data.getPlayerLevel())
             );
+            SpellCaster.syncMana(handler.player, data);
         });
     }
 }
